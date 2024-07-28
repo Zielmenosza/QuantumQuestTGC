@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <!-- Declare custom attributes here -->
+
+    <declare-styleable name="MyCustomView">
+
+        <attr name="customTextColor" format="color" />
+
+        <attr name="customTextSize" format="dimension" />
+
+        <attr name="customText" format="string" />
+
+        <attr name="customBoolean" format="boolean" />
+
+        <attr name="customEnum">
+
+            <enum name="optionOne" value="1" />
+
+            <enum name="optionTwo" value="2" />
+
+        </attr>
+
+    </declare-styleable>
+
+    <attr name="colorPrimaryVariant" format="color" />
+
+    <attr name="colorOnPrimary" format="color" />
+
+    <attr name="colorSecondary" format="color" />
+
+    <attr name="colorSecondaryVariant" format="color" />
+
+    <attr name="colorOnSecondary" format="color" />
+
+</resources>

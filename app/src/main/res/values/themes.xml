@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <style name="Theme.QuantumQuest" parent="Theme.Material3.DayNight">
+        <item name="colorPrimary">@color/my_primary_color</item>
+        <!-- ... other theme attributes -->
+    </style>
+</resources>
