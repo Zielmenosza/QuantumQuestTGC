@@ -54,12 +54,20 @@ android {
     ndkVersion = "26.1.10909125"
 }
 
+android {
+    buildTypes {
+        debug {
+            var jniDebuggable = true
+        }
+    }
+}
+
 dependencies {
     implementation(libs.androidx.core.ktx)
     implementation("androidx.compose.material3:material3:1.2.1")
     implementation("androidx.compose.material3:material3-window-size-class:1.2.1")
     implementation("androidx.compose.material3:material3-adaptive-navigation-suite:1.3.0-beta05")
-    implementation("com.google.android.material:material:1.9.0")
+    implementation("com.google.android.material:material:1.12.0")
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
     implementation(platform(libs.compose.bom))
