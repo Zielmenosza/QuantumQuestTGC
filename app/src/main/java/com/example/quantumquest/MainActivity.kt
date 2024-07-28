@@ -1,21 +1,23 @@
 package com.example.quantumquest
 
+import GameInterface
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
-import com.example.quantumquest.databinding.ActivityMainBinding
+import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
+import androidx.compose.runtime.Composable
 
-class MainActivity : AppCompatActivity() {
-
-    private lateinit var binding: ActivityMainBinding
-
+class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContent {
+            QuantumQuestTheme {
+                GameInterface() // Make sure this is the correct name of your composable function
+            }
+        }
+    }
 
-        binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+    class QuantumQuestTheme(function: @Composable () -> Unit) {
 
-        // Example of a call to a native method
-        binding.sampleText.text = stringFromJNI()
     }
 
     /**
