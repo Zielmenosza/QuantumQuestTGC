@@ -1,11 +1,11 @@
 // build.gradle.kts (App-level)
 
-    plugins {
-        id("com.android.application")
-        id("kotlin-android")
-        id("org.jetbrains.kotlin.android")
-        alias(libs.plugins.compose.compiler)
-    }
+plugins {
+    id("com.android.application")
+    id("kotlin-android")
+    id("org.jetbrains.kotlin.android")
+    alias(libs.plugins.compose.compiler)
+}
 
 android {
     namespace = "com.example.quantumquest"
@@ -25,7 +25,8 @@ android {
     }
 
     buildTypes {
-        release {isMinifyEnabled = true
+        release {
+            isMinifyEnabled = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
@@ -52,14 +53,6 @@ android {
     }
     buildToolsVersion = "34.0.0"
     ndkVersion = "26.1.10909125"
-}
-
-android {
-    buildTypes {
-        debug {
-            var jniDebuggable = true
-        }
-    }
 }
 
 dependencies {
