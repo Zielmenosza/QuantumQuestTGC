@@ -3,7 +3,7 @@
 
 #include <android/log.h>
 #include <sstream>
-#include <stringbuf>
+#include <android_native_app_glue.h>
 
 /*!
  * Use this to log strings out to logcat. Note that you should use std::endl to commit the line
@@ -17,7 +17,7 @@ extern std::ostream aout;
  * Use this class to create an output stream that writes to logcat. By default, a global one is
  * defined as @a aout
  */
-cclass AndroidOut: public std::stringbuf {
+class AndroidOut: public std::stringbuf {
 public:
 int overflow(int c);
 };

@@ -2,26 +2,24 @@
 #define PLAYER_H
 
 #include <vector>
-#include <memory> // Include for std::shared_ptr
+#include <memory>
 #include "card.h"
 
 class Player {
 public:
-    Player(const std::string& name, int health, int mana) : name(name), health(health), mana(mana) {}
+    // ... other members ...
 
-    const std::vector<std::shared_ptr<Card>>& getHand() const { return hand; }
-    int getHealth() const { return health; }
-    int getMana() const { return mana; }
+    const std::vector<std::shared_ptr<Card>>& getHand() const {
+        return hand_;
+    }
 
-    void takeDamage(int amount) { health -= amount; }
-    void addMana(int amount) { mana += amount; }
-    void useCard(int index); // Example of a player action
+    void addToHand(const std::shared_ptr<Card>& card); // Add card to hand (example)
+
+    void reduceIncomingDamage(int damage);
 
 private:
-    std::string name;
-    int health;
-    int mana;
-    std::vector<std::shared_ptr<Card>> hand;
+    std::vector<std::shared_ptr<Card>> hand_;
+    // ... other members ...
 };
 
 #endif // PLAYER_H

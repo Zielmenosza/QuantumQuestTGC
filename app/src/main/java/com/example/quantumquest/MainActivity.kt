@@ -5,19 +5,18 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.runtime.Composable
+import android.util.Log
+import androidx.compose.material3.MaterialTheme
 
 class MainActivity : ComponentActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
             QuantumQuestTheme {
-                GameInterface() // Make sure this is the correct name of your composable function
+                GameInterface()
             }
         }
-    }
-
-    class QuantumQuestTheme(function: @Composable () -> Unit) {
-
     }
 
     /**
@@ -26,10 +25,23 @@ class MainActivity : ComponentActivity() {
      */
     external fun stringFromJNI(): String
 
+    @Composable
+    fun QuantumQuestTheme(content: @Composable () -> Unit) {
+        MaterialTheme { // Use MaterialTheme or define your custom theme
+            content()
+        }
+    }
+
     companion object {
         // Used to load the 'quantumquest' library on application startup.
         init {
-            System.loadLibrary("quantumquest")
+            try {
+                System.loadLibrary("quantumquest")
+                Log.d("LibraryLoad", "Library loaded successfully")
+            } catch (e: UnsatisfiedLinkError) {
+                Log.e("LibraryLoad", "Failed to load library", e)
+                // Handle the error gracefully, e.g., display an error message
+            }
         }
     }
 }

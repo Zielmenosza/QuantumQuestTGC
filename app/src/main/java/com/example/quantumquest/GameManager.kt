@@ -25,7 +25,7 @@ class GameManager {
 
     companion object {
         init {
-            System.loadLibrary("quantum_quest_game")
+            System.loadLibrary("quantumquest")
         }
     }
 }

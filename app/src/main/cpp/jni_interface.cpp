@@ -1,6 +1,7 @@
 #include <jni.h>
 #include <string>
 #include <vector>
+#include "jni_interface.h"
 #include "card.h"
 
 extern "C" JNIEXPORT jobjectArray JNICALL
