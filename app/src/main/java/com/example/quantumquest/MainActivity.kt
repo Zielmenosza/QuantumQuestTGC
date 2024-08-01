@@ -1,47 +1,30 @@
-package com.example.quantumquest
 
-import GameInterface
-import android.os.Bundle
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import androidx.compose.runtime.Composable
 import android.util.Log
-import androidx.compose.material3.MaterialTheme
+import androidx.appcompat.app.AppCompatActivity
 
-class MainActivity : ComponentActivity() {
+class MainActivity : AppCompatActivity() {
+    // Declare native methods
+    external fun getCardNames(cardHandles: LongArray?): Array<String>?
+    external fun getCardCosts(cardHandles: LongArray?): IntArray?
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContent {
-            QuantumQuestTheme {
-                GameInterface()
+    // Example usage
+    fun displayCardInfo(cardHandles: LongArray?) {
+        val cardNames = getCardNames(cardHandles)
+        val cardCosts = getCardCosts(cardHandles)
+
+        if (cardNames != null && cardCosts != null) {
+            for (i in cardNames.indices) {
+                Log.d("CardInfo", "Name: " + cardNames[i] + ", Cost: " + cardCosts[i])
             }
-        }
-    }
-
-    /**
-     * A native method that is implemented by the 'quantumquest' native library,
-     * which is packaged with this application.
-     */
-    external fun stringFromJNI(): String
-
-    @Composable
-    fun QuantumQuestTheme(content: @Composable () -> Unit) {
-        MaterialTheme { // Use MaterialTheme or define your custom theme
-            content()
+        } else {
+            Log.e("CardInfo", "Failed to retrieve card information.")
         }
     }
 
     companion object {
-        // Used to load the 'quantumquest' library on application startup.
+        // Load the native library
         init {
-            try {
-                System.loadLibrary("quantumquest")
-                Log.d("LibraryLoad", "Library loaded successfully")
-            } catch (e: UnsatisfiedLinkError) {
-                Log.e("LibraryLoad", "Failed to load library", e)
-                // Handle the error gracefully, e.g., display an error message
-            }
+            System.loadLibrary("quantumquest")
         }
     }
 }

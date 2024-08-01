@@ -1,4 +1,3 @@
-// Card.h
 #ifndef CARD_H
 #define CARD_H
 
@@ -6,8 +5,10 @@
 
 class Card {
 public:
-    Card(const std::string& name) : name(name) {}  // Add a constructor that takes a string
-    virtual ~Card() {}
+    Card(const std::string& name);
+    virtual ~Card();
+
+    std::string getName() const; // New method for getting card name
 
 private:
     std::string name;

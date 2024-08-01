@@ -1,20 +1,25 @@
 #include "card_pool.h"
-#include "card.h" // Include card.h
-#include <random>
+#include <random> // Include random library for randomness
 
+// Constructor initializes the card pool with a vector of cards
 CardPool::CardPool(const std::vector<Card>& initialCards) : cards(initialCards) {}
 
-void CardPool::addCard(Card card) {
+// Method to add a card to the pool
+void CardPool::addCard(const Card& card) {
     cards.push_back(card);
 }
 
+// Method to retrieve a random card from the pool
 Card CardPool::getRandomCard() {
     if (cards.empty()) {
-        return Card(); // Or throw an exception
+        throw std::runtime_error("Card pool is empty. Cannot get a random card.");
     }
-    std::random_device rd;
-    std::mt19937 gen(rd()); // Added semicolon
-    std::uniform_int_distribution<> distrib(0, cards.size() - 1);
+
+    // Random number generator for selecting a random card
+    std::random_device rd;  // Obtain a random number from hardware
+    std::mt19937 gen(rd()); // Seed the generator
+    std::uniform_int_distribution<> distrib(0, cards.size() - 1); // Define the range
+
     int randomIndex = distrib(gen);
     return cards[randomIndex];
 }

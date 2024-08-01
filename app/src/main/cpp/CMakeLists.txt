@@ -19,6 +19,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++17 -frtti -fexceptions")
 set(SOURCE_FILES
         AndroidOut.cpp
         AndroidOut.h
+        native-lib.cpp   # Include native-lib.cpp
         battle.h
         card.cpp
         card.h
@@ -33,8 +34,6 @@ set(SOURCE_FILES
         character.h
         deck.h
         Direction.h
-        ExampleCard.h
-        ExampleCard.cpp
         element.cpp
         enemy.h
         game_board.cpp

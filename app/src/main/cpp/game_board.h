@@ -2,11 +2,10 @@
 #define GAME_BOARD_H
 
 #include <vector>
+#include "room.h"
+#include "Position.h"
 #include "Direction.h"
-#include "room.h" // Assuming Room is defined
-#include "player.h" // Assuming Player is defined
-#include "PlayerID.h" // Include PlayerID declaration
-#include "Position.h" // Include Position declaration
+#include "player.h"
 
 class GameBoard {
 public:
@@ -17,8 +16,13 @@ public:
     bool isObstacleAt(const Position& pos) const;
 
 private:
+    int width;
+    int height;
     std::vector<std::vector<Room>> rooms;
-    int width, height;
+
+    bool isValidPosition(const Position& pos) const;
+    Position getPlayerPosition(PlayerID player) const;
+    void setPlayerPosition(PlayerID player, const Position& pos);
 };
 
 #endif // GAME_BOARD_H

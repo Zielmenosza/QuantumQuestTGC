@@ -2,24 +2,25 @@
 #define CARD_TYPE_H
 
 #include <string>
+#include "card_type_specific.h" // Include base class header
 
-enum CardType {Attack,
-    Defense,
-    // ... other card types
-};
-
-class card_type_specific; // Forward declaration
-
-#include "card_type_specific.h" // Include the full definition of card_type_specific
-
+// Class for specific attack cards
 class AttackCard : public card_type_specific {
 public:
-    AttackCard(const std::string& name, const std::string& description, int cost, int attackValue);
+    // Constructor initializing the attack card with necessary attributes
+    AttackCard(const std::string& name, const std::string& description, int cost, int attackValue)
+            : card_type_specific(name, description, cost, CardType::Attack), attackValue(attackValue) {}
 
+    // Getter for attack value
     int getAttackValue() const { return attackValue; }
 
+    // Implementation of the Play method
+    void Play(GameState& gameState) override {
+        // Implement attack logic here, e.g., deal damage based on attackValue
+    }
+
 private:
-    int attackValue;
+    int attackValue;  // Attack value of the card
 };
 
 #endif // CARD_TYPE_H

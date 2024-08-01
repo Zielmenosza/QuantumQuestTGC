@@ -2,14 +2,18 @@
 #define CARD_POOL_H
 
 #include <vector>
-#include "card.h" // Include card.h
+#include <stdexcept> // Include for std::runtime_error
+#include "card.h"    // Include card.h for Card class definition
 
 class CardPool {
 public:
-    CardPool(const std::vector<Card>& initialCards);
+    // Constructor that initializes the pool with a set of cards
+    explicit CardPool(const std::vector<Card>& initialCards);
 
-    void addCard(Card card);
+    // Adds a card to the pool
+    void addCard(const Card& card);
 
+    // Retrieves a random card from the pool
     Card getRandomCard();
 
 private:

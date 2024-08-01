@@ -5,15 +5,18 @@
 
 class InputHandler {
 public:
-    InputHandler(android_app* app);
+    explicit InputHandler(android_app* app);
 
-    void handleInput(const android_app* app);
-
-    // Add methods to access input data (e.g., touch coordinates, button presses)
+    void handleInput();
+    bool isTouchEvent() const;
+    int getTouchX() const;
+    int getTouchY() const;
 
 private:
     android_app* app_;
-    // ... input state variables
+    bool touchEvent_;
+    int touchX_;
+    int touchY_;
 };
 
 #endif // INPUT_HANDLER_H

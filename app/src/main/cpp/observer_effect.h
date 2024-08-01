@@ -1,11 +1,12 @@
-#ifndef QUANTUM_QUEST_OBSERVER_EFFECT_H
-#define QUANTUM_QUEST_OBSERVER_EFFECT_H
+#ifndef OBSERVER_EFFECT_H
+#define OBSERVER_EFFECT_H
 
 #include "quantum_state.h"
 
 class ObserverEffect {
 public:
-    static void observeQubit(QuantumState& state, int qubitIndex);
+    // Function to observe a specific qubit in a quantum state.
+    void observeQubit(QuantumState& state, int qubitIndex);
 };
 
-#endif //QUANTUM_QUEST_OBSERVER_EFFECT_H
+#endif // OBSERVER_EFFECT_H

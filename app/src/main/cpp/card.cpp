@@ -1,2 +1,12 @@
-// card.cpp - This file is intentionally left empty because all 
-// member functions are defined within the Card class in card.h
+#include "card.h"
+
+// Constructor
+Card::Card(const std::string& name) : name(name) {}
+
+// Destructor
+Card::~Card() {}
+
+// Method to get the card's name
+std::string Card::getName() const {
+    return name;
+}

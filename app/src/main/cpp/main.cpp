@@ -9,6 +9,11 @@
 #include "player.h"  // Include Player class
 #include "card.h"    // Include Card class
 
+// Declare necessary Android Native App Glue functions
+void android_main(struct android_app* state);
+void handle_cmd(android_app* app, int32_t cmd);
+bool motion_event_filter_func(const GameActivityMotionEvent* motionEvent);
+
 extern "C" {
 
 /*!
@@ -16,7 +21,7 @@ extern "C" {
  * @param pApp the app the commands are coming from
  * @param cmd the command to handle
  */
-void handle_cmd(android_app *pApp, int32_t cmd) {
+void handle_cmd(android_app* pApp, int32_t cmd) {
     switch (cmd) {
         case APP_CMD_INIT_WINDOW:
             // A new window is created, associate a renderer with it. You may replace this with a
@@ -32,7 +37,7 @@ void handle_cmd(android_app *pApp, int32_t cmd) {
             // We have to check if userData is assigned just in case this comes in really quickly
             if (pApp->userData) {
                 //
-                auto *pRenderer = reinterpret_cast<Renderer *>(pApp->userData);
+                auto* pRenderer = reinterpret_cast<Renderer*>(pApp->userData);
                 pApp->userData = nullptr;
                 delete pRenderer;
             }
@@ -51,7 +56,7 @@ void handle_cmd(android_app *pApp, int32_t cmd) {
  * @return true if the event is from a pointer or joystick device,
  *         false for all other input devices.
  */
-bool motion_event_filter_func(const GameActivityMotionEvent *motionEvent) {
+bool motion_event_filter_func(const GameActivityMotionEvent* motionEvent) {
     auto sourceClass = motionEvent->source & AINPUT_SOURCE_CLASS_MASK;
     return (sourceClass == AINPUT_SOURCE_CLASS_POINTER ||
             sourceClass == AINPUT_SOURCE_CLASS_JOYSTICK);
@@ -60,7 +65,7 @@ bool motion_event_filter_func(const GameActivityMotionEvent *motionEvent) {
 /*!
  * This is the main entry point for a native activity
  */
-void android_main(struct android_app *pApp) {
+void android_main(struct android_app* pApp) {
     // Can be removed, useful to ensure your code is running
     aout << "Welcome to android_main" << std::endl;
 
@@ -91,7 +96,7 @@ void android_main(struct android_app *pApp) {
             // 0 is non-blocking.
             int timeout = 0;
             int events;
-            android_poll_source *pSource;
+            android_poll_source* pSource;
             int result = ALooper_pollOnce(timeout, nullptr, &events,
                                           reinterpret_cast<void**>(&pSource));
             switch (result) {
@@ -117,7 +122,7 @@ void android_main(struct android_app *pApp) {
         if (pApp->userData) {
             // We know that our user data is a Renderer, so reinterpret cast it. If you change your
             // user data remember to change it here
-            auto *pRenderer = reinterpret_cast<Renderer *>(pApp->userData);
+            auto* pRenderer = reinterpret_cast<Renderer*>(pApp->userData);
 
             // Process game input
             pRenderer->handleInput();

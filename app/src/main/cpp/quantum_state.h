@@ -1,21 +1,19 @@
-#ifndef QUANTUM_QUEST_QUANTUM_STATE_H
-#define QUANTUM_QUEST_QUANTUM_STATE_H
+#ifndef QUANTUM_STATE_H
+#define QUANTUM_STATE_H
 
 #include <vector>
-#include <complex>
-#include <random>
 
 class QuantumState {
 public:
     QuantumState(int numQubits);
 
-    void applyGate(const std::vector<std::vector<std::complex<double>>>& gate, int qubitIndex);
-    std::vector<std::complex<double>> getStateVector() const;
+    // Method to measure a specific qubit and return its state (0 or 1)
     int measureQubit(int qubitIndex);
 
+    // Additional methods and members for handling quantum state can be added here
+
 private:
-    std::vector<std::complex<double>> stateVector;
-    std::mt19937 generator; // Correct way to declare the random number generator
+    std::vector<int> qubits; // Example representation of qubit states
 };
 
-#endif // QUANTUM_QUEST_QUANTUM_STATE_H
+#endif // QUANTUM_STATE_H

@@ -2,20 +2,20 @@
 #define CARD_ATTACK_H
 
 #include "card.h" // Include base class header
+#include "GameState.h" // Include GameState class header for access
 
 class Card_Attack : public Card {
 public:
-    // Constructor with arguments specific to attack cards (replace with actual implementation)
+    // Constructor with arguments specific to attack cards
     Card_Attack(const std::string& name, const std::string& description, int cost);
 
-    // Placeholder implementation of Play function (replace with attack logic)
-    void Play(GameState& gameState) override {
-        // Implement attack logic here
-    }
+    // Method to play the attack card
+    void Play(GameState& gameState) override;
 
 private:
-    // Potentially useful member variables for attack cards (uncomment if needed)
-    // int attackPower;
+    std::string description; // Description of the card
+    int cost;                // Mana or resource cost to play the card
+    // int attackPower;      // Uncomment and use if attack power is needed
 };
 
 #endif  // CARD_ATTACK_H
