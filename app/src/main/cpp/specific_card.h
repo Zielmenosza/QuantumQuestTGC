@@ -1,13 +1,9 @@
-#ifndef SPECIFIC_CARD_H
-#define SPECIFIC_CARD_H
-
-#include "card.h"
+// SpecificCard.h
+#pragma once
+#include "card.h"  // Ensure correct case sensitivity
 
 class SpecificCard : public Card {
 public:
-    void Play(GameState& gameState) override {
-        // Implementation of Play for SpecificCard
-    }
+    explicit SpecificCard(const std::string &name) : Card(name) {}
+    // Additional methods and members specific to SpecificCard
 };
-
-#endif  // SPECIFIC_CARD_H=

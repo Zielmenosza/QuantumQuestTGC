@@ -3,8 +3,10 @@
 
 #include <vector>
 #include "Direction.h"
-#include "Room.h" // Assuming Room is defined
+#include "room.h" // Assuming Room is defined
 #include "player.h" // Assuming Player is defined
+#include "PlayerID.h" // Include PlayerID declaration
+#include "Position.h" // Include Position declaration
 
 class GameBoard {
 public:

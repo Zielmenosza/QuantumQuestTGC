@@ -7,19 +7,20 @@
 
 class Player {
 public:
-    // ... other members ...
+    Player(const std::string& name) : name(name), health(100) {}
 
     const std::vector<std::shared_ptr<Card>>& getHand() const {
         return hand_;
     }
 
-    void addToHand(const std::shared_ptr<Card>& card); // Add card to hand (example)
+    void addToHand(const std::shared_ptr<Card>& card);
 
     void reduceIncomingDamage(int damage);
 
 private:
+    std::string name;
     std::vector<std::shared_ptr<Card>> hand_;
-    // ... other members ...
+    int health;
 };
 
 #endif // PLAYER_H

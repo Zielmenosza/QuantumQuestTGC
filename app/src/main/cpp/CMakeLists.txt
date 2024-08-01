@@ -33,6 +33,8 @@ set(SOURCE_FILES
         character.h
         deck.h
         Direction.h
+        ExampleCard.h
+        ExampleCard.cpp
         element.cpp
         enemy.h
         game_board.cpp

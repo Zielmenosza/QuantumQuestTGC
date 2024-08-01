@@ -1,20 +1,13 @@
 #pragma once
-
 #include <string>
-#include <vector>
-#include "item.h"
-#include "enemy.h"
 
-class Room {
+class Card {
 public:
-    // ... (your existing public methods)
+    virtual ~Card() {}  // Virtual destructor to ensure proper cleanup of derived classes
 
-    std::vector<Item>& getItems();
-    std::vector<Enemy>& getEnemies();
+    // Assuming you want each card to have a name and a cost
+    virtual std::string getName() const = 0;  // Pure virtual function to get the card's name
+    virtual int getCost() const = 0;          // Pure virtual function to get the card's cost
 
-private:
-    std::string name;
-    std::vector<Item> items;
-    std::vector<Enemy> enemies;
-    // ... (other private members)
+    // Other members and virtual functions as needed
 };

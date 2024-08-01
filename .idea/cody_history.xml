@@ -211,6 +211,18 @@
               <chat>
                 <internalId value="8843a40f-447c-40b9-9980-7a87001ee672" />
               </chat>
+              <chat>
+                <internalId value="d370ffe2-abc2-4a8a-862d-6c3ed0f60beb" />
+              </chat>
+              <chat>
+                <internalId value="6aa98362-ccaa-449a-8ecf-da55951b6519" />
+              </chat>
+              <chat>
+                <internalId value="a118d17a-4889-4573-9b8c-476fdabe0779" />
+              </chat>
+              <chat>
+                <internalId value="abacf32b-2d73-4d29-9e98-694789a8afe7" />
+              </chat>
             </list>
           </chats>
         </AccountData>

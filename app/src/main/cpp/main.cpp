@@ -6,6 +6,8 @@
 
 #include "AndroidOut.h"
 #include "Renderer.h"
+#include "player.h"  // Include Player class
+#include "card.h"    // Include Card class
 
 extern "C" {
 
@@ -56,7 +58,7 @@ bool motion_event_filter_func(const GameActivityMotionEvent *motionEvent) {
 }
 
 /*!
- * This the main entry point for a native activity
+ * This is the main entry point for a native activity
  */
 void android_main(struct android_app *pApp) {
     // Can be removed, useful to ensure your code is running
@@ -69,6 +71,17 @@ void android_main(struct android_app *pApp) {
     // Note that for key inputs, this example uses the default default_key_filter()
     // implemented in android_native_app_glue.c.
     android_app_set_motion_event_filter(pApp, motion_event_filter_func);
+
+    // Create a Player object
+    Player player;
+
+    // Create new cards using shared pointers
+    std::shared_ptr<Card> card1 = std::make_shared<Card>("Ace of Spades");
+    std::shared_ptr<Card> card2 = std::make_shared<Card>("King of Hearts");
+
+    // Add cards to the player's hand
+    player.addToHand(card1);
+    player.addToHand(card2);
 
     // This sets up a typical game/event loop. It will run until the app is destroyed.
     do {
@@ -112,6 +125,16 @@ void android_main(struct android_app *pApp) {
             // Render a frame
             pRenderer->render();
         }
+
+        // Access and print the player's hand
+        const auto& hand = player.getHand();
+        for (const auto& card : hand) {
+            aout << "Player has card: " << card->getName() << std::endl;
+        }
+
+        // Reduce incoming damage (example)
+        player.reduceIncomingDamage(5);
+
     } while (!pApp->destroyRequested);
 }
 }

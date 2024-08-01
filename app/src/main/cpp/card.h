@@ -1,12 +1,16 @@
+// Card.h
 #ifndef CARD_H
 #define CARD_H
 
-#include "card_type_specific.h"
+#include <string>
 
-class Card : public card_type_specific {
+class Card {
 public:
-    Card(const std::string& name, const std::string& description, int cost, CardType type);
-    // ... other methods ...
+    Card(const std::string& name) : name(name) {}  // Add a constructor that takes a string
+    virtual ~Card() {}
+
+private:
+    std::string name;
 };
 
 #endif // CARD_H
