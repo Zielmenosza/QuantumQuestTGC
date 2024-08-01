@@ -13,29 +13,43 @@
 
 class GameBoard {
 public:
+    // Initialize the game board with rooms
     void initializeRooms();
+
+    // Move a player in the specified direction
     bool movePlayer(PlayerID player, Direction direction);
-    Room getRoomAt(Position pos) const;
-    bool isObstacleAt(Position pos) const;
+
+    // Get the room at a specific position
+    Room getRoomAt(const Position& pos) const;
+
+    // Check if there is an obstacle at a specific position
+    bool isObstacleAt(const Position& pos) const;
 
 private:
-    std::vector<std::vector<Room>> rooms;
-    std::vector<Obstacle> obstacles;
-    std::map<PlayerID, Position> playerPositions;
+    std::vector<std::vector<Room>> rooms;   // 2D grid of rooms
+    std::vector<Obstacle> obstacles;        // List of obstacles
+    std::map<PlayerID, Position> playerPositions; // Mapping of player IDs to positions
 };
 
 class QuantumQuestGame {
 public:
-    Player getCurrentPlayer() const;
+    // Get the current player
+    Player& getCurrentPlayer();
+
+    // Start a new game
     void startNewGame();
+
+    // End the current player's turn
     void endPlayerTurn();
-    // ... (other member functions you might need for your game)
+
+    // Additional functions can be declared here
 
 private:
-    GameBoard gameBoard;
-    std::vector<Player> players; // Vector of players in the game
-    int currentPlayerIndex;      // Index of the current player
-    // ... (other member variables)
+    GameBoard gameBoard;             // The game board
+    std::vector<Player> players;     // Vector of players in the game
+    int currentPlayerIndex = 0;      // Index of the current player
+
+    // Private helper functions and variables
 };
 
 #endif // QUANTUM_QUEST_GAME_H

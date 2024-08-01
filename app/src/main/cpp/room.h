@@ -1,13 +1,40 @@
 #pragma once
-#include <string>
 
-class Card {
+#include <vector>
+#include <memory>
+#include "card.h"
+#include "Obstacle.h"
+#include "player.h"
+
+class Room {
 public:
-    virtual ~Card() {}  // Virtual destructor to ensure proper cleanup of derived classes
+    Room();  // Constructor
 
-    // Assuming you want each card to have a name and a cost
-    virtual std::string getName() const = 0;  // Pure virtual function to get the card's name
-    virtual int getCost() const = 0;          // Pure virtual function to get the card's cost
+    // Add a card to the room
+    void addCard(const std::shared_ptr<Card>& card);
 
-    // Other members and virtual functions as needed
+    // Add an obstacle to the room
+    void addObstacle(const Obstacle& obstacle);
+
+    // Check if the room has an obstacle
+    bool hasObstacle() const;
+
+    // Check if a player is in the room
+    bool isPlayerPresent() const;
+
+    // Set and get the player in the room
+    void setPlayer(const std::shared_ptr<Player>& player);
+    std::shared_ptr<Player> getPlayer() const;
+
+    // Retrieve cards in the room
+    const std::vector<std::shared_ptr<Card>>& getCards() const;
+
+    // Other member functions as needed
+
+private:
+    std::vector<std::shared_ptr<Card>> cards_;   // Cards present in the room
+    std::vector<Obstacle> obstacles_;            // Obstacles present in the room
+    std::shared_ptr<Player> player_;             // Player currently in the room
 };
+
+#endif // ROOM_H

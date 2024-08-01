@@ -1,6 +1,4 @@
 // build.gradle.kts (App-level)
-import org.gradle.api.JavaVersion.VERSION_17
-import org.jetbrains.kotlin.fir.expressions.FirEmptyArgumentList.arguments
 
 plugins {
     id("com.android.application")
@@ -50,6 +48,7 @@ android {
     kotlinOptions {
         jvmTarget = "17"
     }
+
     buildFeatures {
         compose = true
     }
@@ -60,39 +59,40 @@ android {
     buildToolsVersion = "35.0.0"
     ndkVersion = "26.3.11579264"
     compileOptions {
-        targetCompatibility = VERSION_17
-        sourceCompatibility = VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+        sourceCompatibility = JavaVersion.VERSION_17
     }
 
     externalNativeBuild {
         cmake {
-            path = file("/src/main/cpp/CMakeLists.txt")
-            version = "3.22.1" // Make sure this matches your installed CMake version
+            path = file("src/main/cpp/CMakeLists.txt")
+            version = "3.22.1" // Ensure this matches your installed CMake version
         }
     }
-    dependencies {
-        implementation(libs.androidx.core.ktx)
-        implementation("androidx.compose.material3:material3:1.2.1")
-        implementation("androidx.compose.material3:material3-window-size-class:1.2.1")
-        implementation("androidx.compose.material3:material3-adaptive-navigation-suite:1.3.0-beta05")
-        implementation("com.google.android.material:material:1.12.0")
-        implementation(libs.androidx.lifecycle.runtime.ktx)
-        implementation(libs.androidx.activity.compose)
-        implementation(platform(libs.compose.bom))
-        implementation(libs.kotlin.stdlib)
-        implementation(libs.ui)
-        implementation(libs.androidx.ui.graphics)
-        implementation(libs.ui.tooling.preview)
-        implementation(libs.androidx.appcompat)
-        testImplementation(libs.junit)
-        androidTestImplementation(libs.androidx.junit)
-        androidTestImplementation(libs.androidx.espresso.core)
-        androidTestImplementation(platform(libs.compose.bom))
-        androidTestImplementation(libs.androidx.ui.test.junit4)
-        androidTestImplementation(libs.junit.junit)
-        debugImplementation(libs.androidx.ui.tooling)
-        debugImplementation(libs.androidx.ui.test.manifest)
-    }
+}
+
+dependencies {
+    implementation(libs.androidx.core.ktx)
+    implementation("androidx.compose.material3:material3:1.2.1")
+    implementation("androidx.compose.material3:material3-window-size-class:1.2.1")
+    implementation("androidx.compose.material3:material3-adaptive-navigation-suite:1.3.0-beta05")
+    implementation("com.google.android.material:material:1.12.0")
+    implementation(libs.androidx.lifecycle.runtime.ktx)
+    implementation(libs.androidx.activity.compose)
+    implementation(platform(libs.compose.bom))
+    implementation(libs.kotlin.stdlib)
+    implementation(libs.ui)
+    implementation(libs.androidx.ui.graphics)
+    implementation(libs.ui.tooling.preview)
+    implementation(libs.androidx.appcompat)
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.androidx.junit)
+    androidTestImplementation(libs.androidx.espresso.core)
+    androidTestImplementation(platform(libs.compose.bom))
+    androidTestImplementation(libs.androidx.ui.test.junit4)
+    androidTestImplementation(libs.junit.junit)
+    debugImplementation(libs.androidx.ui.tooling)
+    debugImplementation(libs.androidx.ui.test.manifest)
 }
 
 fun cppFlags(vararg flags: String) {

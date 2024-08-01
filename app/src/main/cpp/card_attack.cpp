@@ -1,14 +1,21 @@
 #include "card_attack.h"
 
-// Constructor with initialization list
+// Implement the constructor
 Card_Attack::Card_Attack(const std::string& name, const std::string& description, int cost)
-        : Card(name), description(description), cost(cost) {}
+        : name_(name), description_(description), cost_(cost) {}
 
-// Implementation of Play function
+// Implement the Play function logic here
 void Card_Attack::Play(GameState& gameState) {
-    // Implement attack logic here
-    // Example: gameState.reduceHealth(target, attackPower);
+    // Example attack logic
+    // You could manipulate the gameState object to reflect the card's effects
+}
 
-    // Example logging of the card play action
-    aout << "Playing attack card: " << getName() << " with description: " << description << std::endl;
+// Implement the getName function
+std::string Card_Attack::getName() const {
+    return name_;
+}
+
+// Implement the getCost function
+int Card_Attack::getCost() const {
+    return cost_;
 }

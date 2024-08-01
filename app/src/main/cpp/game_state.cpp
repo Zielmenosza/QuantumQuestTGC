@@ -1,53 +1,41 @@
+// game_state.cpp
 #include "game_state.h"
 
-// Constructor
-GameState::GameState() : currentPlayerIndex(0) {
-    // Initialize the game state if needed
+GameState::GameState()
+        : player1Health_(100), player2Health_(100), currentPlayer_(PlayerID::PLAYER_ONE) {
+    // Initialize other game state variables as needed
 }
 
-// Retrieve the health of a specified player
-int GameState::getPlayerHealth(int playerNumber) const {
-    if (playerNumber >= 0 && playerNumber < players.size()) {
-        return players[playerNumber]->getHealth();
-    }
-    return -1; // or throw an exception
-}
-
-// Set the health for a specified player
-void GameState::setPlayerHealth(int playerNumber, int newHealth) {
-    if (playerNumber >= 0 && playerNumber < players.size()) {
-        players[playerNumber]->setHealth(newHealth);
+int GameState::getPlayerHealth(PlayerID playerID) const {
+    switch (playerID) {
+        case PlayerID::PLAYER_ONE:
+            return player1Health_;
+        case PlayerID::PLAYER_TWO:
+            return player2Health_;
+            // Add more cases if needed
+        default:
+            return 0; // Default case for unknown players
     }
 }
 
-// Get the current player's number (index)
-int GameState::getCurrentPlayer() const {
-    return currentPlayerIndex;
-}
-
-// Set the current player by index
-void GameState::setCurrentPlayer(int newPlayerIndex) {
-    if (newPlayerIndex >= 0 && newPlayerIndex < players.size()) {
-        currentPlayerIndex = newPlayerIndex;
+void GameState::setPlayerHealth(PlayerID playerID, int newHealth) {
+    switch (playerID) {
+        case PlayerID::PLAYER_ONE:
+            player1Health_ = newHealth;
+            break;
+        case PlayerID::PLAYER_TWO:
+            player2Health_ = newHealth;
+            break;
+            // Add more cases if needed
+        default:
+            break;
     }
 }
 
-// Get a pointer to the active player
-Player* GameState::getActivePlayer() const {
-    return players[currentPlayerIndex].get();
+PlayerID GameState::getCurrentPlayer() const {
+    return currentPlayer_;
 }
 
-// Advance to the next player's turn
-void GameState::nextTurn() {
-    currentPlayerIndex = (currentPlayerIndex + 1) % players.size();
-}
-
-// Add a new player to the game
-void GameState::addPlayer(std::unique_ptr<Player> player) {
-    players.push_back(std::move(player));
-}
-
-// Get all players
-const std::vector<std::unique_ptr<Player>>& GameState::getPlayers() const {
-    return players;
+void GameState::setCurrentPlayer(PlayerID playerID) {
+    currentPlayer_ = playerID;
 }

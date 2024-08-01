@@ -5,7 +5,9 @@
 enum class PlayerID {
     PLAYER_ONE,
     PLAYER_TWO
-    // ... add more players as needed
+    // Add more players as needed, for example:
+    // PLAYER_THREE,
+    // PLAYER_FOUR
 };
 
 #endif // PLAYER_ID_H
