@@ -1,25 +1,43 @@
 #include "card_pool.h"
-#include <random> // Include random library for randomness
+#include <random>  // For std::mt19937 and std::uniform_int_distribution
 
-// Constructor initializes the card pool with a vector of cards
-CardPool::CardPool(const std::vector<Card>& initialCards) : cards(initialCards) {}
+CardPool::CardPool() {
+    // Initialize the random number generator with a random seed
+    std::random_device rd;
+    generator = std::mt19937(rd());
+}
 
-// Method to add a card to the pool
-void CardPool::addCard(const Card& card) {
+// Draw a random card from the pool
+std::shared_ptr<Card> CardPool::drawRandomCard() {
+    if (cards.empty()) {
+        return nullptr;  // Handle the empty pool case
+    }
+
+    // Use uniform_int_distribution for better random distribution
+    std::uniform_int_distribution<size_t> distribution(0, cards.size() - 1);
+    size_t randomIndex = distribution(generator);
+    return cards[randomIndex];
+}
+
+// Add a card to the pool
+void CardPool::addCard(const std::shared_ptr<Card>& card) {
     cards.push_back(card);
 }
 
-// Method to retrieve a random card from the pool
-Card CardPool::getRandomCard() {
-    if (cards.empty()) {
-        throw std::runtime_error("Card pool is empty. Cannot get a random card.");
+// Remove a card from the pool
+void CardPool::removeCard(const std::shared_ptr<Card>& card) {
+    auto it = std::remove(cards.begin(), cards.end(), card);
+    if (it != cards.end()) {
+        cards.erase(it, cards.end());
     }
+}
 
-    // Random number generator for selecting a random card
-    std::random_device rd;  // Obtain a random number from hardware
-    std::mt19937 gen(rd()); // Seed the generator
-    std::uniform_int_distribution<> distrib(0, cards.size() - 1); // Define the range
+// Check if the card pool is empty
+bool CardPool::isEmpty() const {
+    return cards.empty();
+}
 
-    int randomIndex = distrib(gen);
-    return cards[randomIndex];
+// Get the number of cards in the pool
+size_t CardPool::size() const {
+    return cards.size();
 }

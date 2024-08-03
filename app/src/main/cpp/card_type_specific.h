@@ -3,32 +3,35 @@
 
 #include <string>
 
-// Enumeration representing different card types
+// Enum to define different types of cards
 enum class CardType {
     Attack,
     Defense,
-    // ... other card types
+    // Add more card types as needed
 };
 
-// Abstract base class for specific card types
+// Base class for specific card types
 class card_type_specific {
 public:
-    // Constructor initializing the common attributes for all card types
-    card_type_specific(const std::string& name, const std::string& description, int cost, CardType type);
+    // Constructor to initialize card properties
+    card_type_specific(std::string name, std::string description, int cost, CardType type)
+            : name(std::move(name)), description(std::move(description)), cost(cost), type(type) {}
 
-    // Getters for the card attributes
-    const std::string& getName() const { return name; }
-    const std::string& getDescription() const { return description; }
-    int getCost() const { return cost; }
-    CardType getType() const { return type; }
-
-    // Pure virtual function to be implemented by derived classes
-    virtual void Play(class GameState& gameState) = 0;
-
-    // Virtual destructor to ensure proper cleanup of derived classes
+    // Virtual destructor to ensure proper cleanup in derived classes
     virtual ~card_type_specific() = default;
 
-private:
+    virtual // Getters for card properties
+    [[nodiscard]] const std::string& getName() const { return name; }
+
+    virtual [[nodiscard]] const std::string& getDescription() const { return description; }
+
+    virtual [[nodiscard]] int getCost() const { return cost; }
+    [[nodiscard]] CardType getType() const { return type; }
+
+    // Pure virtual method for card action
+    virtual void Play(class GameState& gameState) = 0;
+
+protected:
     std::string name;
     std::string description;
     int cost;

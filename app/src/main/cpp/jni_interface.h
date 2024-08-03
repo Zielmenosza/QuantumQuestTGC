@@ -1,6 +1,4 @@
-//
-// Created by Ziel on 2024/07/12.
-//
+// jni_interface.h
 
 #ifndef QUANTUM_QUEST_JNI_INTERFACE_H
 #define QUANTUM_QUEST_JNI_INTERFACE_H

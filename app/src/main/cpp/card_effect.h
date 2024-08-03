@@ -1,26 +1,28 @@
-#include "card_pool.h"
-#include "card.h" // Include the Card class definition
-#include <random>
+#ifndef CARD_EFFECT_H
+#define CARD_EFFECT_H
 
-// Constructor for CardPool, initializes with a given set of cards
-CardPool::CardPool(const std::vector<Card>& initialCards) : cards(initialCards) {}
+#include <string>
+#include "card.h"  // Assuming card.h defines the Card base class
+#include "player.h"  // Assuming player.h defines the Player class
 
-// Adds a card to the pool
-void CardPool::addCard(const Card& card) {
-    cards.push_back(card);
-}
+class CardEffect : public Card {
+public:
+    // Constructor for CardEffect, inheriting from Card
+    CardEffect(const std::string& name, const std::string& description, int cost);
 
-// Returns a random card from the pool
-Card CardPool::getRandomCard() {
-    if (cards.empty()) {
-        throw std::runtime_error("Card pool is empty. Cannot get a random card.");
-    }
+    // Getter methods
+    [[nodiscard]] std::string getName() const override;
+    [[nodiscard]] int getCost() const override;
+    [[nodiscard]] std::string getDescription() const;
 
-    // Random number generator for selecting a random card
-    std::random_device rd;  // Obtain a random number from hardware
-    std::mt19937 gen(rd()); // Seed the generator
-    std::uniform_int_distribution<> distrib(0, cards.size() - 1); // Define the range
+    // Method to play the card, affecting the game state
+    void Play(GameState& gameState) override;
 
-    int randomIndex = distrib(gen);
-    return cards[randomIndex];
-}
+    // Method to apply the card effect to a player
+    void applyEffect(Player& player);
+
+private:
+    std::string description;
+};
+
+#endif // CARD_EFFECT_H

@@ -1,26 +1,18 @@
-// SpecificCard.h
 #pragma once
+
 #include "card.h"  // Ensure correct case sensitivity
 #include <string>
 
+// The SpecificCard class is a concrete implementation of the Card class
 class SpecificCard : public Card {
 public:
     // Constructor with name, description, and cost
-    SpecificCard(const std::string &name, const std::string &description, int cost)
-            : name_(name), description_(description), cost_(cost) {}
+    SpecificCard(const std::string &name, const std::string &description, int cost);
 
     // Implementing pure virtual functions from Card
-    std::string getName() const override {
-        return name_;
-    }
-
-    int getCost() const override {
-        return cost_;
-    }
-
-    std::string getDescription() const {
-        return description_;
-    }
+    std::string getName() const override;
+    int getCost() const override;
+    std::string getDescription() const;
 
     // Additional methods and members specific to SpecificCard
     // You can add more functions related to the specific behavior of this card

@@ -1,21 +1,46 @@
 #include "card_attack.h"
+#include <iostream>
 
-// Implement the constructor
-Card_Attack::Card_Attack(const std::string& name, const std::string& description, int cost)
-        : name_(name), description_(description), cost_(cost) {}
-
-// Implement the Play function logic here
-void Card_Attack::Play(GameState& gameState) {
-    // Example attack logic
-    // You could manipulate the gameState object to reflect the card's effects
+// Constructor definition
+CardAttack::CardAttack(
+        const std::string& name,
+        const std::string& description,
+        int cost,
+        int attackValue
+) : card_type_specific(name, description, cost, CardType::Attack), // Initialize base class
+    attackValue_(attackValue) {
+    // Additional initialization if needed
 }
 
-// Implement the getName function
-std::string Card_Attack::getName() const {
-    return name_;
+// Implementation of the Play method
+void CardAttack::Play(GameState& gameState) {
+    // Implement logic to modify the game state
+    std::cout << "Playing attack card: " << getName() << " with attack value: " << getAttackValue() << std::endl;
+
+    // Example: Apply damage to a target in the game state
+    // Assuming gameState has a method to apply damage to a player or enemy
+    // gameState.applyDamage(targetID, attackValue_);
+
+    // Example output
+    std::cout << getDescription() << std::endl;
 }
 
-// Implement the getCost function
-int Card_Attack::getCost() const {
-    return cost_;
+// Getter for card name
+std::string CardAttack::getName() const {
+    return card_type_specific::getName();
+}
+
+// Getter for card cost
+int CardAttack::getCost() const {
+    return card_type_specific::getCost();
+}
+
+// Getter for attack value
+int CardAttack::getAttackValue() const {
+    return attackValue_;
+}
+
+// Getter for description
+std::string CardAttack::getDescription() const {
+    return card_type_specific::getDescription();
 }

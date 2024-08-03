@@ -1,4 +1,8 @@
 #include <android/imagedecoder.h>
+#include <android/asset_manager.h>
+#include <android/bitmap.h>
+#include <cstdlib>  // For malloc and free
+#include <cstring>  // For memcpy
 #include "TextureAsset.h"
 #include "AndroidOut.h"
 #include "Utility.h"

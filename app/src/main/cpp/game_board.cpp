@@ -1,19 +1,22 @@
+// game_board.cpp
 #include "game_board.h"
+#include "player_id.h"
+#include "player.h"
 #include <iostream>
 
-// Constructor
+// Constructor to initialize the game board with specified dimensions
 GameBoard::GameBoard(int width, int height) : width(width), height(height) {
     rooms.resize(width, std::vector<Room>(height));
-    // Initialize rooms and obstacles here
+    // Initialize rooms and any obstacles here
     for (int x = 0; x < width; ++x) {
         for (int y = 0; y < height; ++y) {
-            // Initialize each room, add obstacles, etc.
-            rooms[x][y] = Room();  // Replace with appropriate initialization
+            // Initialize each room, potentially add obstacles, etc.
+            rooms[x][y] = Room();  // Replace with appropriate room initialization if needed
         }
     }
 }
 
-// Move player in the given direction
+// Move a player in the given direction
 bool GameBoard::movePlayer(PlayerID player, Direction direction) {
     Position currentPos = getPlayerPosition(player);
     Position newPos = currentPos;
@@ -85,9 +88,7 @@ bool GameBoard::isValidPosition(const Position& pos) const {
 Position GameBoard::getPlayerPosition(PlayerID player) const {
     // Implement logic to find the player's position
     // This could involve iterating through rooms to find where the player is
-    // For this example, assume a simple map is used for demonstration
-    Position playerPos; // This should be set to the player's actual position
-    // Example logic to find player position
+    Position playerPos; // Initialize to the player's actual position
     for (int x = 0; x < width; ++x) {
         for (int y = 0; y < height; ++y) {
             if (rooms[x][y].hasPlayer(player)) {  // Assuming Room has hasPlayer method

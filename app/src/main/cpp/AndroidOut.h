@@ -3,33 +3,38 @@
 
 #include <android/log.h>
 #include <sstream>
-#include <string> // Ensure all necessary headers are included.
-#include <android_native_app_glue.h>
+#include <string> // Include necessary headers
 
-extern std::ostream aout;  // Define this in one of your cpp files.
+// Log levels to categorize messages
+enum LogLevel {
+    DEBUG,
+    INFO,
+    WARNING,
+    ERROR
+};
+
+// External declaration of the Android output stream
+extern std::ostream aout;
 
 /*!
- * Use this class to create an output stream that writes to logcat. By default, a global one is
- * defined as @a aout
+ * AndroidOut class creates an output stream that writes to logcat.
+ * By default, a global instance is defined as @a aout.
  */
 class AndroidOut : public std::stringbuf {
 public:
-    AndroidOut(const char* logTag = "DefaultTag") : logTag_(logTag) {} // Constructor to initialize logTag_
-
-    int overflow(int c) override {
-        sputc(static_cast<char>(c)); // Example implementation
-        return c;
-    }
+    /*!
+     * Creates a new output stream for logcat
+     * @param kLogTag the log tag to output
+     * @param level the log level
+     */
+    inline explicit AndroidOut(const char* kLogTag, LogLevel level = DEBUG);
 
 protected:
-    int sync() override {
-        __android_log_print(ANDROID_LOG_DEBUG, logTag_, "%s", str().c_str());
-        str("");
-        return 0;
-    }
+    int sync() override; // Override sync method to flush the buffer
 
 private:
     const char* logTag_;
+    LogLevel level_;
 };
 
-#endif // ANDROIDGLINVESTIGATIONS_ANDROIDOUT_H
+#endif //ANDROIDGLINVESTIGATIONS_ANDROIDOUT_H

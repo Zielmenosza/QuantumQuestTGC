@@ -1,55 +1,33 @@
 #ifndef QUANTUM_QUEST_GAME_H
 #define QUANTUM_QUEST_GAME_H
 
-#include <vector>
+#include "Player.h"
 #include <map>
-#include "room.h"
-#include "Obstacle.h"
-#include "player.h"
-#include "card.h"
-#include "PlayerID.h"
-#include "Direction.h"
-#include "Position.h"
+#include <vector>
+#include <memory> // For shared_ptr
 
-class GameBoard {
-public:
-    // Initialize the game board with rooms
-    void initializeRooms();
-
-    // Move a player in the specified direction
-    bool movePlayer(PlayerID player, Direction direction);
-
-    // Get the room at a specific position
-    Room getRoomAt(const Position& pos) const;
-
-    // Check if there is an obstacle at a specific position
-    bool isObstacleAt(const Position& pos) const;
-
-private:
-    std::vector<std::vector<Room>> rooms;   // 2D grid of rooms
-    std::vector<Obstacle> obstacles;        // List of obstacles
-    std::map<PlayerID, Position> playerPositions; // Mapping of player IDs to positions
-};
+using PlayerID = int; // Define PlayerID as an alias for int, or use a more specific type if needed
 
 class QuantumQuestGame {
 public:
-    // Get the current player
-    Player& getCurrentPlayer();
+    // Constructor to initialize the game
+    QuantumQuestGame();
 
-    // Start a new game
+    // Starts a new game by setting up players and the game board
     void startNewGame();
 
-    // End the current player's turn
+    // Gets the current player based on currentPlayerID
+    Player& getCurrentPlayer();
+
+    // Ends the current player's turn and moves to the next player
     void endPlayerTurn();
 
-    // Additional functions can be declared here
-
 private:
-    GameBoard gameBoard;             // The game board
-    std::vector<Player> players;     // Vector of players in the game
-    int currentPlayerIndex = 0;      // Index of the current player
+    std::map<PlayerID, Player> players; // Map to hold players associated with PlayerID
+    PlayerID currentPlayerID; // ID of the current player
+    std::vector<PlayerID> playerOrder; // Order of player IDs for turn rotation
 
-    // Private helper functions and variables
+    void initializePlayers(); // Initialize players with PlayerID and add to the game
 };
 
 #endif // QUANTUM_QUEST_GAME_H

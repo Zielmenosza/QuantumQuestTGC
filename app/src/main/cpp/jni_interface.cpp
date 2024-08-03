@@ -1,3 +1,4 @@
+// jni_interface.cpp
 #include <jni.h>
 #include <string>
 #include <vector>
@@ -14,6 +15,7 @@ Java_com_example_quantumquest_MainActivity_getCardNames(JNIEnv* env, jobject /* 
     jclass stringClass = env->FindClass("java/lang/String");
     if (stringClass == nullptr) {
         // Handle the error
+        env->ExceptionClear();  // Clear exception to avoid crashing the JVM
         return nullptr;
     }
 
@@ -21,6 +23,7 @@ Java_com_example_quantumquest_MainActivity_getCardNames(JNIEnv* env, jobject /* 
     jobjectArray cardNames = env->NewObjectArray(len, stringClass, nullptr);
     if (cardNames == nullptr) {
         // Handle memory allocation failure
+        env->ExceptionClear();  // Clear exception to avoid crashing the JVM
         return nullptr;
     }
 
@@ -28,6 +31,7 @@ Java_com_example_quantumquest_MainActivity_getCardNames(JNIEnv* env, jobject /* 
     jlong* handles = env->GetLongArrayElements(cardHandles, nullptr);
     if (handles == nullptr) {
         // Handle memory access failure
+        env->ExceptionClear();  // Clear exception to avoid crashing the JVM
         return nullptr;
     }
 
@@ -43,6 +47,7 @@ Java_com_example_quantumquest_MainActivity_getCardNames(JNIEnv* env, jobject /* 
         if (name == nullptr) {
             // Handle string creation failure
             env->ReleaseLongArrayElements(cardHandles, handles, 0);
+            env->ExceptionClear();  // Clear exception to avoid crashing the JVM
             return nullptr;
         }
 
@@ -66,6 +71,7 @@ Java_com_example_quantumquest_MainActivity_getCardCosts(JNIEnv* env, jobject /* 
     jintArray cardCosts = env->NewIntArray(len);
     if (cardCosts == nullptr) {
         // Handle memory allocation failure
+        env->ExceptionClear();  // Clear exception to avoid crashing the JVM
         return nullptr;
     }
 
@@ -73,6 +79,7 @@ Java_com_example_quantumquest_MainActivity_getCardCosts(JNIEnv* env, jobject /* 
     jlong* handles = env->GetLongArrayElements(cardHandles, nullptr);
     if (handles == nullptr) {
         // Handle memory access failure
+        env->ExceptionClear();  // Clear exception to avoid crashing the JVM
         return nullptr;
     }
 

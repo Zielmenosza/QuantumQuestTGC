@@ -2,34 +2,41 @@
 #include "player.h"
 #include "specific_card.h" // Include your derived card classes
 #include <iostream> // For outputting debug information
+#include <stdexcept> // For exception handling
 
 // Main function to run a test game
 int main() {
-    // Create an instance of the game
-    QuantumQuestGame game;
+    try {
+        // Create an instance of the game
+        QuantumQuestGame game;
 
-    // Start a new game
-    game.startNewGame();
+        // Start a new game
+        game.startNewGame();
 
-    // Example of adding cards to player's hand
-    std::shared_ptr<Card> card1 = std::make_shared<SpecificCard>("Sword of Power");
-    game.getCurrentPlayer().addToHand(card1);
+        // Example of adding cards to player's hand
+        std::shared_ptr<Card> card1 = std::make_shared<SpecificCard>("Sword of Power", "A powerful sword", 3);
+        game.getCurrentPlayer().addToHand(card1);
 
-    // Print player's hand to verify the card addition
-    const auto& hand = game.getCurrentPlayer().getHand();
-    for (const auto& card : hand) {
-        std::cout << "Player has card: " << card->getName() << std::endl;
-    }
+        // Print player's hand to verify the card addition
+        const auto& hand = game.getCurrentPlayer().getHand();
+        for (const auto& card : hand) {
+            std::cout << "Player has card: " << card->getName() << std::endl;
+        }
 
-    // Simulate a game loop
-    for (int turn = 0; turn < 5; ++turn) { // Example: run 5 turns
-        std::cout << "Turn: " << turn + 1 << std::endl;
+        // Simulate a game loop
+        for (int turn = 0; turn < 5; ++turn) { // Example: run 5 turns
+            std::cout << "Turn: " << turn + 1 << std::endl;
 
-        // Perform actions for the current player
-        game.getCurrentPlayer().takeTurn(); // Implement takeTurn in Player class
+            // Perform actions for the current player
+            game.getCurrentPlayer().takeTurn(); // Implement takeTurn in Player class
 
-        // End the current player's turn
-        game.endPlayerTurn();
+            // End the current player's turn
+            game.endPlayerTurn();
+        }
+
+    } catch (const std::exception& e) {
+        std::cerr << "An error occurred: " << e.what() << std::endl;
+        return 1;
     }
 
     return 0;

@@ -1,5 +1,5 @@
+// input_handler.cpp
 #include "input_handler.h"
-#include "AndroidOut.h"
 
 InputHandler::InputHandler(android_app* app)
         : app_(app), touchEvent_(false), touchX_(0), touchY_(0) {}
@@ -26,8 +26,8 @@ void InputHandler::handleInput() {
                 int32_t handled = 0;
                 if (AInputEvent_getType(event) == AINPUT_EVENT_TYPE_MOTION) {
                     touchEvent_ = true;
-                    touchX_ = AMotionEvent_getX(event, 0);
-                    touchY_ = AMotionEvent_getY(event, 0);
+                    touchX_ = static_cast<int>(AMotionEvent_getX(event, 0));
+                    touchY_ = static_cast<int>(AMotionEvent_getY(event, 0));
                     handled = 1;
                 }
 

@@ -1,3 +1,4 @@
+// random_generator.h
 #ifndef QUANTUM_QUEST_RANDOM_GENERATOR_H
 #define QUANTUM_QUEST_RANDOM_GENERATOR_H
 

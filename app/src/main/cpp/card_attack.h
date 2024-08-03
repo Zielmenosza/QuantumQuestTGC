@@ -1,24 +1,33 @@
 #ifndef CARD_ATTACK_H
 #define CARD_ATTACK_H
 
-#include "card.h"        // Include base class header
-#include "game_state.h"  // Include GameState class header
+#include "card_type_specific.h" // Assuming there's a base class for specific card types
+#include "game_state.h"  // Assuming GameState is defined here
+#include <string>
 
-class Card_Attack : public Card {
+// Inherit from the appropriate base card class if there's a hierarchy
+class CardAttack : public CardTypeSpecific {
 public:
-    // Constructor declaration
-    Card_Attack(const std::string& name, const std::string& description, int cost);
+    // Constructor
+    CardAttack(const std::string& name, const std::string& description, int cost, int attackValue);
 
-    // Override the Play function from the Card class
+    // Method to play the card
     void Play(GameState& gameState) override;
 
-    std::string getName() const override;
-    int getCost() const override;
+    // Getter for card name
+    [[nodiscard]] const std::string& getName() const override;
+
+    // Getter for card cost
+    [[nodiscard]] int getCost() const override;
+
+    // Getter for attack value
+    [[nodiscard]] int getAttackValue() const;
+
+    // Getter for description
+    [[nodiscard]] std::string getDescription() const;
 
 private:
-    std::string name_;
-    std::string description_;
-    int cost_;
+    int attackValue_;  // Attack value specific to this card
 };
 
-#endif  // CARD_ATTACK_H
+#endif // CARD_ATTACK_H

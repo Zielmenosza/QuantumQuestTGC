@@ -1,3 +1,4 @@
+// main.cpp
 #define APP_CMD_INIT_WINDOW
 #define APP_CMD_TERM_WINDOW
 
@@ -78,11 +79,11 @@ void android_main(struct android_app* pApp) {
     android_app_set_motion_event_filter(pApp, motion_event_filter_func);
 
     // Create a Player object
-    Player player;
+    Player player("Player1", 100, 10);  // Example player with name, maxHealth, and shield
 
     // Create new cards using shared pointers
-    std::shared_ptr<Card> card1 = std::make_shared<Card>("Ace of Spades");
-    std::shared_ptr<Card> card2 = std::make_shared<Card>("King of Hearts");
+    std::shared_ptr<Card> card1 = std::make_shared<SpecificCard>("Ace of Spades", "Powerful card", 5);
+    std::shared_ptr<Card> card2 = std::make_shared<SpecificCard>("King of Hearts", "Strong card", 3);
 
     // Add cards to the player's hand
     player.addToHand(card1);
@@ -142,4 +143,5 @@ void android_main(struct android_app* pApp) {
 
     } while (!pApp->destroyRequested);
 }
-}
+
+} // extern "C"

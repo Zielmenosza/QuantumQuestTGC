@@ -20,6 +20,7 @@ public:
     void resumeBattle();
     void endBattle();
 
+    // Changed to non-static to access the current state of the instance
     BattleState getState() const;
 
 private:

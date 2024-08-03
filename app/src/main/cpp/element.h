@@ -1,27 +1,15 @@
-//
-// Created by Ziel on 2024/08/01.
-//
+#ifndef ELEMENT_H
+#define ELEMENT_H
 
-#ifndef QUANTUMQUEST_ELEMENT_H
-#define QUANTUMQUEST_ELEMENT_H
+#include <string>  // Include string for std::string
+#include <iostream> // Include iostream for std::cout
 
-#endif //QUANTUMQUEST_ELEMENT_H
-a//
-// Created by Ziel on 2024/07/12.
-//
-
-#ifndef QUANTUM_QUEST_ELEMENT_H
-#define QUANTUM_QUEST_ELEMENT_H
-
-#include <string>
-#include <iostream>
-
+// Define an enumeration for ElementType
 enum class ElementType {
     Fire,
     Water,
     Earth,
-    Air,
-    // Add more element types as needed
+    Air
 };
 
 class Element {
@@ -29,16 +17,17 @@ public:
     // Constructor
     Element(const std::string& name, ElementType type);
 
-    // Accessor methods
+    // Getter functions
     const std::string& getName() const;
     ElementType getType() const;
 
-    // Methods to interact with other elements
+    // Function for interaction
     void interactWith(const Element& other) const;
 
 private:
+    // Member variables
     std::string name;
     ElementType type;
 };
 
-#endif // QUANTUM_QUEST_ELEMENT_H
+#endif // ELEMENT_H

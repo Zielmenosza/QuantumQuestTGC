@@ -1,6 +1,8 @@
+// Utility.cpp
 #include "Utility.h"
 #include "AndroidOut.h"
 #include <GLES3/gl3.h>
+#include <algorithm>  // For std::fill_n
 
 #define CHECK_ERROR(e) case e: aout << "GL Error: "#e << std::endl; break;
 
@@ -25,7 +27,7 @@ bool Utility::checkAndLogGlError(bool alwaysLog) {
     }
 }
 
-float *Utility::buildOrthographicMatrix(float *outMatrix, float halfHeight, float aspect, float near, float far) {
+float* Utility::buildOrthographicMatrix(float* outMatrix, float halfHeight, float aspect, float near, float far) {
     float halfWidth = halfHeight * aspect;
     // Zero the matrix here (initialize all elements to 0)
     std::fill_n(outMatrix, 16, 0.0f); // Ensure matrix is initially zeroed
@@ -39,7 +41,7 @@ float *Utility::buildOrthographicMatrix(float *outMatrix, float halfHeight, floa
     return outMatrix;
 }
 
-float *Utility::buildIdentityMatrix(float *outMatrix) {
+float* Utility::buildIdentityMatrix(float* outMatrix) {
     std::fill_n(outMatrix, 16, 0.0f); // Zero the matrix
     outMatrix[0] = 1.f;
     outMatrix[5] = 1.f;

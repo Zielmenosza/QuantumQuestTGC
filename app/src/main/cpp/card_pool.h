@@ -1,23 +1,28 @@
-#ifndef CARD_POOL_H
-#define CARD_POOL_H
+#pragma once
 
 #include <vector>
-#include <stdexcept> // Include for std::runtime_error
-#include "card.h"    // Include card.h for Card class definition
+#include <memory>
+#include <random>  // Include for random number generation
+#include "card.h"
 
 class CardPool {
 public:
-    // Constructor that initializes the pool with a set of cards
-    explicit CardPool(const std::vector<Card>& initialCards);
+    CardPool();  // Constructor declaration
+    std::shared_ptr<Card> drawRandomCard();  // Function to draw a random card
 
-    // Adds a card to the pool
-    void addCard(const Card& card);
+    // Function to add a card to the pool
+    void addCard(const std::shared_ptr<Card>& card);
 
-    // Retrieves a random card from the pool
-    Card getRandomCard();
+    // Function to remove a card from the pool
+    void removeCard(const std::shared_ptr<Card>& card);
+
+    // Function to check if the pool is empty
+    bool isEmpty() const;
+
+    // Function to get the number of cards in the pool
+    size_t size() const;
 
 private:
-    std::vector<Card> cards;
+    std::vector<std::shared_ptr<Card>> cards;  // Vector to store cards
+    std::mt19937 generator;  // Random number generator
 };
-
-#endif // CARD_POOL_H

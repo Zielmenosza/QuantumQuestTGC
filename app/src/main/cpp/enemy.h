@@ -1,25 +1,13 @@
 #ifndef ENEMY_H
 #define ENEMY_H
 
-#include <string>
-#include "character.h" // Assuming Character is a base class for game entities
+#include "character.h"
 
-class Enemy : public Character {  // Inherit from Character if applicable
+class Enemy : public Character {
 public:
-    // Constructor with default parameter values for attributes
-    Enemy(const std::string& name, int health = 100, int attackPower = 10, int defense = 5);
-
-    // Destructor
-    virtual ~Enemy();
-
-    // Methods
-    void attack(Character& target);  // Attack a target character
-    void takeDamage(int damage);     // Take damage from an attack
-    void displayStatus() const;      // Display current status
-
-private:
-    int attackPower;  // Attack power of the enemy
-    int defense;      // Defense value
+    void attack(Character& target); // Attacks target character
+    void takeDamage(int amount) override;
+    std::string getName() const override;
 };
 
 #endif // ENEMY_H

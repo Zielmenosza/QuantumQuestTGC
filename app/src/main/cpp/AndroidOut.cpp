@@ -1,59 +1,29 @@
 #include "AndroidOut.h"
-#include <android/log.h>
-#include <sstream>
 
-enum LogLevel {
-    DEBUG,
-    INFO,
-    WARNING,
-    ERROR
-};
+// Initialize the global Android output stream with a default log tag
+std::ostream aout(new AndroidOut("AndroidOut"));
 
-/*!
- * Use this to log strings out to logcat. Note that you should use std::endl to commit the line
- *
- * ex:
- *  out << "Hello World" << std::endl;
- */
-extern std::ostream aout;
+// Constructor implementation
+AndroidOut::AndroidOut(const char* kLogTag, LogLevel level)
+        : logTag_(kLogTag), level_(level) {}
 
-/*!
- * Use this class to create an output stream that writes to logcat. By default, a global one is
- * defined as @a aout
- */
-class AndroidOut : public std::stringbuf {
-public:
-    /*!
-     * Creates a new output stream for logcat
-     * @param kLogTag the log tag to output
-     * @param level the log level
-     */
-    inline AndroidOut(const char* kLogTag, LogLevel level = DEBUG) : logTag_(kLogTag), level_(level) {}
-
-protected:
-    virtual int sync() override {
-        int androidLogLevel = ANDROID_LOG_DEBUG;
-        switch (level_) {
-            case INFO:
-                androidLogLevel = ANDROID_LOG_INFO;
-                break;
-            case WARNING:
-                androidLogLevel = ANDROID_LOG_WARN;
-                break;
-            case ERROR:
-                androidLogLevel = ANDROID_LOG_ERROR;
-                break;
-            default:
-                break;
-        }
-        __android_log_print(androidLogLevel, logTag_, "%s", str().c_str());
-        str("");
-        return 0;
+// Override the sync method to send the buffer content to Android log
+int AndroidOut::sync() {
+    int androidLogLevel = ANDROID_LOG_DEBUG;
+    switch (level_) {
+        case INFO:
+            androidLogLevel = ANDROID_LOG_INFO;
+            break;
+        case WARNING:
+            androidLogLevel = ANDROID_LOG_WARN;
+            break;
+        case ERROR:
+            androidLogLevel = ANDROID_LOG_ERROR;
+            break;
+        default:
+            break;
     }
-
-private:
-    const char* logTag_;
-    LogLevel level_;
-};
-
-#endif //ANDROIDGLINVESTIGATIONS_ANDROIDOUT_H
+    __android_log_print(androidLogLevel, logTag_, "%s", str().c_str());
+    str(""); // Clear the buffer after logging
+    return 0;
+}

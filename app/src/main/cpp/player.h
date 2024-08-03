@@ -1,34 +1,18 @@
 #ifndef PLAYER_H
 #define PLAYER_H
 
-#include <string>
-#include <vector>
-#include <memory>
-#include "card.h" // Include Card class header
+#include "character.h"  // Ensure you include the base class header
 
-class Player {
+class Player : public Character {
 public:
-    Player(const std::string& name, int maxHealth, int shield);
+    Player(const std::string& name, int health, int defense);
 
-    // Add a card to the player's hand
-    void addToHand(const std::shared_ptr<Card>& card);
-
-    // Reduce incoming damage
-    void reduceIncomingDamage(int damage);
-
-    // Get the player's current health
-    int getHealth() const;
-
-    // Get the player's hand
-    const std::vector<std::shared_ptr<Card>>& getHand() const;
+    int getHealth() const override;  // Correctly marked as override
+    void heal(int amount) override;  // Correctly marked as override
 
 private:
-    std::string name_; // Player's name
-    int max_health_;   // Maximum health
-    int current_health_; // Current health
-    int shield_;       // Shield value to reduce damage
-
-    std::vector<std::shared_ptr<Card>> hand_; // Player's hand of cards
+    std::string name; // Player's name
+    // Remove the redundant health member variable here
 };
 
 #endif // PLAYER_H

@@ -1,6 +1,5 @@
-//
-// Created by Ziel on 2024/07/28.
-//
-
 #include "card_type_specific.h"
-#include "card.h"
+#include "game_state.h"
+
+// This file may not need any implementation unless you have specific shared logic
+// for all card types in the base class. Any base functionality could be added here.

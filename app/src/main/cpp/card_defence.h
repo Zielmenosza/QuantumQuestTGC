@@ -1,21 +1,24 @@
 #ifndef CARD_DEFENSE_H
 #define CARD_DEFENSE_H
 
+#include "card.h"
 #include <string>
-#include "card.h" // Include the Card class header
 
-class Card_Defense : public Card {
+class CardDefense : public Card {
 public:
-    // Constructor with arguments specific to defense cards
-    Card_Defense(const std::string& name, const std::string& description, int cost);
+    // Constructor for CardDefense, initializing with name, description, and cost
+    CardDefense(const std::string& name, const std::string& description, int cost);
 
-    // Method to play the defense card
+    // Override the pure virtual method from the base class to play the card
     void Play(GameState& gameState) override;
 
+    // Getter methods
+    [[nodiscard]] std::string getName() const override;
+    [[nodiscard]] int getCost() const override;
+    [[nodiscard]] std::string getDescription() const;
+
 private:
-    std::string description; // Description of the card
-    int cost;                // Mana or resource cost to play the card
-    // int defenseValue;     // Uncomment and use if defense value is needed
+    std::string description;
 };
 
 #endif // CARD_DEFENSE_H

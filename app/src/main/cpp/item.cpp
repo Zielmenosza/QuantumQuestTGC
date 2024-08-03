@@ -1,18 +1,20 @@
+// item.cpp
 #include "item.h"
 #include <iostream>
 
-// Constructor
+// Constructor to initialize the item's name and value
 Item::Item(const std::string& name, int value)
         : name_(name), value_(value) {}
 
 // Destructor
 Item::~Item() {}
 
-// Accessor methods
+// Accessor method to get the item's name
 const std::string& Item::getName() const {
     return name_;
 }
 
+// Accessor method to get the item's value
 int Item::getValue() const {
     return value_;
 }

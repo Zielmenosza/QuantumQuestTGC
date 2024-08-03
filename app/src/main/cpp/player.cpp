@@ -1,38 +1,28 @@
-// player.cpp
-
 #include "player.h"
-#include <iostream> // For debug printing, if needed
 
-// Constructor
-Player::Player(const std::string& name, int maxHealth, int shield)
-        : name_(name), max_health_(maxHealth), current_health_(maxHealth), shield_(shield) {}
+// Constructor to initialize a Player with a name and initial health
+Player::Player(const std::string& name, int health) : name(name), health(health) {}
 
-// Add a card to the player's hand
-void Player::addToHand(const std::shared_ptr<Card>& card) {
-    hand_.push_back(card);
-    std::cout << "Added card to hand: " << card->getName() << std::endl;
+// Implementation of takeDamage function, reducing player's health
+void Player::takeDamage(int amount) {
+    health -= amount;
+    if (health < 0) {
+        health = 0; // Health should not be negative
+    }
 }
 
-// Reduce incoming damage, example implementation
-void Player::reduceIncomingDamage(int damage) {
-    int effective_damage = damage - shield_; // Reduce damage by shield's protection value
-    effective_damage = std::max(0, effective_damage); // Ensure damage isn't negative
-    current_health_ -= effective_damage;
-    current_health_ = std::max(0, current_health_); // Ensure health isn't negative
-
-    // Debug output
-    std::cout << name_ << " takes " << effective_damage << " damage, health is now " << current_health_ << std::endl;
+// Implementation of getName function, returning player's name
+std::string Player::getName() const {
+    return name;
 }
 
-// Get current health
+// Implementation of getHealth function, returning current health
 int Player::getHealth() const {
-    return current_health_;
+    return health;
 }
 
-// Get player's hand
-const std::vector<std::shared_ptr<Card>>& Player::getHand() const {
-    return hand_;
+// Implementation of heal function, increasing player's health
+void Player::heal(int amount) {
+    health += amount;
+    // Optional: Cap health at maximum value if needed
 }
-
-// Additional methods can be implemented here
-// e.g., methods for using cards, discarding cards, etc.

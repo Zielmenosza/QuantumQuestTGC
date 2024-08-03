@@ -1,40 +1,23 @@
-#pragma once
+#ifndef ROOM_H
+#define ROOM_H
 
-#include <vector>
-#include <memory>
-#include "card.h"
-#include "Obstacle.h"
-#include "player.h"
+#include "player.h"  // Include player or necessary headers
+#include <vector>    // For managing the list of players
 
 class Room {
 public:
-    Room();  // Constructor
+    // Check if the room contains the specified player
+    bool hasPlayer(const Player& player) const;
 
-    // Add a card to the room
-    void addCard(const std::shared_ptr<Card>& card);
+    // Remove the specified player from the room
+    void removePlayer(const Player& player);
 
-    // Add an obstacle to the room
-    void addObstacle(const Obstacle& obstacle);
-
-    // Check if the room has an obstacle
-    bool hasObstacle() const;
-
-    // Check if a player is in the room
-    bool isPlayerPresent() const;
-
-    // Set and get the player in the room
-    void setPlayer(const std::shared_ptr<Player>& player);
-    std::shared_ptr<Player> getPlayer() const;
-
-    // Retrieve cards in the room
-    const std::vector<std::shared_ptr<Card>>& getCards() const;
-
-    // Other member functions as needed
+    // Add the specified player to the room
+    void addPlayer(const Player& player);
 
 private:
-    std::vector<std::shared_ptr<Card>> cards_;   // Cards present in the room
-    std::vector<Obstacle> obstacles_;            // Obstacles present in the room
-    std::shared_ptr<Player> player_;             // Player currently in the room
+    // Vector to track players currently in the room
+    std::vector<Player> players_;
 };
 
 #endif // ROOM_H

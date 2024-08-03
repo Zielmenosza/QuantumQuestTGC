@@ -3,19 +3,30 @@
 
 #include <string>
 
-// Forward declaration of GameState class
+// Forward declare GameState if it's defined in another file
 class GameState;
 
 class Card {
 public:
-    virtual ~Card() {}  // Virtual destructor for proper cleanup of derived classes
+    // Constructor to initialize card with name and cost
+    Card(const std::string &name, int cost);
 
-    // Assuming you want each card to have a name and a cost
-    virtual std::string getName() const = 0;  // Pure virtual function to get the card's name
-    virtual int getCost() const = 0;          // Pure virtual function to get the card's cost
+    // Virtual destructor to ensure derived classes are destructed properly
+    virtual ~Card(); // Declaration only
 
-    // Add a virtual function that derived classes can override
-    virtual void Play(GameState& gameState) = 0;  // Pure virtual function for playing a card
+    // Pure virtual method to play the card, modifying the game state
+    virtual void Play(GameState& gameState) = 0;
+
+    // Pure virtual method to get the name of the card
+    virtual std::string getName() const = 0;
+
+    // Pure virtual method to get the cost of the card
+    virtual int getCost() const = 0;
+
+protected:
+    // Member variables for card properties
+    std::string name; // Name of the card
+    int cost;         // Cost of the card
 };
 
-#endif  // CARD_H
+#endif // CARD_H

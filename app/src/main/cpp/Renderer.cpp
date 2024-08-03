@@ -7,15 +7,17 @@
 #include "Shader.h"
 #include "Utility.h"
 #include "TextureAsset.h"
+#include <fstream> // For file operations
+#include <sstream> // For string streams
 
 //! executes glGetString and outputs the result to logcat
 #define PRINT_GL_STRING(s) {aout << #s": "<< glGetString(s) << std::endl;}
 
 /*!
- * @brief if glGetString returns a space separated list of elements, prints each one on a new line
+ * @brief if glGetString returns a space-separated list of elements, prints each one on a new line
  *
- * This works by creating an istringstream of the input c-style string. Then that is used to create
- * a vector -- each element of the vector is a new element in the input string. Finally a foreach
+ * This works by creating an istringstream of the input C-style string. Then that is used to create
+ * a vector -- each element of the vector is a new element in the input string. Finally, a foreach
  * loop consumes this and outputs it to logcat using @a aout
  */
 #define PRINT_GL_STRING_AS_LIST(s) { \
@@ -76,7 +78,7 @@ static constexpr float kProjectionHalfHeight = 2.f;
 static constexpr float kProjectionNearPlane = -1.f;
 
 /*!
- * The far plane distance for the projection matrix. Since this is an orthographic porjection
+ * The far plane distance for the projection matrix. Since this is an orthographic projection
  * matrix, it's convenient to have the far plane equidistant from 0 as the near plane.
  */
 static constexpr float kProjectionFarPlane = 1.f;
@@ -101,6 +103,56 @@ Renderer::~Renderer() {
     }
 }
 
+void Renderer::initRenderer() {
+    // Initialize EGL and OpenGL ES settings here
+    const EGLint configAttribs[] = {
+            EGL_RENDERABLE_TYPE, EGL_OPENGL_ES3_BIT,
+            EGL_SURFACE_TYPE, EGL_WINDOW_BIT,
+            EGL_BLUE_SIZE, 8,
+            EGL_GREEN_SIZE, 8,
+            EGL_RED_SIZE, 8,
+            EGL_DEPTH_SIZE, 24,
+            EGL_NONE
+    };
+
+    EGLint numConfigs;
+    EGLConfig config;
+    display_ = eglGetDisplay(EGL_DEFAULT_DISPLAY);
+    eglInitialize(display_, nullptr, nullptr);
+    eglChooseConfig(display_, configAttribs, &config, 1, &numConfigs);
+
+    EGLint contextAttribs[] = {EGL_CONTEXT_CLIENT_VERSION, 3, EGL_NONE};
+    context_ = eglCreateContext(display_, config, EGL_NO_CONTEXT, contextAttribs);
+
+    surface_ = eglCreateWindowSurface(display_, config, app_->window, nullptr);
+    eglMakeCurrent(display_, surface_, surface_, context_);
+
+    // Check and log OpenGL version and extensions
+    PRINT_GL_STRING(GL_VENDOR);
+    PRINT_GL_STRING(GL_RENDERER);
+    PRINT_GL_STRING(GL_VERSION);
+    PRINT_GL_STRING_AS_LIST(GL_EXTENSIONS);
+
+    // Initialize the shader
+    shader_ = std::unique_ptr<Shader>(Shader::loadShader(vertex, fragment, "inPosition", "inUV", "uProjection"));
+
+    // Create models here
+    createModels();
+}
+
+void Renderer::updateRenderArea() {
+    EGLint newWidth, newHeight;
+    eglQuerySurface(display_, surface_, EGL_WIDTH, &newWidth);
+    eglQuerySurface(display_, surface_, EGL_HEIGHT, &newHeight);
+
+    if (width_ != newWidth || height_ != newHeight) {
+        width_ = newWidth;
+        height_ = newHeight;
+        glViewport(0, 0, width_, height_);
+        shaderNeedsNewProjectionMatrix_ = true;
+    }
+}
+
 void Renderer::render() {
     // Check to see if the surface has changed size. This is _necessary_ to do every frame when
     // using immersive mode as you'll get no other notification that your renderable area has
@@ -122,4 +174,51 @@ void Renderer::render() {
                 kProjectionNearPlane,
                 kProjectionFarPlane);
 
-        // send the matrix to
+        // Corrected method call
+        shader_->setProjectionMatrix(projectionMatrix);
+
+        shaderNeedsNewProjectionMatrix_ = false;
+
+        // Logging projection matrix values
+        std::ofstream aout("log.txt", std::ios_base::app);
+        if (aout.is_open()) {
+            aout << "Projection matrix updated\n";
+            aout << "Projection matrix: " << projectionMatrix[0] << " " << projectionMatrix[1] << " "
+                 << projectionMatrix[2] << " " << projectionMatrix[3] << "\n";
+            aout << "Projection matrix: " << projectionMatrix[4] << " " << projectionMatrix[5] << " "
+                 << projectionMatrix[6] << " " << projectionMatrix[7] << "\n";
+            aout << "Projection matrix: " << projectionMatrix[8] << " " << projectionMatrix[9] << " "
+                 << projectionMatrix[10] << " " << projectionMatrix[11] << "\n";
+            aout << "Projection matrix: " << projectionMatrix[12] << " " << projectionMatrix[13] << " "
+                 << projectionMatrix[14] << " " << projectionMatrix[15] << "\n";
+            aout.close();
+        } else {
+            std::cerr << "Failed to open log file for writing." << std::endl;
+        }
+    }
+
+    // Rendering code
+    glClearColor(CORNFLOWER_BLUE);
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+    // Example rendering call (ensure `model_` is properly defined and initialized)
+    shader_->activate();
+    for (auto& model : models_) {
+        shader_->drawModel(model);
+    }
+    shader_->deactivate();
+
+    eglSwapBuffers(display_, surface_);
+}
+
+void Renderer::handleInput() {
+    // Handle user input and update game state
+    inputHandler_.processInput();
+}
+
+void Renderer::createModels() {
+    // Example: Load a model and initialize it here
+    Model model;
+    // Initialize model with vertex data, textures, etc.
+    models_.push_back(model);
+}

@@ -1,11 +1,13 @@
 // game_state.cpp
 #include "game_state.h"
 
+// Constructor to initialize game state
 GameState::GameState()
         : player1Health_(100), player2Health_(100), currentPlayer_(PlayerID::PLAYER_ONE) {
     // Initialize other game state variables as needed
 }
 
+// Get the health of a player
 int GameState::getPlayerHealth(PlayerID playerID) const {
     switch (playerID) {
         case PlayerID::PLAYER_ONE:
@@ -18,6 +20,7 @@ int GameState::getPlayerHealth(PlayerID playerID) const {
     }
 }
 
+// Set the health of a player
 void GameState::setPlayerHealth(PlayerID playerID, int newHealth) {
     switch (playerID) {
         case PlayerID::PLAYER_ONE:
@@ -32,10 +35,12 @@ void GameState::setPlayerHealth(PlayerID playerID, int newHealth) {
     }
 }
 
+// Get the current player
 PlayerID GameState::getCurrentPlayer() const {
     return currentPlayer_;
 }
 
+// Set the current player
 void GameState::setCurrentPlayer(PlayerID playerID) {
     currentPlayer_ = playerID;
 }

@@ -3,27 +3,23 @@
 
 #include <string>
 
+// Base class for all characters in the game
 class Character {
 public:
-    Character(const std::string& name, int strength, int health, int experience = 0, int level = 1);
+    Character(int health, int defense); // Declare the constructor
 
-    void takeDamage(int damage);
-    void attack(Character& target);
-    void gainExperience(int exp);
-    void levelUp();
+    virtual int getHealth() const = 0;  // Pure virtual function
+    virtual void heal(int amount) = 0;  // Pure virtual function
 
-    int getStrength() const { return strength; }
-    int getHealth() const { return health; }
-    int getExperience() const { return experience; }
-    int getLevel() const { return level; }
-    const std::string& getName() const { return name; }
+    int getDefense() const; // Declare getDefense
 
-private:
-    std::string name;
-    int strength;
+protected:
+    // Member variables for character attributes
     int health;
-    int experience;
-    int level;
+    int defense;
+
+    // Helper function for reducing health
+    void reduceHealth(int amount);
 };
 
 #endif // CHARACTER_H

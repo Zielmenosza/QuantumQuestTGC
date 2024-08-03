@@ -2,12 +2,13 @@
 #define POSITION_H
 
 #include "Direction.h"
+#include <cmath>  // Include cmath for std::sqrt
 
 struct Position {
     int x;
     int y;
 
-    // Default constructor
+    // Default constructor with member initializer list
     Position(int x = 0, int y = 0) : x(x), y(y) {}
 
     // Move the position in a specified direction
@@ -44,7 +45,7 @@ struct Position {
         }
     }
 
-    // Calculates the distance to another position
+    // Calculates the distance to another position using Euclidean distance
     double distanceTo(const Position& other) const {
         int dx = x - other.x;
         int dy = y - other.y;

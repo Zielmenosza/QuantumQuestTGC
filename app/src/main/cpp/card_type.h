@@ -2,25 +2,22 @@
 #define CARD_TYPE_H
 
 #include <string>
-#include "card_type_specific.h" // Include base class header
+#include "card_type_specific.h"
 
-// Class for specific attack cards
+// AttackCard class inheriting from card_type_specific
 class AttackCard : public card_type_specific {
 public:
-    // Constructor initializing the attack card with necessary attributes
-    AttackCard(const std::string& name, const std::string& description, int cost, int attackValue)
-            : card_type_specific(name, description, cost, CardType::Attack), attackValue(attackValue) {}
+    // Constructor to initialize the AttackCard with specific properties
+    AttackCard(const std::string& name, const std::string& description, int cost, int attackValue);
 
-    // Getter for attack value
-    int getAttackValue() const { return attackValue; }
+    // Override the Play method to define the attack behavior
+    void Play(GameState& gameState) override;
 
-    // Implementation of the Play method
-    void Play(GameState& gameState) override {
-        // Implement attack logic here, e.g., deal damage based on attackValue
-    }
+    // Getter for the attack value
+    [[nodiscard]] int getAttackValue() const;
 
 private:
-    int attackValue;  // Attack value of the card
+    int attackValue; // Attack value specific to the AttackCard
 };
 
 #endif // CARD_TYPE_H

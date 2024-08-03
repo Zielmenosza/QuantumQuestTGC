@@ -1,60 +1,55 @@
-cmake_minimum_required(VERSION 3.4.1)
+# Specify the minimum version for CMake
+cmake_minimum_required(VERSION 3.10)
 
-project(QuantumQuest CXX)
+# Define the project name
+project(QuantumQuest)
 
-# Set the path to the NDK
-set(NDK_PATH "C:/Users/Ziel/AppData/Local/Android/Sdk/ndk/26.3.11579264")
+# Set the path to the correct NDK version
+set(NDK_PATH "C:/Users/Ziel/AppData/Local/Android/Sdk/ndk/26.1.10909125")
 
 # Include directories
 include_directories(
         ${NDK_PATH}/sources/android/native_app_glue
-        ${CMAKE_CURRENT_SOURCE_DIR}  # Include the current source directory for header files
-        # Add more include directories as needed
+        ${CMAKE_SOURCE_DIR}
 )
 
-# Set the Android STL
-set(ANDROID_STL c++_shared)
+# Add native app glue as a library
+add_library(native_app_glue STATIC
+        ${NDK_PATH}/sources/android/native_app_glue/android_native_app_glue.c
+)
 
-# Compiler flags
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++17 -frtti -fexceptions")
+# Ensure the native_app_glue uses C as the linker language
+set_target_properties(native_app_glue PROPERTIES LINKER_LANGUAGE C)
 
-# Use GLOB to gather source files
+# Collect all source files
 file(GLOB_RECURSE SOURCE_FILES
         ${CMAKE_CURRENT_SOURCE_DIR}/*.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/*.h
 )
 
-# Add native app glue source file
-add_library(native_app_glue STATIC
-        ${NDK_PATH}/sources/android/native_app_glue/android_native_app_glue.c
-)
-set_target_properties(native_app_glue PROPERTIES LINKER_LANGUAGE CXX)
-
-# Add your native library
+# Create the main library
 add_library(quantumquest SHARED ${SOURCE_FILES})
 
-# Find libraries
+# Find required libraries
 find_library(log-lib log)
 find_library(android-lib android)
-find_library(EGL-lib EGL)
-find_library(GLESv3-lib GLESv3) # Use GLESv3 if targeting OpenGL ES 3.0
+find_library(egl-lib EGL)  # Add EGL library
+find_library(glesv3-lib GLESv3)  # Add GLESv3 library
 
-# Link libraries
+# Link the native app glue and other required libraries
 target_link_libraries(quantumquest
         native_app_glue
         ${log-lib}
         ${android-lib}
-        ${EGL-lib}
-        ${GLESv3-lib} # Link with GLESv3
+        ${egl-lib}    # Link EGL library
+        ${glesv3-lib} # Link GLESv3 library
 )
 
-# Set target include directories
-target_include_directories(quantumquest PRIVATE
-        ${NDK_PATH}/sources/android/native_app_glue
-)
-
-# Set target properties
+# Specify the C++ standard version
 set_target_properties(quantumquest PROPERTIES CXX_STANDARD 17)
+
+# Set compiler flags
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++17 -frtti -fexceptions")
 
 # Define compiler flags for different build types
 if(CMAKE_BUILD_TYPE MATCHES Debug)
@@ -64,6 +59,3 @@ else()
     message("Configuring Release Build")
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O2")
 endif()
-
-# Additional settings and configurations can be added here
-# Add custom commands, build steps, or other configurations as needed

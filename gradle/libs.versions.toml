@@ -1,8 +1,10 @@
 [versions]
 activityCompose = "1.9.1"
+activityComposeVersion = "1.4.0"
 agp = "8.5.1"
 androidxJunit = "1.2.1"
 composeBomVersion = "2024.06.00"
+coreKtxVersion = "1.7.0"
 espressoCoreVersion = "3.6.1"
 gradle = "8.5.1"
 kotlin = "2.0.0"
@@ -14,24 +16,33 @@ espressoCore = "3.6.1"
 appcompat = "1.7.0"
 kotlinGradlePlugin = "1.8.22"
 lifecycleRuntimeKtx = "2.8.4"
+lifecycleRuntimeKtxVersion = "2.4.0"
 material = "1.12.0"
 constraintlayout = "2.1.4"
 androidx-compose = "1.2.1"
 androidx-lifecycle = "2.8.4"
 junitJunit = "4.13.2"
 material3 = "1.2.1"
+materialVersion = "1.4.0"
+ui = "1.0.5"
+uiVersion = "1.6.8"
 
 [libraries]
+androidx-activity-compose-v140 = { module = "androidx.activity:activity-compose", version.ref = "activityComposeVersion" }
 androidx-activity-compose-v172 = { module = "androidx.activity:activity-compose", version.ref = "activityCompose" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-core-ktx-v170 = { module = "androidx.core:core-ktx", version.ref = "coreKtxVersion" }
 androidx-espresso-core-v351 = { module = "androidx.test.espresso:espresso-core", version.ref = "espressoCoreVersion" }
 androidx-junit-v115 = { module = "androidx.test.ext:junit", version.ref = "androidxJunit" }
+androidx-lifecycle-runtime-ktx-v240 = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtxVersion" }
 androidx-lifecycle-runtime-ktx-v261 = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
 androidx-material3-v120 = { module = "androidx.compose.material3:material3", version.ref = "material3" }
 androidx-ui-graphics = { module = "androidx.compose.ui:ui-graphics" }
 androidx-ui-test-junit4 = { module = "androidx.compose.ui:ui-test-junit4" }
 androidx-ui-test-manifest = { module = "androidx.compose.ui:ui-test-manifest", version = "1.6.8" }
 androidx-ui-tooling = { module = "androidx.compose.ui:ui-tooling" }
+androidx-ui-v105 = { module = "androidx.compose.ui:ui", version.ref = "ui" }
+androidx-ui-v168 = { module = "androidx.compose.ui:ui", version.ref = "uiVersion" }
 compose-bom = { module = "androidx.compose:compose-bom", version.ref = "composeBomVersion" }
 gradle = { module = "com.android.tools.build:gradle", version.ref = "gradle" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -66,6 +77,7 @@ androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version
 kotlin-stdlib-jdk8 = { module = "org.jetbrains.kotlin:kotlin-stdlib-jdk8" }
 material = { group = "com.google.android.material", name= "material", version.ref = "material" }
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+material-v140 = { module = "com.google.android.material:material", version.ref = "materialVersion" }
 material3 = { module = "androidx.compose.material3:material3" }
 ui = { module = "androidx.compose.ui:ui" }
 ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview" }
