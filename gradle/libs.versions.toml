@@ -30,6 +30,8 @@ material3 = "1.2.1"
 materialVersion = "1.4.0"
 ui = "1.0.5"
 uiVersion = "1.6.8"
+uiAndroid = "1.6.8"
+material3Android = "1.2.1"
 
 [libraries]
 androidx-activity-compose-v140 = { module = "androidx.activity:activity-compose", version.ref = "activityComposeVersion" }
@@ -90,6 +92,8 @@ material3 = { module = "androidx.compose.material3:material3" }
 ui = { module = "androidx.compose.ui:ui" }
 ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview" }
 junit-junit = { group = "junit", name = "junit", version.ref = "junitJunit" }
+androidx-ui-android = { group = "androidx.compose.ui", name = "ui-android", version.ref = "uiAndroid" }
+androidx-material3-android = { group = "androidx.compose.material3", name = "material3-android", version.ref = "material3Android" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

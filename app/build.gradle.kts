@@ -45,7 +45,12 @@ android {
 
 dependencies {
     implementation("com.google.ar:core:1.44.0")
-    implementation("androidx.core:core-ktx:1.9.0")
-    implementation("androidx.appcompat:appcompat:1.5.1")
-    implementation("com.google.android.material:material:1.7.0")
+    androidTestImplementation ("androidx.test.ext:junit:1.2.1") // Or latest version
+    androidTestImplementation ("androidx.test.espresso:espresso-core:3.6.1") // Or latest version
+    testImplementation ("junit:junit:4.13.2") // Or latest version
+    implementation("androidx.core:core-ktx:1.13.1")
+    implementation("androidx.appcompat:appcompat:1.7.0")
+    implementation("com.google.android.material:material:1.12.0")
+    implementation(libs.androidx.ui.android)
+    implementation(libs.androidx.material3.android)
 }

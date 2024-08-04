@@ -43,7 +43,10 @@ int main() {
     return 0;
 }
 
-// QuantumQuestGame function implementations
+// QuantumQuestGame constructor definition
+QuantumQuestGame::QuantumQuestGame() {
+    // Initialize any member variables if needed
+}
 
 // Get the current player
 Player& QuantumQuestGame::getCurrentPlayer() {if (players.find(currentPlayerID) != players.end()) {

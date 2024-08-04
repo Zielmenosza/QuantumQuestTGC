@@ -7,10 +7,10 @@
 
 class GameState {
 public:
-    // Constructor
-    GameState(Player player);
+    GameState(); // Default constructor
+    GameState(Player player); // Add this declaration
 
-    Player & getPlayer(PlayerID id) const;
+    Player& getPlayer(PlayerID id) const;
 
     // Methods to get and set player health
     int getPlayerHealth(PlayerID playerID) const;

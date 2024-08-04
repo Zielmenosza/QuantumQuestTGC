@@ -1,3 +1,5 @@
-//
-// Created by Ziel on 2024/08/04.
-//
+#include "match.h"
+
+Match::Match(Player* player1, Player* player2) : player1_(player1), player2_(player2) {
+    // Initialize gameState_ if needed
+}

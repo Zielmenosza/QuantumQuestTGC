@@ -17,6 +17,7 @@ file(GLOB_RECURSE SOURCE_FILES
         ${CMAKE_CURRENT_SOURCE_DIR}/*.c
         ${CMAKE_CURRENT_SOURCE_DIR}/*.h
         ${CMAKE_CURRENT_SOURCE_DIR}/ar_session.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/main.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/ar_object.cpp  # Add this line
         ${CMAKE_CURRENT_SOURCE_DIR}/ar_match.cpp   # Add this line
 )

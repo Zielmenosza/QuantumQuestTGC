@@ -15,6 +15,12 @@ void Player::reduceIncomingDamage(int damage) {
     currentHealth_ -= damage;
 }
 
+void Player::addToHand(const std::shared_ptr<Card>& card) {
+    hand_.push_back(card);
+}const std::vector<std::shared_ptr<Card>>& Player::getHand() const {
+    return hand_;
+}
+
 int Player::getHealth() const {
     return currentHealth_;
 }
