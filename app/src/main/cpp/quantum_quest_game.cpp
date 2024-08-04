@@ -1,3 +1,4 @@
+#include "ar_session.h"
 #include "quantum_quest_game.h"
 #include "player.h"
 #include "specific_card.h" // Include yourderived card classes

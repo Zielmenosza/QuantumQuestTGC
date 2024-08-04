@@ -4,17 +4,18 @@ plugins {
 }
 
 android {
-    namespace = "com.example.QuantumQuest" // Add this line with your actual package name
-    compileSdk = 34  // Ensure this matches your desired SDK version
+    namespace = "com.example.QuantumQuest"  // Replace with your actual package name
+    compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.QuantumQuest"  // Replace with your actual package name
+        applicationId = "com.example.QuantumQuest"  // This should match your namespace
         minSdk = 30
-        targetSdk = 34  // Ensure this matches your desired SDK version
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
-        ndkVersion = "26.1.10909125"  // Make sure this is consistent with your NDK installation
+        // Ensure NDK version matches your setup
+        ndkVersion = "26.1.10909125"
     }
 
     buildTypes {
@@ -24,6 +25,7 @@ android {
         }
     }
 
+    // Set both Java and Kotlin to target JVM 17
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
@@ -39,16 +41,11 @@ android {
             version = "3.22.1"  // Ensure this matches your installed CMake version
         }
     }
-    ndkVersion = "26.1.10909125"
 }
 
 dependencies {
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.ui.v168)
-    implementation(libs.androidx.material3.v120)
-    implementation(libs.androidx.lifecycle.runtime.ktx.v261)
-    implementation(libs.androidx.activity.compose.v172)
-    implementation(libs.material)
-    implementation(libs.core.v1370) // Use the latest ARCore version
-    implementation(libs.androidx.exifinterface)
+    implementation("com.google.ar:core:1.44.0")
+    implementation("androidx.core:core-ktx:1.9.0")
+    implementation("androidx.appcompat:appcompat:1.5.1")
+    implementation("com.google.android.material:material:1.7.0")
 }

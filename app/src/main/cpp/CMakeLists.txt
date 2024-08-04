@@ -16,21 +16,27 @@ file(GLOB_RECURSE SOURCE_FILES
         ${CMAKE_CURRENT_SOURCE_DIR}/*.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/*.c
         ${CMAKE_CURRENT_SOURCE_DIR}/*.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/ar_session.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/ar_object.cpp  # Add this line
+        ${CMAKE_CURRENT_SOURCE_DIR}/ar_match.cpp   # Add this line
 )
 
 add_library(quantumquest SHARED ${SOURCE_FILES})
 
 find_library(log-lib log)
+find_library(JNIGRAPHICS_LIB jnigraphics)
 find_library(android-lib android)
 find_library(egl-lib EGL)
-find_library(glesv2-lib GLESv2)
+find_library(glesv3-lib GLESv3)
 
 target_link_libraries(quantumquest
         native_app_glue
         ${log-lib}
         ${android-lib}
         ${egl-lib}
-        ${glesv2-lib})
+        ${glesv3-lib}
+        ${JNIGRAPHICS_LIB}
+)
 
 set_target_properties(quantumquest PROPERTIES CXX_STANDARD 17)
 

@@ -3,6 +3,7 @@
 #include <android_native_app_glue.h>
 #include <android/input.h>
 #include <memory>
+#include "match.h"
 #include "Renderer.h"
 #include "player.h"
 #include "card.h"
