@@ -1,13 +1,18 @@
 #ifndef ENEMY_H
 #define ENEMY_H
 
-#include "character.h"
+#include <string>
 
-class Enemy : public Character {
+class Enemy {
 public:
-    void attack(Character& target); // Attacks target character
-    void takeDamage(int amount) override;
-    std::string getName() const override;
+    Enemy(const std::string& name, int health, int attack); // Constructor declaration
+    std::string getType() const; // Method declaration
+
+private:
+    std::string enemyName;
+    int enemyHealth;
+    int enemyAttack;
+    std::string type; // Add a type member variable if needed
 };
 
 #endif // ENEMY_H

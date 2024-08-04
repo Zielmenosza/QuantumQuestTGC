@@ -1,33 +1,25 @@
 #ifndef CARD_ATTACK_H
 #define CARD_ATTACK_H
 
-#include "card_type_specific.h" // Assuming there's a base class for specific card types
-#include "game_state.h"  // Assuming GameState is defined here
+#include "ExampleCard.h"  // Ensure correct include of base class
 #include <string>
 
-// Inherit from the appropriate base card class if there's a hierarchy
-class CardAttack : public CardTypeSpecific {
+class GameState;  // Forward declaration if GameState is used
+
+// Derived class for attack cards
+class CardAttack : public Card {
 public:
-    // Constructor
     CardAttack(const std::string& name, const std::string& description, int cost, int attackValue);
 
-    // Method to play the card
-    void Play(GameState& gameState) override;
+    void Play(GameState& gameState); // Implemented method to affect game state
 
-    // Getter for card name
-    [[nodiscard]] const std::string& getName() const override;
-
-    // Getter for card cost
-    [[nodiscard]] int getCost() const override;
-
-    // Getter for attack value
-    [[nodiscard]] int getAttackValue() const;
-
-    // Getter for description
-    [[nodiscard]] std::string getDescription() const;
+    std::string getName() const override;        // Correctly override
+    std::string getDescription() const override; // Correctly override
+    int getCost() const override;                // Correctly override
+    int getAttackValue() const;                  // Additional method
 
 private:
-    int attackValue_;  // Attack value specific to this card
+    int attackValue_;
 };
 
 #endif // CARD_ATTACK_H

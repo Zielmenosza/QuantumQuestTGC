@@ -3,12 +3,12 @@
 
 // Constructor implementation for CardDefense
 CardDefense::CardDefense(const std::string& name, const std::string& description, int cost)
-        : Card(name, cost), description(description) {}
+        : Card(name, description, cost) { // Call Card constructor
+    // ... other initialization ...
+}
 
 // Implement Play method
-void CardDefense::Play(GameState& gameState) {
-    std::cout << "Playing defense card: " << getName() << " with description: " << getDescription() << std::endl;
-
+void CardDefense::Play(GameState&gameState) { // Matching declaration
     // Implement the actual game logic here
     // Example: Increase player's defense or shield
     // gameState.getCurrentPlayer().increaseDefense(10); // Assuming this method exists

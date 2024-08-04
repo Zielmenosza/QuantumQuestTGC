@@ -12,7 +12,7 @@ public:
     // Implementing pure virtual functions from Card
     std::string getName() const override;
     int getCost() const override;
-    std::string getDescription() const;
+    std::string getDescription() const override;
 
     // Additional methods and members specific to SpecificCard
     // You can add more functions related to the specific behavior of this card
@@ -22,5 +22,3 @@ private:
     std::string description_;
     int cost_;
 };
-
-#endif // SPECIFIC_CARD_H

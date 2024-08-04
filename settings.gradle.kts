@@ -9,12 +9,12 @@ pluginManagement {
 }
 
 dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS) // Ensures repositories are only defined here
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
-        google()             // Google's Maven repository
-        mavenCentral()       // Maven Central repository
+        google()
+        mavenCentral()
     }
 }
 
 rootProject.name = "QuantumQuest"
-include(":app")
+include(":app", ":arcore_client")

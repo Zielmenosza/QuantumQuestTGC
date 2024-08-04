@@ -2,11 +2,11 @@
 #include <android/imagedecoder.h>
 #include <android/asset_manager.h>
 #include <stdexcept>
+#include "Utility.h"
 #include <vector>
 
 // Constructor to load the texture from the given file path
-Texture::Texture(AAssetManager* assetManager, const std::string& filePath)
-        : textureID(0), filePath(filePath) {
+Texture::Texture(AAssetManager* assetManager, const std::string& filePath) {
     loadTexture(assetManager, filePath);
 }
 
@@ -23,10 +23,14 @@ GLuint Texture::getTextureID() const {
 }
 
 // Private method to load the texture using AImageDecoder
-void Texture::loadTexture(AAssetManager* assetManager, const std::string& filePath) {
+void Texture::loadTexture(AAssetManager* assetManager, const std::string& filePath) { // Add AAssetManager*
     // Ensure assetManager is valid
     if (!assetManager) {
         throw std::runtime_error("Invalid asset manager.");
+    }
+
+    if (!Utility::checkAndLogGlError()){
+        // ...Handle OpenGL error
     }
 
     // Open the asset using AAssetManager

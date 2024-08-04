@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace = "com.example.QuantumQuest" // Add this line with your actual package name
-    compileSdk = 33  // Ensure this matches your desired SDK version
+    compileSdk = 34  // Ensure this matches your desired SDK version
 
     defaultConfig {
         applicationId = "com.example.QuantumQuest"  // Replace with your actual package name
         minSdk = 30
-        targetSdk = 30  // Ensure this matches your desired SDK version
+        targetSdk = 34  // Ensure this matches your desired SDK version
         versionCode = 1
         versionName = "1.0"
 
@@ -39,6 +39,7 @@ android {
             version = "3.22.1"  // Ensure this matches your installed CMake version
         }
     }
+    ndkVersion = "26.1.10909125"
 }
 
 dependencies {
@@ -48,4 +49,6 @@ dependencies {
     implementation(libs.androidx.lifecycle.runtime.ktx.v261)
     implementation(libs.androidx.activity.compose.v172)
     implementation(libs.material)
+    implementation(libs.core.v1370) // Use the latest ARCore version
+    implementation(libs.androidx.exifinterface)
 }

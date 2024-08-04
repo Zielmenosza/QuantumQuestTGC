@@ -1,28 +1,38 @@
 #include "player.h"
 
-// Constructor to initialize a Player with a name and initial health
-Player::Player(const std::string& name, int health) : name(name), health(health) {}
+Player::Player() : name_{"Player"}, maxHealth_{100}, currentHealth_{100}, shield_{0} {}
 
-// Implementation of takeDamage function, reducing player's health
-void Player::takeDamage(int amount) {
-    health -= amount;
-    if (health < 0) {
-        health = 0; // Health should not be negative
-    }
-}
-
-// Implementation of getName function, returning player's name
 std::string Player::getName() const {
-    return name;
+    return name_;
 }
 
-// Implementation of getHealth function, returning current health
+void Player::reduceIncomingDamage(int damage) {
+    if (shield_ > 0) {
+        int damageToShield = std::min(damage, shield_);
+        shield_ -= damageToShield;
+        damage -= damageToShield;
+    }
+    currentHealth_ -= damage;
+}
+
 int Player::getHealth() const {
-    return health;
+    return currentHealth_;
 }
 
-// Implementation of heal function, increasing player's health
+void Player::setHealth(int newHealth) {
+    currentHealth_ = newHealth;
+}
+
 void Player::heal(int amount) {
-    health += amount;
-    // Optional: Cap health at maximum value if needed
+    currentHealth_ = std::min(currentHealth_ + amount, maxHealth_);
+}
+
+void Player::increaseMovementPoints(int points) {
+    // Implement logic to increase movement points, e.g.,
+    // movementPoints_ += points; (if you have a movementPoints_ member)
+}
+
+void Player::takeTurn() {
+    // Implement logic to take a turn, e.g.,
+    // std::cout << "Player " << name_ << " takes a turn" << std::endl;
 }

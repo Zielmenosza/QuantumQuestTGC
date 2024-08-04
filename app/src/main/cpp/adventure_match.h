@@ -1,22 +1,28 @@
 #ifndef ADVENTURE_MATCH_H
 #define ADVENTURE_MATCH_H
 
-#include "match.h"
+#include "player.h"
 #include "enemy.h"
+#include <memory>
+#include "card_type_specific.h"
 #include <vector>
 
-class AdventureMatch : public Match {
+// Class to manage an adventure match
+class AdventureMatch {
 public:
-    AdventureMatch(Player *player1, Player *player2, const std::vector<Enemy>& enemies);
+    // Constructor for AdventureMatch
+    AdventureMatch(Player& player, Enemy& enemy);
 
-    void start() override;
-    void update() override;
-    void end() override;
+    // Start the match
+    void start();
 
 private:
-    std::vector<Enemy> enemies_;
-    void handleAI();
-    void progressStory();
+    Player& player;
+    Enemy& enemy;
+    std::vector<CardTypeSpecific> deck;
+
+    // Initialize the deck with some cards
+    void initializeDeck();
 };
 
 #endif // ADVENTURE_MATCH_H

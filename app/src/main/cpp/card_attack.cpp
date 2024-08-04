@@ -7,7 +7,7 @@ CardAttack::CardAttack(
         const std::string& description,
         int cost,
         int attackValue
-) : card_type_specific(name, description, cost, CardType::Attack), // Initialize base class
+) : Card(name, description, cost),  // Initialize base class
     attackValue_(attackValue) {
     // Additional initialization if needed
 }
@@ -27,12 +27,12 @@ void CardAttack::Play(GameState& gameState) {
 
 // Getter for card name
 std::string CardAttack::getName() const {
-    return card_type_specific::getName();
+    return Card::getName();
 }
 
 // Getter for card cost
 int CardAttack::getCost() const {
-    return card_type_specific::getCost();
+    return Card::getCost();
 }
 
 // Getter for attack value
@@ -42,5 +42,5 @@ int CardAttack::getAttackValue() const {
 
 // Getter for description
 std::string CardAttack::getDescription() const {
-    return card_type_specific::getDescription();
+    return Card::getDescription();
 }

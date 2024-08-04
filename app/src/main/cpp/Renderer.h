@@ -17,7 +17,7 @@ public:
     ~Renderer();
 
     void render();
-    void handleInput();
+    void handleInput(const AInputEvent* event);
     void initRenderer();
 
 private:

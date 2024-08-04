@@ -1,8 +1,9 @@
 #include "quantum_quest_game.h"
 #include "player.h"
-#include "specific_card.h" // Include your derived card classes
+#include "specific_card.h" // Include yourderived card classes
 #include <iostream> // For outputting debug information
 #include <stdexcept> // For exception handling
+#include <random>
 
 // Main function to run a test game
 int main() {
@@ -14,8 +15,7 @@ int main() {
         game.startNewGame();
 
         // Example of adding cards to player's hand
-        std::shared_ptr<Card> card1 = std::make_shared<SpecificCard>("Sword of Power", "A powerful sword", 3);
-        game.getCurrentPlayer().addToHand(card1);
+        std::shared_ptr<Card> card1 = std::make_shared<SpecificCard>("Sword of Power", "A powerful sword", 3);game.getCurrentPlayer().addToHand(card1);
 
         // Print player's hand to verify the card addition
         const auto& hand = game.getCurrentPlayer().getHand();
@@ -45,33 +45,56 @@ int main() {
 // QuantumQuestGame function implementations
 
 // Get the current player
-Player& QuantumQuestGame::getCurrentPlayer() {
-    if (currentPlayerIndex >= 0 && currentPlayerIndex < players.size()) {
-        return players[currentPlayerIndex];
+Player& QuantumQuestGame::getCurrentPlayer() {if (players.find(currentPlayerID) != players.end()) {
+        return players[currentPlayerID];
     } else {
-        throw std::out_of_range("Invalid current player index");
+        throw std::out_of_range("Invalid current player ID");
     }
+}
+
+void QuantumQuestGame::initializePlayers() {
+    // Example: Create two players
+    players[0] = Player();
+    players[1] = Player();
+
+    // Initialize player order
+    playerOrder = {0, 1}; // Example: Two players
+
+    // Set the starting player
+    currentPlayerID = playerOrder[0];
 }
 
 // Start a new game
 void QuantumQuestGame::startNewGame() {
-    // Initialize the game board
-    gameBoard.initializeRooms();
+    initializePlayers(); // Call initializePlayers to set up players
 
-    // Create players (replace with your actual player creation logic)
-    players.emplace_back("Player One", 100, 10, 0, 1); // Example player data
-    players.emplace_back("Player Two", 100, 10, 0, 1); // Example player data
-
-    // Set the starting player
-    currentPlayerIndex = 0;
+    currentPlayerID = 0; // Set the starting player
 
     // ... (other initialization logic, like dealing cards, etc.)
+
+    // Example: Create a deck of cards and shuffle it
+    std::vector<std::shared_ptr<Card>> deck;
+    deck.push_back(std::make_shared<SpecificCard>("Card 1", "Description 1", 1));
+    deck.push_back(std::make_shared<SpecificCard>("Card 2", "Description 2", 2));
+    // ... add more cards to the deck
+
+    std::random_device rd;
+    std::mt19937 g(rd());
+    std::shuffle(deck.begin(), deck.end(), g);
+
+    // Deal cards to players (example: 5 cards each)
+    for (int i = 0; i < 5; ++i) {
+        for(PlayerID id : playerOrder) {
+            players[id].addToHand(deck.back());
+            deck.pop_back();
+        }
+    }
 }
 
 // End the current player's turn
 void QuantumQuestGame::endPlayerTurn() {
-    // Increment the current player index (with wrap-around)
-    currentPlayerIndex = (currentPlayerIndex + 1) % players.size();
+    // Increment the current player ID (with wrap-around)
+    currentPlayerID = (currentPlayerID + 1) % players.size();
 
     // ... (other end-of-turn logic, like drawing cards, resolving effects, etc.)
 }

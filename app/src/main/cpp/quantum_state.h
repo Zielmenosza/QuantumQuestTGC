@@ -1,22 +1,21 @@
-// quantum_state.h
 #ifndef QUANTUM_STATE_H
 #define QUANTUM_STATE_H
 
-#include <vector>
+#include "vector"
+#include <cstdlib>
 
-class QuantumState {
-public:
-    // Constructor to initialize the quantum state with a specified number of qubits
+class QuantumState {public:
+    // Constructor declaration
     QuantumState(int numQubits);
 
-    // Measure a specific qubit and return its state (0 or 1)
+    int getNumQubits() const {
+        return qubits_.size();
+    }
+
     int measureQubit(int qubitIndex);
 
-    // Additional methods and members for handling quantum state can be added here
-
 private:
-    // Vector to store the state of each qubit (0 or 1)
-    std::vector<int> qubits;
+    std::vector<int> qubits_; // Declare qubits_ as a member
 };
 
 #endif // QUANTUM_STATE_H

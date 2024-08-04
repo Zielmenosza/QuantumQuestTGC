@@ -7,6 +7,7 @@
 #include "Shader.h"
 #include "Utility.h"
 #include "TextureAsset.h"
+#include "iostream"
 #include <fstream> // For file operations
 #include <sstream> // For string streams
 
@@ -183,18 +184,22 @@ void Renderer::render() {
         std::ofstream aout("log.txt", std::ios_base::app);
         if (aout.is_open()) {
             aout << "Projection matrix updated\n";
-            aout << "Projection matrix: " << projectionMatrix[0] << " " << projectionMatrix[1] << " "
+            aout << "Projection matrix: " << projectionMatrix[0] << " " << projectionMatrix[1]
+                 << " "
                  << projectionMatrix[2] << " " << projectionMatrix[3] << "\n";
-            aout << "Projection matrix: " << projectionMatrix[4] << " " << projectionMatrix[5] << " "
+            aout << "Projection matrix: " << projectionMatrix[4] << " " << projectionMatrix[5]
+                 << " "
                  << projectionMatrix[6] << " " << projectionMatrix[7] << "\n";
-            aout << "Projection matrix: " << projectionMatrix[8] << " " << projectionMatrix[9] << " "
+            aout << "Projection matrix: " << projectionMatrix[8] << " " << projectionMatrix[9]
+                 << " "
                  << projectionMatrix[10] << " " << projectionMatrix[11] << "\n";
-            aout << "Projection matrix: " << projectionMatrix[12] << " " << projectionMatrix[13] << " "
+            aout << "Projection matrix: " << projectionMatrix[12] << " " << projectionMatrix[13]
+                 << " "
                  << projectionMatrix[14] << " " << projectionMatrix[15] << "\n";
             aout.close();
-        } else {
+        } else
             std::cerr << "Failed to open log file for writing." << std::endl;
-        }
+
     }
 
     // Rendering code
@@ -211,9 +216,9 @@ void Renderer::render() {
     eglSwapBuffers(display_, surface_);
 }
 
-void Renderer::handleInput() {
+void Renderer::handleInput(const AInputEvent* event) { // Add event argument
     // Handle user input and update game state
-    inputHandler_.processInput();
+    inputHandler_.processInput(event); // Pass event to processInput
 }
 
 void Renderer::createModels() {

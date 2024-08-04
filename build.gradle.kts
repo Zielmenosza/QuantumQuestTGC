@@ -7,6 +7,7 @@ plugins {
     alias(libs.plugins.compose.compiler) apply false // Using version catalogs
 }
 
+
 buildscript {
     dependencies {
         classpath(libs.gradle) // Reference to Gradle version in version catalog

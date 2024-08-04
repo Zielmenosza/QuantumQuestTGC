@@ -1,28 +1,27 @@
-#ifndef CARD_EFFECT_H
-#define CARD_EFFECT_H
+#ifndef CARDEFFECT_H
+#define CARDEFFECT_H
 
 #include <string>
 #include "card.h"  // Assuming card.h defines the Card base class
 #include "player.h"  // Assuming player.h defines the Player class
+#include "game_state.h"
 
 class CardEffect : public Card {
-public:
-    // Constructor for CardEffect, inheriting from Card
-    CardEffect(const std::string& name, const std::string& description, int cost);
-
-    // Getter methods
-    [[nodiscard]] std::string getName() const override;
-    [[nodiscard]] int getCost() const override;
-    [[nodiscard]] std::string getDescription() const;
-
-    // Method to play the card, affecting the game state
-    void Play(GameState& gameState) override;
-
-    // Method to apply the card effect to a player
-    void applyEffect(Player& player);
-
 private:
     std::string description;
+
+public:
+    CardEffect(const std::string& name, const std::string& description, int cost);
+
+    void activateEffect(Player& player); // Add Player& argument to declaration
+
+    void Play(GameState& gameState);
+
+    std::string getName() const;
+
+    int getCost() const;
+
+    std::string getDescription() const;
 };
 
-#endif // CARD_EFFECT_H
+#endif //CARDEFFECT_H

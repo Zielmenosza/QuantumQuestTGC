@@ -6,12 +6,9 @@
 // Base class for all characters in the game
 class Character {
 public:
-    Character(int health, int defense); // Declare the constructor
-
-    virtual int getHealth() const = 0;  // Pure virtual function
-    virtual void heal(int amount) = 0;  // Pure virtual function
-
-    int getDefense() const; // Declare getDefense
+    // Pure virtual functions for character behavior
+    virtual int getHealth() const = 0;
+    virtual void heal(int amount) = 0;
 
 protected:
     // Member variables for character attributes
@@ -20,6 +17,9 @@ protected:
 
     // Helper function for reducing health
     void reduceHealth(int amount);
+
+    // Constructor to initialize health and defense
+    Character(int health, int defense);
 };
 
 #endif // CHARACTER_H

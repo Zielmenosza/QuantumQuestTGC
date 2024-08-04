@@ -1,24 +1,27 @@
 #include "card_effect.h"
+#include "card.h"
 #include <iostream>
 #include <utility>
 
-// Constructor for CardEffect, initializing name, description, and cost
 CardEffect::CardEffect(const std::string& name, const std::string& description, int cost)
-        : Card(name, cost), description(description) {}
+        : Card(name, description, cost) {} // Provide all three arguments to Card constructor
 
 // Implementation of the applyEffect function
-void CardEffect::applyEffect(Player& player) {
-    // Example logic: Apply effect to the player
-    player.reduceIncomingDamage(10);  // Assuming this function exists in the Player class
-
-    // Log the effect application for debugging purposes
-    std::cout << "Applied effect: " << description << " to player: " << player.getName() << std::endl;
+void CardEffect::activateEffect(Player& player) { // Remove const
+    // Implement effect activation logic here, e.g.,
+    if (getName() == "Speed Boost") {
+        player.increaseMovementPoints(2);
+    } else if (getName() == "Heal") {
+        player.heal(10);
+    } // Add more effects for other cards
 }
 
 // Implement the Play function (inherited from Card)
 void CardEffect::Play(GameState& gameState) {
-    // Implement your logic to play the card within the game
-    std::cout << "Playing card: " << getName() << std::endl;
+    // Implement your logic to play the card within the game, e.g.,
+    Player currentPlayer = gameState.getCurrentPlayer(); // Get the current player
+    activateEffect(currentPlayer); // Call activateEffect with the player object
+    // Add logic for removing the card from hand, etc.}
 }
 
 // Getter for the name
@@ -34,22 +37,4 @@ int CardEffect::getCost() const {
 // Getter for the description
 std::string CardEffect::getDescription() const {
     return description;
-}
-
-// Example main function demonstrating CardEffect usage
-int main() {
-    // Assuming Player has a constructor that takes a name and relevant methods
-    Player p("Alice", 100, 10);  // Use appropriate constructor for Player
-
-    // Create a CardEffect object with appropriate attributes
-    CardEffect speedBoost("Speed Boost", "Increases movement points", 1);
-
-    // Apply the card effect to the player
-    speedBoost.applyEffect(p);
-
-    // Access player's attributes or methods to check effect results
-    // Ensure getMovementPoints is a valid function in the Player class
-    // std::cout << "Movement Points: " << p.getMovementPoints() << std::endl;
-
-    return 0;
 }

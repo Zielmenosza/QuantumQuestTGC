@@ -15,6 +15,8 @@ public:
     // Add the specified player to the room
     void addPlayer(const Player& player);
 
+    static bool hasObstacle();
+
 private:
     // Vector to track players currently in the room
     std::vector<Player> players_;

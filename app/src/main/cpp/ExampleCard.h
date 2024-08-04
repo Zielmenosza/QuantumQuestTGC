@@ -1,16 +1,17 @@
-#pragma once
+#ifndef EXAMPLE_CARD_H
+#define EXAMPLE_CARD_H
 
-#include "card.h" // Include the base Card class
-#include <string> // Include string for std::string
+#include "card.h"
+#include "publicCard.h"
 
-class ExampleCard : public Card {
+class ExampleCard : public Card { // Ensure public inheritance
 public:
-    // Constructor that initializes the base class with name and cost
-    ExampleCard(const std::string& name, int cost);
+    ExampleCard(const std::string& name, const std::string& description, int cost, int power);
 
-    // Implement the getName method
-    std::string getName() const override;
+    int getPower() const;
 
-    // Implement the getCost method
-    int getCost() const override;
+private:
+    int power_;
 };
+
+#endif // EXAMPLE_CARD_H

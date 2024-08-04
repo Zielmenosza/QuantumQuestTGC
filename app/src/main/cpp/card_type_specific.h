@@ -1,41 +1,19 @@
 #ifndef CARD_TYPE_SPECIFIC_H
 #define CARD_TYPE_SPECIFIC_H
 
-#include <string>
+#include "ExampleCard.h"
+#include <memory>
 
-// Enum to define different types of cards
-enum class CardType {
-    Attack,
-    Defense,
-    // Add more card types as needed
-};
-
-// Base class for specific card types
-class card_type_specific {
+// Derived class for specific card types
+class CardTypeSpecific : public Card {
 public:
-    // Constructor to initialize card properties
-    card_type_specific(std::string name, std::string description, int cost, CardType type)
-            : name(std::move(name)), description(std::move(description)), cost(cost), type(type) {}
+    CardTypeSpecific(const std::string& name, const std::string& description, int cost, int power); // Description already present
 
-    // Virtual destructor to ensure proper cleanup in derived classes
-    virtual ~card_type_specific() = default;
+    int getPower() const;
+    void activateEffect(); // Implement effect logic
 
-    virtual // Getters for card properties
-    [[nodiscard]] const std::string& getName() const { return name; }
-
-    virtual [[nodiscard]] const std::string& getDescription() const { return description; }
-
-    virtual [[nodiscard]] int getCost() const { return cost; }
-    [[nodiscard]] CardType getType() const { return type; }
-
-    // Pure virtual method for card action
-    virtual void Play(class GameState& gameState) = 0;
-
-protected:
-    std::string name;
-    std::string description;
-    int cost;
-    CardType type;
+private:
+    int power_;
 };
 
 #endif // CARD_TYPE_SPECIFIC_H

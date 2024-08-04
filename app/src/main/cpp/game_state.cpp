@@ -2,42 +2,37 @@
 #include "game_state.h"
 
 // Constructor to initialize game state
-GameState::GameState()
-        : player1Health_(100), player2Health_(100), currentPlayer_(PlayerID::PLAYER_ONE) {
+GameState::GameState(Player player) : player1_(), currentPlayer_(PlayerID::PLAYER_ONE) {
+    players[PlayerID::PLAYER_ONE] = Player();
+    players[PlayerID::PLAYER_TWO] = Player();
     // Initialize other game state variables as needed
+}
+
+Player & GameState::getPlayer(PlayerID id) const {
+    return const_cast<Player &>(players.at(id)); // Use at() for bounds checking
 }
 
 // Get the health of a player
 int GameState::getPlayerHealth(PlayerID playerID) const {
-    switch (playerID) {
-        case PlayerID::PLAYER_ONE:
-            return player1Health_;
-        case PlayerID::PLAYER_TWO:
-            return player2Health_;
-            // Add more cases if needed
-        default:
-            return 0; // Default case for unknown players
+    try {
+        return players.at(playerID).getHealth();
+    } catch (const std::out_of_range& e) {
+        return 0; // Default case for unknown players
     }
 }
 
 // Set the health of a player
 void GameState::setPlayerHealth(PlayerID playerID, int newHealth) {
-    switch (playerID) {
-        case PlayerID::PLAYER_ONE:
-            player1Health_ = newHealth;
-            break;
-        case PlayerID::PLAYER_TWO:
-            player2Health_ = newHealth;
-            break;
-            // Add more cases if needed
-        default:
-            break;
+    try {
+        players.at(playerID).setHealth(newHealth);
+    } catch (const std::out_of_range& e) {
+        // Handle the case where the playerID is not found
     }
 }
 
 // Get the current player
-PlayerID GameState::getCurrentPlayer() const {
-    return currentPlayer_;
+Player& GameState::getCurrentPlayer() {
+    return players.at(currentPlayer_);
 }
 
 // Set the current player

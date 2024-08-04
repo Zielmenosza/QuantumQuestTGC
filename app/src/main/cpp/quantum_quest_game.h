@@ -1,7 +1,7 @@
 #ifndef QUANTUM_QUEST_GAME_H
 #define QUANTUM_QUEST_GAME_H
 
-#include "Player.h"
+#include "player.h"
 #include <map>
 #include <vector>
 #include <memory> // For shared_ptr
@@ -17,7 +17,7 @@ public:
     void startNewGame();
 
     // Gets the current player based on currentPlayerID
-    Player& getCurrentPlayer();
+    Player& getCurrentPlayer(); // Only declare once
 
     // Ends the current player's turn and moves to the next player
     void endPlayerTurn();

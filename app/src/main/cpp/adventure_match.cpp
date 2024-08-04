@@ -1,45 +1,26 @@
-#include <iostream>  // Include this to use std::cout and std::endl
 #include "adventure_match.h"
-#include "enemy.h"  // Include enemy if not already included
-#include "player.h" // Include player if not already included
+#include <iostream>
 
-// Constructor implementation
-AdventureMatch::AdventureMatch(Player *player1, Player *player2, const std::vector<Enemy>& enemies)
-        : Match(player1, player2), enemies_(enemies) {
-    // Additional initialization if needed
+// Constructor for AdventureMatch
+AdventureMatch::AdventureMatch(Player& player, Enemy& enemy)
+        : player(player), enemy(enemy) {
+    initializeDeck();
 }
 
-// Start the adventure match
+// Start the match
 void AdventureMatch::start() {
-    // Initialize the match, perhaps set player positions, enemy placements, etc.
-    std::cout << "Adventure match started!" << std::endl;
-}
+    std::cout << "Starting match between " << player.getName() << " and " << enemy.getType() << std::endl;
 
-// Update the match state each frame or turn
-void AdventureMatch::update() {
-    handleAI();         // Handle enemy AI logic
-    progressStory();    // Progress the storyline or events within the match
-    // Other update logic, e.g., checking win/loss conditions
-}
-
-// End the adventure match
-void AdventureMatch::end() {
-    // Cleanup or finalize the match, possibly record results, etc.
-    std::cout << "Adventure match ended!" << std::endl;
-}
-
-// Handle AI logic for enemies
-void AdventureMatch::handleAI() {
-    // Implement AI behavior for enemies, e.g., choose actions, attack players, etc.
-    for (Enemy& enemy : enemies_) {
-        // Example: Enemy attacks the first player
-        enemy.attack(*player1_);
-        std::cout << "Enemy attacked " << player1_->getName() << std::endl;
+    // Example match logic
+    for (auto& card : deck) {
+        std::cout << "Activating card: " << card.getName() << std::endl;
+        card.activateEffect();
+        std::cout << "Card power: " << card.getPower() << std::endl;
     }
 }
 
-// Progress the story within the adventure match
-void AdventureMatch::progressStory() {
-    // Implement story progression logic, e.g., trigger events, narrative updates
-    std::cout << "Story progressing..." << std::endl;
+// Initialize the deck with some cards
+void AdventureMatch::initializeDeck() {
+    deck.emplace_back("Fireball", "Throws a ball of fire", 10, 5); // Added description
+    deck.emplace_back("Ice Blast", "Unleashes a blast of ice", 8, 4); // Added description
 }

@@ -1,18 +1,8 @@
-#include "ExampleCard.h" // Include the header file for ExampleCard
+#include "ExampleCard.h"
 
-// Constructor definition that calls the base class constructor
-ExampleCard::ExampleCard(const std::string& name, int cost)
-        : Card(name, cost) // Call the base class constructor with arguments
-{
-    // Additional initialization if needed
-}
+ExampleCard::ExampleCard(const std::string& name, const std::string& description, int cost, int power)
+        : Card(name, description, cost), power_(power) {}
 
-// Implement getName method using the base class method
-std::string ExampleCard::getName() const {
-    return Card::getName();
-}
-
-// Implement getCost method using the base class method
-int ExampleCard::getCost() const {
-    return Card::getCost();
+int ExampleCard::getPower() const {
+    return power_;
 }

@@ -3,30 +3,21 @@
 
 #include <string>
 
-// Forward declare GameState if it's defined in another file
-class GameState;
-
+// Base class for all cards in the game
 class Card {
 public:
-    // Constructor to initialize card with name and cost
-    Card(const std::string &name, int cost);
+    // Constructor for Card
+    Card(const std::string& name, const std::string& description, int cost); // Added description
+    virtual ~Card() = default; // Virtual destructor
 
-    // Virtual destructor to ensure derived classes are destructed properly
-    virtual ~Card(); // Declaration only
-
-    // Pure virtual method to play the card, modifying the game state
-    virtual void Play(GameState& gameState) = 0;
-
-    // Pure virtual method to get the name of the card
-    virtual std::string getName() const = 0;
-
-    // Pure virtual method to get the cost of the card
-    virtual int getCost() const = 0;
+    virtual std::string getName() const { return name_; }
+    virtual std::string getDescription() const { return description_; } // Added for consistency
+    virtual int getCost() const { return cost_; }
 
 protected:
-    // Member variables for card properties
-    std::string name; // Name of the card
-    int cost;         // Cost of the card
+    std::string name_;
+    std::string description_; // Added description
+    int cost_;
 };
 
 #endif // CARD_H

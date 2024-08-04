@@ -1,7 +1,7 @@
 #ifndef POSITION_H
 #define POSITION_H
 
-#include "Direction.h"
+#include "direction.h"
 #include <cmath>  // Include cmath for std::sqrt
 
 struct Position {

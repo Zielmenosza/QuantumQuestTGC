@@ -20,3 +20,7 @@ void Room::addPlayer(const Player& player) {
         players_.push_back(player);
     }
 }
+
+bool Room::hasObstacle() {
+    return false;
+}
