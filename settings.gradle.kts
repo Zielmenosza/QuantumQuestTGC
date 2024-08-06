@@ -2,19 +2,20 @@
 
 pluginManagement {
     repositories {
-        gradlePluginPortal() // Required for Gradle plugins
+        gradlePluginPortal() // For Gradle plugins
         google()             // Google's Maven repository
         mavenCentral()       // Maven Central repository
     }
 }
 
 dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS) // Ensure this setting
     repositories {
-        google()
+        google()  // Centralize Google repository declaration here
         mavenCentral()
+        // Add other repositories if needed
     }
 }
 
 rootProject.name = "QuantumQuest"
-include(":app", ":arcore_client")
+include(":app")

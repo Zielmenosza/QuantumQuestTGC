@@ -4,32 +4,36 @@ project(QuantumQuest)
 set(NDK_PATH "C:/Users/Ziel/AppData/Local/Android/Sdk/ndk/26.1.10909125")
 
 include_directories(${CMAKE_SOURCE_DIR})
-include_directories(${ANDROID_NDK}/sources/android/native_app_glue)
+include_directories(${NDK_PATH}/sources/android/native_app_glue)  # Correct path to native_app_glue
 include_directories(utils)
 
+# Add static library for native_app_glue
 add_library(native_app_glue STATIC
         ${NDK_PATH}/sources/android/native_app_glue/android_native_app_glue.c
 )
 set_target_properties(native_app_glue PROPERTIES LINKER_LANGUAGE C)
 
+# ARCore SDK root (if used)
+set(ARCORE_SDK_ROOT "C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/arcore-android-sdk-1.44.0")
+
+# Source files for the shared library
 file(GLOB_RECURSE SOURCE_FILES
         ${CMAKE_CURRENT_SOURCE_DIR}/*.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/*.c
         ${CMAKE_CURRENT_SOURCE_DIR}/*.h
-        ${CMAKE_CURRENT_SOURCE_DIR}/ar_session.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/main.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/ar_object.cpp  # Add this line
-        ${CMAKE_CURRENT_SOURCE_DIR}/ar_match.cpp   # Add this line
 )
 
+# Add the shared library
 add_library(quantumquest SHARED ${SOURCE_FILES})
 
+# Find necessary libraries
 find_library(log-lib log)
 find_library(JNIGRAPHICS_LIB jnigraphics)
 find_library(android-lib android)
 find_library(egl-lib EGL)
 find_library(glesv3-lib GLESv3)
 
+# Link libraries
 target_link_libraries(quantumquest
         native_app_glue
         ${log-lib}
@@ -39,14 +43,17 @@ target_link_libraries(quantumquest
         ${JNIGRAPHICS_LIB}
 )
 
+# Set C++ standard
 set_target_properties(quantumquest PROPERTIES CXX_STANDARD 17)
 
+# Compiler options
 target_compile_options(quantumquest PRIVATE
         -std=c++17
         -frtti
         -fexceptions
 )
 
+# Build type-specific configurations
 if(CMAKE_BUILD_TYPE MATCHES Debug)
     message("Configuring Debug Build")
     target_compile_options(quantumquest PRIVATE

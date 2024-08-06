@@ -1,30 +1,34 @@
+package com.example.QuantumQuest
 
+import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
-    // Declare native methods
-    external fun getCardNames(cardHandles: LongArray?): Array<String>?
-    external fun getCardCosts(cardHandles: LongArray?): IntArray?
 
-    // Example usage
-    fun displayCardInfo(cardHandles: LongArray?) {
-        val cardNames = getCardNames(cardHandles)
-        val cardCosts = getCardCosts(cardHandles)
+    // Example function to demonstrate logging
+    fun displayCardInfo() {
+        // Simulate card handles and information retrieval without JNI
+        val cardNames = arrayOf("Ace of Spades", "King of Hearts", "Queen of Diamonds")
+        val cardCosts = intArrayOf(5, 10, 8)
 
-        if (cardNames != null && cardCosts != null) {
-            for (i in cardNames.indices) {
-                Log.d("CardInfo", "Name: " + cardNames[i] + ", Cost: " + cardCosts[i])
-            }
-        } else {
-            Log.e("CardInfo", "Failed to retrieve card information.")
+        for (i in cardNames.indices) {
+            Log.d("CardInfo", "Name: ${cardNames[i]}, Cost: ${cardCosts[i]}")
         }
     }
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        // Example call to display card information
+        displayCardInfo()
+    }
+
     companion object {
-        // Load the native library
+        // No need to load any native library if not using JNI
         init {
-            System.loadLibrary("quantumquest")
+            // This block is intentionally left empty if no library is needed
         }
     }
 }

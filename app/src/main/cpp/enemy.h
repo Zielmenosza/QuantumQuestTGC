@@ -5,14 +5,15 @@
 
 class Enemy {
 public:
-    Enemy(const std::string& name, int health, int attack); // Constructor declaration
-    std::string getType() const; // Method declaration
+    explicit Enemy(std::string  name);
+    Enemy(std::string  name, int health, int attack);
+    [[nodiscard]] std::string getType() const;
 
 private:
     std::string enemyName;
     int enemyHealth;
     int enemyAttack;
-    std::string type; // Add a type member variable if needed
+    std::string type;
 };
 
 #endif // ENEMY_H

@@ -14,6 +14,8 @@ public:
 
     void addToHand(const std::shared_ptr<Card> &card);
 
+    Player(std::string  name); // Add this constructor
+
     const std::vector<std::shared_ptr<Card>> &getHand() const;
 
     void increaseMovementPoints(int points);

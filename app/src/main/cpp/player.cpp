@@ -1,5 +1,7 @@
 #include "player.h"
 
+#include <utility>
+
 Player::Player() : name_{"Player"}, maxHealth_{100}, currentHealth_{100}, shield_{0} {}
 
 std::string Player::getName() const {
@@ -14,6 +16,8 @@ void Player::reduceIncomingDamage(int damage) {
     }
     currentHealth_ -= damage;
 }
+
+Player::Player(std::string  name) : name_(std::move(name)), maxHealth_{100}, currentHealth_{100}, shield_{0} {}
 
 void Player::addToHand(const std::shared_ptr<Card>& card) {
     hand_.push_back(card);

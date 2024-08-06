@@ -11,7 +11,7 @@ ARManager::~ARManager() {
 }
 
 void ARManager::createARObject() {
-    ARObject* newObj = new ARObject();
+    auto* newObj = new ARObject();
     // Use newObj as needed
     delete newObj; // Properly delete the object when done
 }

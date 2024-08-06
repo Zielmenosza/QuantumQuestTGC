@@ -10,8 +10,8 @@ public:
     ARManager();
     ~ARManager();
 
-    void createARObject();
-    void removeARObject(ARObject* obj);
+    static void createARObject();
+    static void removeARObject(ARObject* obj);
 
 private:
     ARSession* arSession_;
