@@ -1,3 +1,4 @@
+// GameManager.kt
 package com.example.quantumquest
 
 class GameManager {

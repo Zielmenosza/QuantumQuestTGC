@@ -1,30 +1,24 @@
+// GameInterface.kt
 package com.example.quantumquest
 
-import androidx.compose.foundation.layout.*
-import androidx.compose.material.*
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.dp
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
 
 @Composable
 fun GameInterface() {
-    Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .padding(16.dp)
-    ) {
-        Text(text = "Welcome to QuantumQuest", color = Color.Black)
-        Spacer(modifier = Modifier.height(8.dp))
-        Button(onClick = { /* Handle click */ }) {
-            Text("Start Game")
+    val navController = rememberNavController()
+    NavHost(navController = navController, startDestination = "mainMenu") {
+        composable("mainMenu") {
+            MainMenu(
+                onStartGame = { navController.navigate("playerSetup") },
+                onViewDeck = { /* Navigate to deck view */ },
+                onSettings = { /* Navigate to settings */ }
+            )
+        }
+        composable("playerSetup") {
+            PlayerSetup(onStartBattle = { /* Start battle logic */ })
         }
     }
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GameInterfacePreview() {
-    GameInterface()
 }

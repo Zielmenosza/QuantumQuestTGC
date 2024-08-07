@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">Quantum Quest</string>
     <string name="todo">TODO</string>
+    <string name="start_new_game">Start New Game</string>
+    <string name="view_card_collection">View Card Collection</string>
+    <string name="game_screen">Game Screen</string>
+    <string name="next_turn">Next Turn</string>
 </resources>

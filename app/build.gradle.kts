@@ -1,34 +1,19 @@
-// app/build.gradle.kts
-
 plugins {
     id("com.android.application")
-    id("org.jetbrains.kotlin.android")
+    kotlin("android")
+    kotlin("kapt") // if you are using Kotlinannotation processing
 }
 
 android {
-    namespace = "com.example.QuantumQuest"
+    namespace = "com.example.quantumquest" // Add the namespace here
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.QuantumQuest"
-        minSdk = 30
+        applicationId = "com.example.quantumquest"
+        minSdk = 21
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
-
-        ndkVersion = "26.1.10909125"
-
-        ndk {
-            abiFilters.addAll(listOf("arm64-v8a", "armeabi-v7a", "x86", "x86_64"))
-        }
-    }
-
-    buildTypes {
-        release {
-            isMinifyEnabled = false
-            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
-            signingConfig = signingConfigs.getByName("debug")
-        }
     }
 
     compileOptions {
@@ -37,40 +22,27 @@ android {
     }
 
     kotlinOptions {
-        jvmTarget = "17"
-    }
-
-    buildFeatures {
-        compose = true // Enable Jetpack Compose
-    }
-
-    composeOptions {
-        kotlinCompilerExtensionVersion = "1.4.3" // Match Compose version with Kotlin
-    }
-
-    externalNativeBuild {
-        cmake {
-            path = file("src/main/cpp/CMakeLists.txt")
-            version = "3.22.1"
-        }
+        jvmTarget ="17"
     }
 }
 
 dependencies {
+    implementation("androidx.core:core-ktx:1.13.1")
+    implementation("androidx.appcompat:appcompat:1.7.0")
+    implementation("com.google.android.material:material:1.12.0")
+    implementation("androidx.compose.ui:ui:1.5.0")
+    implementation("androidx.compose.ui:ui-tooling-preview:1.5.0")
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.8.4")
+    implementation("androidx.activity:activity-compose:1.9.1")
     implementation("com.google.ar:core:1.44.0")
-    implementation("androidx.core:core-ktx:1.9.0")
-    implementation("androidx.appcompat:appcompat:1.5.1")
-    implementation("com.google.android.material:material:1.7.0")
-
-    // Add Jetpack Compose dependencies
-    implementation("androidx.compose.ui:ui:1.4.3")
-    implementation("androidx.compose.material:material:1.4.3")
-    implementation("androidx.compose.ui:ui-tooling-preview:1.4.3")
-    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.5.1")
-    implementation("androidx.activity:activity-compose:1.6.1")
-    testImplementation(libs.junit.junit2)
-
-    // Optional: Compose UI Testing
-    androidTestImplementation("androidx.compose.ui:ui-test-junit4:1.4.3")
-    debugImplementation("androidx.compose.ui:ui-tooling:1.4.3")
+    implementation(libs.androidx.navigation.runtime.ktx)
+    implementation(libs.androidx.foundation.android)
+    implementation(libs.androidx.navigation.compose)
+    testImplementation("junit:junit:4.13.2")
+    implementation("androidx.compose.material3:material3:1.2.0")
+    androidTestImplementation("androidx.test.ext:junit:1.2.1")
+    androidTestImplementation("androidx.test.espresso:espresso-core:3.6.1")
+    androidTestImplementation("androidx.compose.ui:ui-test-junit4:1.5.0")
+    debugImplementation("androidx.compose.ui:ui-tooling:1.5.0")
+    debugImplementation("androidx.compose.ui:ui-test-manifest:1.5.0")
 }

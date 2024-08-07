@@ -1,6 +1,8 @@
+package com.example.quantumquest
+
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.QuantumQuest.R
+import com.example.quantumquest.R
 import com.google.ar.core.Config
 import com.google.ar.core.Session
 import com.google.ar.core.ArCoreApk
