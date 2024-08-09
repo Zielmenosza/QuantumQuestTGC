@@ -9,11 +9,11 @@ pluginManagement {
 }
 
 dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS) // Ensure this setting
+    repositoriesMode.set(RepositoriesMode.PREFER_PROJECT)  // Or RepositoriesMode.FAIL_ON_PROJECT_REPOS to enforce
     repositories {
-        google()  // Centralize Google repository declaration here
+        google()
         mavenCentral()
-        // Add other repositories if needed
+        maven { url = uri("https://maven.example.com/repo") }
     }
 }
 

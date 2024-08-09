@@ -4,6 +4,9 @@ import android.os.Bundle;
 import android.widget.VideoView;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.quantumquest.MainActivity;
+import com.example.quantumquest.R;
+
 public class VideoActivity extends AppCompatActivity {
 
     @Override
