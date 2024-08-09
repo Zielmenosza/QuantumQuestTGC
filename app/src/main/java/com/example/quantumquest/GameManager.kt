@@ -25,11 +25,7 @@ class GameManager {
         val playerHand = getCurrentPlayerHand(gamePtr).toList()
         Log.d("CardBattleScreen", "Player hand: $playerHand")
         return playerHand
-    }
-
-    companion object {
-        init {
-            System.loadLibrary("quantumquest")
-        }
+            .filter { it.cost <= 0 }
+            .sortedByDescending { it.cost }
     }
 }
