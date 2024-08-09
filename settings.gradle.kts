@@ -2,14 +2,15 @@
 
 pluginManagement {
     repositories {
-        gradlePluginPortal() // For Gradle plugins
-        google()             // Google's Maven repository
-        mavenCentral()       // Maven Central repository
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+        maven { url = uri("https://maven.pkg.jetbrains.space/public/p/compose/dev") } // Add this line
     }
 }
 
 dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.PREFER_PROJECT)  // Or RepositoriesMode.FAIL_ON_PROJECT_REPOS to enforce
+    RepositoriesMode.FAIL_ON_PROJECT_REPOS  // Or RepositoriesMode.FAIL_ON_PROJECT_REPOS to enforce
     repositories {
         google()
         mavenCentral()

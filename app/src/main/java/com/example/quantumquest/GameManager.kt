@@ -1,5 +1,6 @@
-// GameManager.kt
 package com.example.quantumquest
+
+import android.util.Log
 
 class GameManager {
     private var gamePtr: Long = 0
@@ -21,7 +22,9 @@ class GameManager {
     }
 
     fun getPlayerHand(): List<CardModel> {
-        return getCurrentPlayerHand(gamePtr).toList()
+        val playerHand = getCurrentPlayerHand(gamePtr).toList()
+        Log.d("CardBattleScreen", "Player hand: $playerHand")
+        return playerHand
     }
 
     companion object {

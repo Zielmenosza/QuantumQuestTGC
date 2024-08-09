@@ -1,55 +1,82 @@
-import org.gradle.internal.impldep.com.amazonaws.PredefinedClientConfigurations.defaultConfig
-import org.gradle.internal.impldep.com.jcraft.jsch.ConfigRepository.defaultConfig
+// Module-level build.gradle.kts
 
 plugins {
     id("com.android.application")
-    kotlin("android")
-    kotlin("kapt") // if you are using Kotlin annotation processing
+    alias(libs.plugins.orgJetbrainsKotlinAndroid)
+    alias(libs.plugins.composeCompiler)
 }
 
 android {
-    namespace = "com.example.quantumquest" // Corrected
-    compileSdk = 34 // Corrected
+    namespace = "com.example.quantumquest"
+    compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.quantumquest" // Corrected
-        minSdk = 21 // Corrected
-        targetSdk = 34 // Corrected
-        versionCode = 1 // Corrected
-        versionName = "1.0" // Corrected
+        applicationId = "com.example.quantumquest"
+        minSdk = 21
+        targetSdk = 34
+        versionCode = 1
+        versionName = "1.0"
     }
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_17 // Corrected
-        targetCompatibility = JavaVersion.VERSION_17 // Corrected
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+
+        java {
+            toolchain {
+                languageVersion.set(JavaLanguageVersion.of(17))
+            }
+        }
     }
 
     kotlinOptions {
-        jvmTarget = "17" // Corrected
+        jvmTarget = "17"
     }
 
-    ndkVersion = "27.0.12077973" // Corrected
+    buildFeatures {
+        compose = true
+    }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion = "2.0.0"
+    }
+
+    ndkVersion = "27.0.12077973"
 }
 
 dependencies {
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.appcompat)
-    implementation(libs.material)
-    implementation(libs.androidx.ui.v168)
-    implementation(libs.androidx.ui.tooling.preview.v168) // Changed to match UI version
-    implementation(libs.androidx.runtime)
-    implementation(libs.androidx.lifecycle.runtime.ktx.v261)
-    implementation(libs.androidx.activity.compose.v172)
-    implementation(libs.core)
-    implementation(libs.androidx.navigation.runtime.ktx)
-    implementation(libs.androidx.foundation.v168) // Match version with UI and runtime
-    implementation(libs.androidx.navigation.compose)
-    implementation(libs.androidx.annotation)
+    implementation(libs.androidxCoreKtx)
+    implementation(libs.androidxAppcompat)
+    implementation(libs.googleMaterial)
+    implementation(libs.googleArCore)
+
+    // Compose
+    implementation(libs.androidxComposeUi)
+    implementation(libs.androidxComposeUiToolingPreview)
+    implementation(libs.androidxComposeRuntime)
+    implementation(libs.androidxComposeFoundation)
+    implementation(libs.androidxComposeMaterial3)
+
+    // Lifecycle
+    implementation(libs.androidxLifecycleRuntimeKtx)
+
+    // Activity
+    implementation(libs.androidxActivityCompose)
+
+    // Navigation
+    implementation(libs.androidxNavigationRuntimeKtx)
+    implementation(libs.androidxNavigationCompose)
+
+    // Annotation
+    implementation("androidx.annotation:annotation:1.8.2")
+
+    // Testing
     testImplementation(libs.junit)
-    implementation(libs.androidx.material3.v120)
-    androidTestImplementation(libs.androidx.junit.v115)
-    androidTestImplementation(libs.androidx.espresso.core.v351)
-    androidTestImplementation(libs.ui.test.junit4) // Changed to match UI version
-    debugImplementation(libs.ui.tooling) // Changed to match UI version
-    debugImplementation(libs.androidx.ui.test.manifest) // Changed to match UI version
+    androidTestImplementation(libs.androidxTestJunit)
+    androidTestImplementation(libs.androidxEspressoCore)
+    androidTestImplementation(libs.androidxComposeUiTestJunit4)
+
+    // Debug
+    debugImplementation(libs.androidxComposeUiTooling)
+    debugImplementation(libs.androidxComposeUiTestManifest)
 }

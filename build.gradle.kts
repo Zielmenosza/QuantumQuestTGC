@@ -1,13 +1,10 @@
-// build.gradle.kts (Project-level)
+// Root build.gradle.kts
 
 plugins {
-    kotlin("jvm") version "2.0.20-RC"
     id("com.android.application") version "8.5.2" apply false
     id("com.android.library") version "8.5.2" apply false
-}
-
-    subprojects {
-    delete("build")
+    alias(libs.plugins.orgJetbrainsKotlinAndroid) apply false
+    alias(libs.plugins.composeCompiler) apply false
 }
 
 buildscript {
@@ -15,9 +12,10 @@ buildscript {
         google()
         mavenCentral()
     }
+
     dependencies {
-        classpath(libs.gradle) // or the latest stable version
-        classpath(libs.kotlin.gradle.plugin.v190) // Ensure this matches your Kotlin version
+        classpath("com.android.tools.build:gradle:8.5.2")
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:2.0.0")
     }
 }
 
@@ -25,5 +23,11 @@ allprojects {
     repositories {
         google()
         mavenCentral()
+    }
+}
+
+subprojects {
+    delete {
+        delete("build")
     }
 }

@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.10)
 project(QuantumQuest)
 
-set(NDK_PATH "C:/Users/Ziel/AppData/Local/Android/Sdk/ndk/26.1.10909125")
+set(NDK_PATH "C:/Users/Ziel/AppData/Local/Android/Sdk/ndk/27.0.12077973")
 
 include_directories(${CMAKE_SOURCE_DIR})
 include_directories(${NDK_PATH}/sources/android/native_app_glue)  # Correct path to native_app_glue
