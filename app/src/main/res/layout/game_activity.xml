@@ -1,0 +1,26 @@
+<!-- res/layout/activity_game.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/game_screen"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:id="@+id/handTextView"
+        android:layout_marginTop="16dp"
+        android:padding="16dp"/>
+
+    <Button
+        android:id="@+id/nextTurnButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/next_turn"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Game UI components here -->
+</LinearLayout>
