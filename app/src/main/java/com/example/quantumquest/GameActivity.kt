@@ -1,38 +1,46 @@
 package com.example.quantumquest
 
-import androidx.appcompat.app.AppCompatActivity
+import android.media.MediaPlayer
 import android.os.Bundle
-import android.widget.Button
-import android.widget.TextView
+import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.tooling.preview.Preview
 
-class GameActivity : AppCompatActivity() {
-    private lateinit var gameManager: GameManager
-    private lateinit var handTextView: TextView
-    private lateinit var nextTurnButton: Button
+class GameActivity : ComponentActivity() {
+
+    private lateinit var backgroundMusic: MediaPlayer
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_game)
 
-        gameManager = GameManager()
-        handTextView = findViewById(R.id.handTextView)
-        nextTurnButton = findViewById(R.id.nextTurnButton)
+        // Initialize background music
+        backgroundMusic = MediaPlayer.create(this, R.raw.background_music)
+        backgroundMusic.isLooping = true
+        backgroundMusic.start()
 
-        gameManager.startNewGame()
-        updateUI()
-
-        nextTurnButton.setOnClickListener {
-            val gameOver = gameManager.playNextTurn()
-            updateUI()
-            if (gameOver) {
-                nextTurnButton.isEnabled = false
-                // TODO: Show game over message
-            }
+        // Set content for the game
+        setContent {
+            QuantumQuestGameApp() // Use a different name to avoid conflict
         }
     }
 
-    private fun updateUI() {
-        val hand = gameManager.getPlayerHand()
-        handTextView.text = hand.joinToString("\n") { "${it.name} (Cost: ${it.cost})" }
+    override fun onDestroy() {
+        super.onDestroy()
+        if (::backgroundMusic.isInitialized) {
+            backgroundMusic.stop()
+            backgroundMusic.release()
+        }
     }
+}
+
+@Composable
+fun QuantumQuestGameApp() {
+    // Your composable content here
+}
+
+@Preview(showBackground = true)
+@Composable
+fun GamePreview() {
+    QuantumQuestGameApp() // Adjusted name
 }
