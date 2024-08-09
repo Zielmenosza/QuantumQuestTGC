@@ -10,4 +10,10 @@
         <item name="colorOnSecondary">@color/onSecondary</item>
     </style>
 
+    <!-- Theme for VideoActivity -->
+    <style name="Theme.VideoActivity" parent="Theme.AppCompat.NoActionBar">
+        <!-- Customize your theme here -->
+        <item name="android:windowBackground">@android:color/black</item>
+    </style>
+
 </resources>

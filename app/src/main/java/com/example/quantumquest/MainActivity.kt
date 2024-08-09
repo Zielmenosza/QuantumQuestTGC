@@ -1,7 +1,9 @@
 package com.example.quantumquest
 
+import android.content.Intent
 import android.media.MediaPlayer
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.*
@@ -15,7 +17,6 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.compose.ui.tooling.preview.Preview
-import android.util.Log
 
 class MainActivity : ComponentActivity() {
 
@@ -24,29 +25,48 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // Initialize backgroundMusic before using it
-        initializeBackgroundMusic()
+        try {
+            backgroundMusic = MediaPlayer.create(this, R.raw.background_music)
+            if (backgroundMusic == null) {
+                Log.e("MainActivity", "Failed to create MediaPlayer for background music.")
+            } else {
+                initializeBackgroundMusic(backgroundMusic!!)
+            }
+        } catch (e: Exception) {
+            Log.e("MainActivity", "Exception during MediaPlayer setup: ${e.message}", e)
+        }
 
+        // Set the content for the main activity
         setContent {
             QuantumQuestApp()
         }
+
+        // Start the VideoActivity
+        val intent = Intent(this, VideoActivity::class.java)
+        startActivity(intent)
     }
 
-    private fun initializeBackgroundMusic() {
-        backgroundMusic = MediaPlayer.create(this, R.raw.background_music)
-        if (backgroundMusic != null) {
-            backgroundMusic?.isLooping = true
-            backgroundMusic?.start()
-        } else {
-            Log.e("MainActivity", "Failed to load background music")
+    private fun initializeBackgroundMusic(player: MediaPlayer) {
+        try {
+            player.isLooping = true
+            player.start()
+        } catch (e: Exception) {
+            Log.e("MainActivity", "Failed to start background music: ${e.message}", e)
         }
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        // Release the MediaPlayer resources
-        backgroundMusic?.stop()
-        backgroundMusic?.release()
+        backgroundMusic?.let { player ->
+            try {
+                if (player.isPlaying) {
+                    player.stop()
+                }
+                player.release()
+            } catch (e: Exception) {
+                Log.e("MainActivity", "Failed to release MediaPlayer: ${e.message}", e)
+            }
+        }
     }
 }
 

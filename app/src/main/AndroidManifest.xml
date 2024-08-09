@@ -33,9 +33,11 @@
 
         <!-- VideoActivity should not have its own MAIN and LAUNCHER intent-filter -->
         <!-- Correct placement of VideoActivity -->
-        <activity android:name=".VideoActivity"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+        <activity
+            android:name=".VideoActivity"
+            android:theme="@style/Theme.VideoActivity">
         </activity>
+
 
         <!-- GameActivity declaration -->
         <activity android:name=".GameActivity" />
