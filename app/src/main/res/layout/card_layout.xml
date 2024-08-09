@@ -6,18 +6,21 @@
        android:id="@+id/card_frame_background"
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
+       android:importantForAccessibility="no"
        android:src="@drawable/card_frame_background" />
 
    <ImageView
        android:id="@+id/card_frame_foreground"
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
+       android:importantForAccessibility="no"
        android:src="@drawable/card_frame_foreground" />
 
    <ImageView
        android:id="@+id/card_icon"
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
+       android:importantForAccessibility="no"
        android:src="@drawable/aqua_mirage_icon"
        android:layout_gravity="center" />
 
@@ -25,6 +28,7 @@
        android:id="@+id/scene_image"
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
+       android:importantForAccessibility="no"
        android:src="@drawable/aqua_mirage_scene"
        android:layout_gravity="center" />
 

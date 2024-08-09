@@ -2,11 +2,9 @@ package com.example.quantumquest
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.quantumquest.R
+import com.google.ar.core.ArCoreApk
 import com.google.ar.core.Config
 import com.google.ar.core.Session
-import com.google.ar.core.ArCoreApk
-import com.google.ar.core.TrackingState
 
 class ARActivity : AppCompatActivity() {
 
@@ -66,26 +64,4 @@ class ARActivity : AppCompatActivity() {
         }
     }
 
-    private fun updateFrame() {
-        if (!::arSession.isInitialized) return
-
-        // Update ARCore frame
-        val frame = arSession.update()
-
-        // Process the camera frame, draw objects, etc.
-        val camera = frame.camera
-
-        // Handle tracking state and update visuals accordingly
-        when (camera.trackingState) {
-            TrackingState.TRACKING -> {
-                // Perform rendering and updates
-            }
-            TrackingState.PAUSED -> {
-                // Handle paused state
-            }
-            TrackingState.STOPPED -> {
-                // Handle stopped state
-            }
-        }
-    }
 }

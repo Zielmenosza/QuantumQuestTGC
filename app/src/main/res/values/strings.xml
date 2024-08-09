@@ -5,4 +5,5 @@
     <string name="view_card_collection">View Card Collection</string>
     <string name="game_screen">Game Screen</string>
     <string name="next_turn">Next Turn</string>
+    <string name="select_a_character">Select a Character</string>
 </resources>
