@@ -1,13 +1,13 @@
 package com.example.quantumquest
 
-import android.content.Intent
 import android.media.MediaPlayer
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.*
-import androidx.compose.runtime.*
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
@@ -15,35 +15,38 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.compose.ui.tooling.preview.Preview
+import android.util.Log
 
 class MainActivity : ComponentActivity() {
-    private lateinit var backgroundMusic: MediaPlayer
+
+    private var backgroundMusic: MediaPlayer? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // Initialize and start the background music
-        backgroundMusic = MediaPlayer.create(this, R.raw.background_music)
-        backgroundMusic.isLooping = true // Loop the music
-        backgroundMusic.start()
+        // Initialize backgroundMusic before using it
+        initializeBackgroundMusic()
 
-        // Launch VideoActivity to play the intro video first
-        val intent = Intent(this, VideoActivity::class.java)
-        startActivity(intent)
-
-        // Set the content after the video activity finishes
         setContent {
             QuantumQuestApp()
+        }
+    }
+
+    private fun initializeBackgroundMusic() {
+        backgroundMusic = MediaPlayer.create(this, R.raw.background_music)
+        if (backgroundMusic != null) {
+            backgroundMusic?.isLooping = true
+            backgroundMusic?.start()
+        } else {
+            Log.e("MainActivity", "Failed to load background music")
         }
     }
 
     override fun onDestroy() {
         super.onDestroy()
         // Release the MediaPlayer resources
-        if (::backgroundMusic.isInitialized) {
-            backgroundMusic.stop()
-            backgroundMusic.release()
-        }
+        backgroundMusic?.stop()
+        backgroundMusic?.release()
     }
 }
 
