@@ -2,6 +2,7 @@
 kotlin = "2.0.0"
 composeVersion = "1.6.8"
 agp = "8.5.2"
+media3Common = "1.4.0"
 
 [plugins]
 orgJetbrainsKotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
@@ -39,3 +40,4 @@ androidxComposeUiTestJunit4 = { group = "androidx.compose.ui", name = "ui-test-j
 # Debug
 androidxComposeUiTooling = { group = "androidx.compose.ui", name = "ui-tooling", version.ref = "composeVersion" }
 androidxComposeUiTestManifest = { group = "androidx.compose.ui", name = "ui-test-manifest", version.ref = "composeVersion" }
+media3Common = { group = "androidx.media3", name = "media3-common", version.ref = "media3Common" }

@@ -35,7 +35,9 @@
         <activity
             android:name=".VideoActivity"
             android:screenOrientation="landscape"
-            android:theme="@style/Theme.AppCompat.NoActionBar" />
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            tools:ignore="DiscouragedApi">
+        </activity>
 
 
         <!-- GameActivity declaration -->
