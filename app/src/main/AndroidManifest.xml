@@ -39,6 +39,11 @@
             tools:ignore="DiscouragedApi">
         </activity>
 
+        <activity
+            android:name=".LoadingActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:screenOrientation="landscape">
+        </activity>
 
         <!-- GameActivity declaration -->
         <activity android:name=".GameActivity" />
