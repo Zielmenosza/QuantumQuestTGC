@@ -8,10 +8,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="com.example.quantumquest" />
+                  <option name="mobileSdkAppId" value="1:1038043426268:android:966ad6b00970d817c73319" />
+                  <option name="projectId" value="quantum-quest-30628" />
+                  <option name="projectNumber" value="1038043426268" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />

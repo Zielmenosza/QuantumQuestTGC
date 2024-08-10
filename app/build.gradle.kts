@@ -2,6 +2,7 @@
 
 plugins {
     id("com.android.application")
+    id("com.google.gms.google-services")
     alias(libs.plugins.orgJetbrainsKotlinAndroid)
     alias(libs.plugins.composeCompiler)
 }
@@ -12,7 +13,7 @@ android {
 
     defaultConfig {
         applicationId = "com.example.quantumquest"
-        minSdk = 21
+        minSdk = 23
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -76,6 +77,12 @@ dependencies {
     implementation("androidx.annotation:annotation:1.8.2")
     implementation(libs.media3Common)
 
+    // Import the Firebase BoM
+    implementation(platform("com.google.firebase:firebase-bom:33.1.2"))
+
+    // Add Firebase Analytics (or any other Firebase SDK)
+    implementation("com.google.firebase:firebase-analytics")
+
     // Testing
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidxTestJunit)
@@ -85,4 +92,13 @@ dependencies {
     // Debug
     debugImplementation(libs.androidxComposeUiTooling)
     debugImplementation(libs.androidxComposeUiTestManifest)
+
+    implementation("com.google.firebase:firebase-auth")
+    implementation("com.google.android.gms:play-services-auth:20.4.1")
+    // Firebase Authentication
+    implementation("com.google.firebase:firebase-auth-ktx")
+    implementation("com.google.android.gms:play-services-auth:20.1.0")
+    // Facebook SDK
+    implementation("com.facebook.android:facebook-android-sdk:latest.release")
+    implementation("com.facebook.android:facebook-login:12.0.0")
 }

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1038043426268",
+    "project_id": "quantum-quest-30628",
+    "storage_bucket": "quantum-quest-30628.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1038043426268:android:966ad6b00970d817c73319",
+        "android_client_info": {
+          "package_name": "com.example.quantumquest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1038043426268-0vnjni6teu6gsidp9dbc6r13bh4nk51b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1mFWifX-bZ2PfH-KpXgDbU2_sFWpeLFs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1038043426268-0vnjni6teu6gsidp9dbc6r13bh4nk51b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

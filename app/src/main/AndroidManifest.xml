@@ -1,31 +1,28 @@
-<!-- AndroidManifest.xml -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-feature android:name="android.hardware.camera.ar" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-feature
         android:name="android.hardware.camera"
         android:required="false" />
 
     <application
-        android:theme="@style/Theme.Material3.DayNight"
         android:allowBackup="true"
-        android:dataExtractionRules="@xml/data_extraction_rules"
-        android:fullBackupContent="@xml/backup_rules"
-        android:icon="@drawable/icon_1"
         android:label="@string/app_name"
+        android:icon="@drawable/icon_1"
+        android:theme="@style/Theme.Material3.DayNight"
         android:supportsRtl="true"
         tools:replace="android:appComponentFactory"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         tools:targetApi="31">
 
-        <!-- MainActivity should be the launcher activity, which starts the app -->
         <activity
             android:name=".MainActivity"
             android:screenOrientation="landscape"
-            android:exported="true"
-            tools:ignore="DiscouragedApi">
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -35,8 +32,7 @@
         <activity
             android:name=".VideoActivity"
             android:screenOrientation="landscape"
-            android:theme="@style/Theme.AppCompat.NoActionBar"
-            tools:ignore="DiscouragedApi">
+            android:theme="@style/Theme.AppCompat.NoActionBar">
         </activity>
 
         <activity
@@ -45,13 +41,10 @@
             android:screenOrientation="landscape">
         </activity>
 
-        <!-- GameActivity declaration -->
         <activity android:name=".GameActivity" />
 
-        <!-- Example of a meta-data element -->
         <meta-data
             android:name="android.app.lib_name"
             android:value="quantumquest" />
-
     </application>
 </manifest>
