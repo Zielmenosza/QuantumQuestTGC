@@ -2,6 +2,7 @@
     <string name="app_name">Quantum Quest</string>
     <string name="todo">TODO</string>
     <string name="default_web_client_id">1038043426268-0vnjni6teu6gsidp9dbc6r13bh4nk51b.apps.googleusercontent.com</string>
+    <string name="facebook_app_id">1191939875384622</string>
     <string name="start_new_game">Start New Game</string>
     <string name="view_card_collection">View Card Collection</string>
     <string name="game_screen">Game Screen</string>
