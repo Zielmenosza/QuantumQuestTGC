@@ -21,7 +21,6 @@ import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.GoogleAuthProvider
 import com.google.firebase.auth.FacebookAuthProvider
 import com.google.android.gms.common.api.ApiException
-import android.view.WindowInsetsController
 
 class MainActivity : AppCompatActivity() {
 
@@ -34,11 +33,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // Hide the status bar using WindowInsetsController
-        window.insetsController?.let {
-            it.hide(WindowInsetsController.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE)
-            it.systemBarsBehavior = WindowInsetsController.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
-        }
+        // Hide the status bar and make the app full-screen
+        window.decorView.systemUiVisibility = (
+                View.SYSTEM_UI_FLAG_FULLSCREEN
+                        or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                        or View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                        or View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY)
 
         // Initialize Firebase Auth
         auth = FirebaseAuth.getInstance()
@@ -120,9 +120,5 @@ class MainActivity : AppCompatActivity() {
 
     private fun updateUI(user: FirebaseUser?) {
         // Update your UI with user information
-    }
-
-    companion object {
-        private const val RC_SIGN_IN = 9001
     }
 }

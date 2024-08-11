@@ -1,19 +1,28 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera.ar" />
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
 
     <application
         android:name=".MyApplication"
         android:allowBackup="true"
-        android:icon="@drawable/icon_1"
         android:label="@string/app_name"
+        android:icon="@drawable/icon_1"
+        android:theme="@style/Theme.Material3.DayNight"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Material3.DayNight">
+        tools:replace="android:appComponentFactory"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        tools:targetApi="31">
 
+        <!-- Splash Activity as the launcher -->
         <activity
-            android:name=".MainActivity"
-            android:screenOrientation="landscape"
+            android:name=".SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,26 +30,40 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".VideoActivity"
+        <!-- Main Activity -->
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="landscape"
+            android:exported="false">
+        </activity>
+
+        <!-- Video Activity for intro -->
+        <activity
+            android:name=".VideoActivity"
             android:screenOrientation="landscape"
             android:theme="@style/Theme.AppCompat.NoActionBar">
         </activity>
 
+        <!-- Other Activities -->
         <activity
             android:name=".LoadingActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar"
             android:screenOrientation="landscape">
         </activity>
 
+        <activity android:name=".GameActivity" />
+
+        <!-- Facebook SDK Initialization -->
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/facebook_app_id" />
+
         <meta-data
             android:name="com.facebook.sdk.ClientToken"
             android:value="@string/facebook_client_token" />
+
         <meta-data
             android:name="android.app.lib_name"
             android:value="quantumquest" />
     </application>
-
 </manifest>
