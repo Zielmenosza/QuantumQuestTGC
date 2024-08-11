@@ -1,0 +1,501 @@
+Task :app:compileReleaseKotlin FAILED
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/BaseCard.kt:2:33 Unresolved reference 'Card'.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/BaseCard.kt:6:5 Property must be initialized.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/BaseCard.kt:6:19 Syntax error: Property getter or setter expected.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/BaseCard.kt:7:5 Property must be initialized.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/BaseCard.kt:7:21 Syntax error: Property getter or setter expected.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/BaseCard.kt:8:5 Property must be initialized.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/BaseCard.kt:9:1 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/BaseCard.kt:9:3 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/BaseCard.kt:9:3 Function declaration must have a name.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/Card.kt:1:33 Unresolved reference 'Card'.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/Card.kt:2:1 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/Card.kt:2:9 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/Card.kt:2:12 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/Card.kt:2:13 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/Card.kt:2:20 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/Card.kt:2:21 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/Card.kt:2:33 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/Card.kt:2:34 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/Card.kt:5:5 Property must be initialized.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/Card.kt:5:16 Syntax error: Property getter or setter expected.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/Card.kt:6:5 Property must be initialized.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/Card.kt:6:21 Syntax error: Property getter or setter expected.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/Card.kt:7:5 Property must be initialized.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/Card.kt:8:1 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/Card.kt:8:3 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/Card.kt:8:3 Function declaration must have a name.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/Card.kt:9:5 Modifier 'open' is not applicable to 'local function'.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/CharacterCard.kt:1:33 Unresolved reference 'Card'.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/CharacterCard.kt:3:33 Unresolved reference 'CharacterCard'.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/CharacterCard.kt:4:1 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/CharacterCard.kt:4:9 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/CharacterCard.kt:4:12 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/CharacterCard.kt:4:13 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/CharacterCard.kt:4:20 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/CharacterCard.kt:4:21 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/CharacterCard.kt:4:33 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/CharacterCard.kt:4:34 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/CharacterCard.kt:7:5 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/CharacterCard.kt:7:7 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/CharacterCard.kt:7:9 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/CharacterCard.kt:7:12 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/CharacterCard.kt:8:5 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/CharacterCard.kt:8:9 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/CharacterCard.kt:8:11 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/CharacterCard.kt:8:17 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/CharacterCard.kt:9:5 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/CharacterCard.kt:9:16 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/CharacterCard.kt:9:18 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/CharacterCard.kt:9:24 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/CharacterCard.kt:10:5 Property must be initialized.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/CharacterCard.kt:10:20 Syntax error: Property getter or setter expected.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/CharacterCard.kt:11:5 Property must be initialized.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/CharacterCard.kt:12:1 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/CharacterCard.kt:12:3 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/CharacterCard.kt:12:5 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/CharacterCard.kt:12:9 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/CharacterCard.kt:12:10 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/CharacterCard.kt:12:12 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/CharacterCard.kt:12:14 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/CharacterCard.kt:12:18 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/CharacterCard.kt:12:20 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/CharacterCard.kt:12:31 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/CharacterCard.kt:12:33 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/CharacterCard.kt:12:33 Function declaration must have a name.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/CharacterCard.kt:13:5 Modifier 'open' is not applicable to 'local function'.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/QuestCard.kt:2:33 Unresolved reference 'Card'.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/QuestCard.kt:3:33 Unresolved reference 'QuestCard'.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/QuestCard.kt:7:5 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/QuestCard.kt:7:7 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/QuestCard.kt:7:9 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/QuestCard.kt:7:12 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/QuestCard.kt:8:5 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/QuestCard.kt:8:9 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/QuestCard.kt:8:11 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/QuestCard.kt:8:17 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/QuestCard.kt:9:5 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/QuestCard.kt:9:16 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/QuestCard.kt:9:18 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/QuestCard.kt:10:1 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/QuestCard.kt:10:3 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/QuestCard.kt:10:5 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/QuestCard.kt:10:9 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/QuestCard.kt:10:10 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/QuestCard.kt:10:12 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/QuestCard.kt:10:14 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/QuestCard.kt:10:18 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/QuestCard.kt:10:20 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/QuestCard.kt:10:31 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/QuestCard.kt:10:33 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/QuestCard.kt:10:33 Function declaration must have a name.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/QuestCard.kt:11:5 Modifier 'open' is not applicable to 'local function'.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/RoomEffectCard.kt:1:33 Unresolved reference 'Card'.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/RoomEffectCard.kt:3:33 Unresolved reference 'RoomEffectCard'.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/RoomEffectCard.kt:4:1 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/RoomEffectCard.kt:4:9 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/RoomEffectCard.kt:4:12 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/RoomEffectCard.kt:4:13 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/RoomEffectCard.kt:4:20 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/RoomEffectCard.kt:4:21 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/RoomEffectCard.kt:4:33 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/RoomEffectCard.kt:4:34 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/RoomEffectCard.kt:7:5 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/RoomEffectCard.kt:7:7 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/RoomEffectCard.kt:7:9 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/RoomEffectCard.kt:7:12 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/RoomEffectCard.kt:8:5 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/RoomEffectCard.kt:8:9 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/RoomEffectCard.kt:8:11 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/RoomEffectCard.kt:8:17 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/RoomEffectCard.kt:9:5 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/RoomEffectCard.kt:9:16 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/RoomEffectCard.kt:9:18 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/RoomEffectCard.kt:10:1 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/RoomEffectCard.kt:10:3 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/RoomEffectCard.kt:10:5 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/RoomEffectCard.kt:10:9 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/RoomEffectCard.kt:10:10 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/RoomEffectCard.kt:10:12 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/RoomEffectCard.kt:10:14 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/RoomEffectCard.kt:10:18 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/RoomEffectCard.kt:10:20 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/RoomEffectCard.kt:10:31 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/RoomEffectCard.kt:10:33 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/RoomEffectCard.kt:10:33 Function declaration must have a name.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/Model/RoomEffectCard.kt:11:5 Modifier 'open' is not applicable to 'local function'.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/cards/ElementalSpellCard.kt:2:33 Unresolved reference 'Card'.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/cards/ElementalSpellCard.kt:3:39 Unresolved reference 'Card'.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/cards/ElementalSpellCard.kt:7:5 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/cards/ElementalSpellCard.kt:7:7 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/cards/ElementalSpellCard.kt:7:9 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/cards/ElementalSpellCard.kt:7:12 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/cards/ElementalSpellCard.kt:8:5 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/cards/ElementalSpellCard.kt:8:9 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/cards/ElementalSpellCard.kt:8:11 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/cards/ElementalSpellCard.kt:8:17 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/cards/ElementalSpellCard.kt:9:5 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/cards/ElementalSpellCard.kt:9:16 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/cards/ElementalSpellCard.kt:9:18 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/cards/ElementalSpellCard.kt:10:1 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/cards/ElementalSpellCard.kt:10:3 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/cards/ElementalSpellCard.kt:10:5 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/cards/ElementalSpellCard.kt:10:9 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/cards/ElementalSpellCard.kt:10:10 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/cards/ElementalSpellCard.kt:10:12 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/cards/ElementalSpellCard.kt:10:14 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/cards/ElementalSpellCard.kt:10:18 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/cards/ElementalSpellCard.kt:10:20 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/cards/ElementalSpellCard.kt:10:31 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/cards/ElementalSpellCard.kt:10:33 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/cards/ElementalSpellCard.kt:10:33 Function declaration must have a name.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/cards/PixelArtifactCard.kt:2:33 Unresolved reference 'Card'.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/cards/PixelArtifactCard.kt:3:39 Unresolved reference 'Card'.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/cards/PixelArtifactCard.kt:7:5 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/cards/PixelArtifactCard.kt:7:7 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/cards/PixelArtifactCard.kt:7:9 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/cards/PixelArtifactCard.kt:7:12 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/cards/PixelArtifactCard.kt:8:5 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/cards/PixelArtifactCard.kt:8:9 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/cards/PixelArtifactCard.kt:8:11 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/cards/PixelArtifactCard.kt:8:17 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/cards/PixelArtifactCard.kt:9:5 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/cards/PixelArtifactCard.kt:9:16 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/cards/PixelArtifactCard.kt:9:18 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/cards/PixelArtifactCard.kt:10:1 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/cards/PixelArtifactCard.kt:10:3 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/cards/PixelArtifactCard.kt:10:5 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/cards/PixelArtifactCard.kt:10:9 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/cards/PixelArtifactCard.kt:10:10 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/cards/PixelArtifactCard.kt:10:12 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/cards/PixelArtifactCard.kt:10:14 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/cards/PixelArtifactCard.kt:10:18 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/cards/PixelArtifactCard.kt:10:20 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/cards/PixelArtifactCard.kt:10:31 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/cards/PixelArtifactCard.kt:10:33 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/cards/PixelArtifactCard.kt:10:33 Function declaration must have a name.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/cards/QuantumAnomalyCard.kt:2:33 Unresolved reference 'QuantumAnomalyCard'.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/cards/QuantumAnomalyCard.kt:3:33 Unresolved reference 'Card'.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/cards/QuantumAnomalyCard.kt:4:39 Unresolved reference 'QuantumAnomalyCard'.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/cards/QuantumAnomalyCard.kt:10:5 Property must be initialized.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/cards/QuantumAnomalyCard.kt:10:19 Syntax error: Property getter or setter expected.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/cards/QuantumAnomalyCard.kt:10:21 Property must be initialized.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/cards/QuantumAnomalyCard.kt:10:37 Syntax error: Property getter or setter expected.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/cards/QuantumAnomalyCard.kt:10:39 Property must be initialized.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/cards/QuantumAnomalyCard.kt:11:1 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/cards/QuantumAnomalyCard.kt:11:3 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/cards/QuantumAnomalyCard.kt:11:5 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/cards/QuantumAnomalyCard.kt:11:23 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/cards/QuantumAnomalyCard.kt:11:24 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/cards/QuantumAnomalyCard.kt:11:26 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/cards/QuantumAnomalyCard.kt:11:28 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/cards/QuantumAnomalyCard.kt:11:32 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/cards/QuantumAnomalyCard.kt:11:34 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/cards/QuantumAnomalyCard.kt:11:45 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/cards/QuantumAnomalyCard.kt:11:47 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/cards/QuantumAnomalyCard.kt:11:47 Function declaration must have a name.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/ChronoBard.kt:2:33 Unresolved reference 'ChronoBard'.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/ChronoBard.kt:3:39 Unresolved reference 'ChronoBard'.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/ChronoBard.kt:7:5 Property must be initialized.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/ChronoBard.kt:7:9 Conflicting declarations:
+val id: String
+val id: String
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/ChronoBard.kt:7:19 Syntax error: Property getter or setter expected.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/ChronoBard.kt:7:21 Property must be initialized.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/ChronoBard.kt:7:25 Conflicting declarations:
+val name: String
+val name: String
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/ChronoBard.kt:7:37 Syntax error: Property getter or setter expected.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/ChronoBard.kt:7:39 Property must be initialized.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/ChronoBard.kt:7:43 Conflicting declarations:
+val description: String
+val description: String
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/ChronoBard.kt:7:62 Syntax error: Property getter or setter expected.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/ChronoBard.kt:7:64 Property must be initialized.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/ChronoBard.kt:7:68 Conflicting declarations:
+val health: String
+val health: String
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/ChronoBard.kt:7:82 Syntax error: Property getter or setter expected.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/ChronoBard.kt:7:84 Property must be initialized.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/ChronoBard.kt:7:88 Conflicting declarations:
+val attack: String
+val attack: String
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/ChronoBard.kt:8:1 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/ChronoBard.kt:8:3 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/ChronoBard.kt:8:5 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/ChronoBard.kt:8:15 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/ChronoBard.kt:8:16 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/ChronoBard.kt:8:18 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/ChronoBard.kt:8:20 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/ChronoBard.kt:8:24 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/ChronoBard.kt:8:26 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/ChronoBard.kt:8:37 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/ChronoBard.kt:8:39 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/ChronoBard.kt:8:45 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/ChronoBard.kt:8:47 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/ChronoBard.kt:8:53 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/ChronoBard.kt:8:55 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/ChronoBard.kt:8:55 Function declaration must have a name.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/PixelSorceress.kt:2:33 Unresolved reference 'PixelSorceress'.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/PixelSorceress.kt:3:39 Unresolved reference 'PixelSorceress'.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/PixelSorceress.kt:7:5 Property must be initialized.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/PixelSorceress.kt:7:9 Conflicting declarations:
+val id: String
+val id: String
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/PixelSorceress.kt:7:19 Syntax error: Property getter or setter expected.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/PixelSorceress.kt:7:21 Property must be initialized.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/PixelSorceress.kt:7:25 Conflicting declarations:
+val name: String
+val name: String
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/PixelSorceress.kt:7:37 Syntax error: Property getter or setter expected.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/PixelSorceress.kt:7:39 Property must be initialized.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/PixelSorceress.kt:7:43 Conflicting declarations:
+val description: String
+val description: String
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/PixelSorceress.kt:7:62 Syntax error: Property getter or setter expected.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/PixelSorceress.kt:7:64 Property must be initialized.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/PixelSorceress.kt:7:68 Conflicting declarations:
+val health: String
+val health: String
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/PixelSorceress.kt:7:82 Syntax error: Property getter or setter expected.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/PixelSorceress.kt:7:84 Property must be initialized.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/PixelSorceress.kt:7:88 Conflicting declarations:
+val attack: String
+val attack: String
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/PixelSorceress.kt:8:1 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/PixelSorceress.kt:8:3 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/PixelSorceress.kt:8:5 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/PixelSorceress.kt:8:19 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/PixelSorceress.kt:8:20 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/PixelSorceress.kt:8:22 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/PixelSorceress.kt:8:24 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/PixelSorceress.kt:8:28 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/PixelSorceress.kt:8:30 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/PixelSorceress.kt:8:41 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/PixelSorceress.kt:8:43 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/PixelSorceress.kt:8:49 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/PixelSorceress.kt:8:51 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/PixelSorceress.kt:8:57 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/PixelSorceress.kt:8:59 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/PixelSorceress.kt:8:59 Function declaration must have a name.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/QuantumKnight.kt:2:33 Unresolved reference 'QuantumKnight'.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/QuantumKnight.kt:3:39 Unresolved reference 'QuantumKnight'.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/QuantumKnight.kt:7:5 Property must be initialized.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/QuantumKnight.kt:7:9 Conflicting declarations:
+val id: String
+val id: String
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/QuantumKnight.kt:7:19 Syntax error: Property getter or setter expected.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/QuantumKnight.kt:7:21 Property must be initialized.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/QuantumKnight.kt:7:25 Conflicting declarations:
+val name: String
+val name: String
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/QuantumKnight.kt:7:37 Syntax error: Property getter or setter expected.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/QuantumKnight.kt:7:39 Property must be initialized.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/QuantumKnight.kt:7:43 Conflicting declarations:
+val description: String
+val description: String
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/QuantumKnight.kt:7:62 Syntax error: Property getter or setter expected.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/QuantumKnight.kt:7:64 Property must be initialized.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/QuantumKnight.kt:7:68 Conflicting declarations:
+val health: String
+val health: String
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/QuantumKnight.kt:7:82 Syntax error: Property getter or setter expected.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/QuantumKnight.kt:7:84 Property must be initialized.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/QuantumKnight.kt:7:88 Conflicting declarations:
+val attack: String
+val attack: String
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/QuantumKnight.kt:8:1 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/QuantumKnight.kt:8:3 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/QuantumKnight.kt:8:5 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/QuantumKnight.kt:8:18 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/QuantumKnight.kt:8:19 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/QuantumKnight.kt:8:21 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/QuantumKnight.kt:8:23 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/QuantumKnight.kt:8:27 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/QuantumKnight.kt:8:29 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/QuantumKnight.kt:8:40 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/QuantumKnight.kt:8:42 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/QuantumKnight.kt:8:48 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/QuantumKnight.kt:8:50 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/QuantumKnight.kt:8:56 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/QuantumKnight.kt:8:58 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/characters/QuantumKnight.kt:8:58 Function declaration must have a name.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/duplicates/CardBattleScreen.kt:3:33 Unresolved reference 'Card'.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/duplicates/CardCollectionActivity.kt:2:33 Unresolved reference 'Card'.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/duplicates/CardCollectionActivity.kt:8:32 This type has a constructor, so it must be initialized here.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/duplicates/CardCollectionActivity.kt:10:5 Modifier 'override' is not applicable to 'top level function'.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/duplicates/CardCollectionActivity.kt:11:9 No supertypes are accessible in this context.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/duplicates/CardCollectionActivity.kt:12:9 Unresolved reference 'setContentView'.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/duplicates/CardCollectionActivity.kt:16:1 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/duplicates/CardView.kt:2:33 Unresolved reference 'Card'.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/duplicates/GameManager.kt:2:33 Unresolved reference 'Card'.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/manager/CardManager.kt:2:33 Unresolved reference 'Card'.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/manager/CardManager.kt:3:33 Unresolved reference 'CardManager'.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/manager/QuestManager.kt:2:33 Unresolved reference 'QuestManager'.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/manager/RoomManager.kt:2:33 Unresolved reference 'RoomManager'.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/managers/CardManager.kt:1:33 Unresolved reference 'CardManager'.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/managers/CardManager.kt:2:1 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/managers/CardManager.kt:2:9 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/managers/CardManager.kt:2:12 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/managers/CardManager.kt:2:13 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/managers/CardManager.kt:2:20 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/managers/CardManager.kt:2:21 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/managers/CardManager.kt:2:33 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/managers/CardManager.kt:2:34 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/managers/CardManager.kt:2:42 Syntax error: imports are only allowed in the beginning of file.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/managers/CardManager.kt:4:33 Unresolved reference 'Card'.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/managers/CharacterManager.kt:2:33 Unresolved reference 'Card'.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/managers/CharacterManager.kt:3:33 Unresolved reference 'CharacterManager'.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/managers/CharacterManager.kt:4:33 Unresolved reference 'CharacterCard'.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/managers/GameLoopManager.kt:2:33 Unresolved reference 'Card'.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/managers/GameLoopManager.kt:3:33 Unresolved reference 'CardManager'.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/managers/GameLoopManager.kt:4:33 Unresolved reference 'CharacterManager'.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/managers/GameLoopManager.kt:5:33 Unresolved reference 'QuestManager'.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/managers/GameLoopManager.kt:6:33 Unresolved reference 'RoomManager'.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/managers/GameLoopManager.kt:7:39 Unresolved reference 'CardManager'.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/managers/GameLoopManager.kt:8:44 Unresolved reference 'CharacterManager'.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/managers/GameLoopManager.kt:9:40 Unresolved reference 'QuestManager'.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/managers/GameLoopManager.kt:10:39 Unresolved reference 'RoomManager'.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/managers/GameLoopManager.kt:18:31 Unresolved reference 'CardManager'.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/managers/GameLoopManager.kt:20:32 Unresolved reference 'QuestManager'.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/managers/GameLoopManager.kt:21:31 Unresolved reference 'RoomManager'.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/managers/QuestManager.kt:1:33 Unresolved reference 'Card'.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/managers/QuestManager.kt:3:33 Unresolved reference 'QuestManager'.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/managers/QuestManager.kt:4:1 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/managers/QuestManager.kt:4:9 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/managers/QuestManager.kt:4:12 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/managers/QuestManager.kt:4:13 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/managers/QuestManager.kt:4:20 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/managers/QuestManager.kt:4:21 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/managers/QuestManager.kt:4:33 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/managers/QuestManager.kt:4:34 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/managers/QuestManager.kt:4:42 Syntax error: imports are only allowed in the beginning of file.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/managers/QuestManager.kt:6:33 Unresolved reference 'QuestCard'.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/managers/QuestManager.kt:9:47 Unresolved reference 'QuestCard'.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/managers/QuestManager.kt:11:33 Unresolved reference 'QuestCard'.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/managers/QuestManager.kt:15:35 Unresolved reference 'QuestCard'.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/managers/QuestManager.kt:19:34 Unresolved reference 'QuestCard'.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/managers/QuestManager.kt:20:30 Not enough information to infer type argument for 'T'.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/managers/RoomManager.kt:1:33 Unresolved reference 'Card'.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/managers/RoomManager.kt:3:33 Unresolved reference 'RoomManager'.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/managers/RoomManager.kt:4:1 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/managers/RoomManager.kt:4:9 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/managers/RoomManager.kt:4:12 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/managers/RoomManager.kt:4:13 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/managers/RoomManager.kt:4:20 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/managers/RoomManager.kt:4:21 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/managers/RoomManager.kt:4:33 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/managers/RoomManager.kt:4:34 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/managers/RoomManager.kt:4:42 Syntax error: imports are only allowed in the beginning of file.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/managers/RoomManager.kt:6:33 Unresolved reference 'RoomEffectCard'.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/quests/DragonQuest.kt:2:33 Unresolved reference 'DragonQuest'.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/quests/DragonQuest.kt:3:39 Unresolved reference 'DragonQuest'.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/quests/DragonQuest.kt:7:5 Property must be initialized.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/quests/DragonQuest.kt:7:9 Conflicting declarations:
+val id: String
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/quests/DragonQuest.kt:7:19 Syntax error: Property getter or setter expected.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/quests/DragonQuest.kt:7:21 Property must be initialized.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/quests/DragonQuest.kt:7:25 Conflicting declarations:
+val name: String
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/quests/DragonQuest.kt:7:37 Syntax error: Property getter or setter expected.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/quests/DragonQuest.kt:7:39 Property must be initialized.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/quests/DragonQuest.kt:7:43 Conflicting declarations:
+val description: String
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/quests/DragonQuest.kt:8:1 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/quests/DragonQuest.kt:8:3 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/quests/DragonQuest.kt:8:5 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/quests/DragonQuest.kt:8:16 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/quests/DragonQuest.kt:8:17 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/quests/DragonQuest.kt:8:19 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/quests/DragonQuest.kt:8:21 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/quests/DragonQuest.kt:8:25 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/quests/DragonQuest.kt:8:27 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/quests/DragonQuest.kt:8:38 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/quests/DragonQuest.kt:8:40 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/quests/DragonQuest.kt:8:40 Function declaration must have a name.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/quests/DragonQuest.kt:9:5 Modifier 'override' is not applicable to 'local variable'.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/quests/TreasureHunt.kt:2:33 Unresolved reference 'TreasureHunt'.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/quests/TreasureHunt.kt:3:39 Unresolved reference 'TreasureHunt'.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/quests/TreasureHunt.kt:7:5 Property must be initialized.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/quests/TreasureHunt.kt:7:9 Conflicting declarations:
+val id: String
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/quests/TreasureHunt.kt:7:19 Syntax error: Property getter or setter expected.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/quests/TreasureHunt.kt:7:21 Property must be initialized.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/quests/TreasureHunt.kt:7:25 Conflicting declarations:
+val name: String
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/quests/TreasureHunt.kt:7:37 Syntax error: Property getter or setter expected.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/quests/TreasureHunt.kt:7:39 Property must be initialized.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/quests/TreasureHunt.kt:7:43 Conflicting declarations:
+val description: String
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/quests/TreasureHunt.kt:8:1 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/quests/TreasureHunt.kt:8:3 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/quests/TreasureHunt.kt:8:5 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/quests/TreasureHunt.kt:8:17 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/quests/TreasureHunt.kt:8:18 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/quests/TreasureHunt.kt:8:20 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/quests/TreasureHunt.kt:8:22 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/quests/TreasureHunt.kt:8:26 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/quests/TreasureHunt.kt:8:28 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/quests/TreasureHunt.kt:8:39 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/quests/TreasureHunt.kt:8:41 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/quests/TreasureHunt.kt:8:41 Function declaration must have a name.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/quests/TreasureHunt.kt:9:5 Modifier 'override' is not applicable to 'local variable'.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/rooms/FireRoom.kt:2:33 Unresolved reference 'FireRoom'.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/rooms/FireRoom.kt:3:39 Unresolved reference 'FireRoom'.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/rooms/FireRoom.kt:7:5 Property must be initialized.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/rooms/FireRoom.kt:7:9 Conflicting declarations:
+val id: String
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/rooms/FireRoom.kt:7:19 Syntax error: Property getter or setter expected.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/rooms/FireRoom.kt:7:21 Property must be initialized.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/rooms/FireRoom.kt:7:25 Conflicting declarations:
+val name: String
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/rooms/FireRoom.kt:7:37 Syntax error: Property getter or setter expected.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/rooms/FireRoom.kt:7:39 Property must be initialized.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/rooms/FireRoom.kt:7:43 Conflicting declarations:
+val description: String
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/rooms/FireRoom.kt:8:1 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/rooms/FireRoom.kt:8:3 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/rooms/FireRoom.kt:8:5 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/rooms/FireRoom.kt:8:13 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/rooms/FireRoom.kt:8:14 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/rooms/FireRoom.kt:8:16 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/rooms/FireRoom.kt:8:18 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/rooms/FireRoom.kt:8:22 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/rooms/FireRoom.kt:8:24 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/rooms/FireRoom.kt:8:35 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/rooms/FireRoom.kt:8:37 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/rooms/FireRoom.kt:8:37 Function declaration must have a name.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/rooms/FireRoom.kt:9:5 Modifier 'override' is not applicable to 'local function'.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/rooms/WaterRoom.kt:2:33 Unresolved reference 'WaterRoom'.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/rooms/WaterRoom.kt:3:39 Unresolved reference 'WaterRoom'.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/rooms/WaterRoom.kt:7:5 Property must be initialized.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/rooms/WaterRoom.kt:7:9 Conflicting declarations:
+val id: String
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/rooms/WaterRoom.kt:7:19 Syntax error: Property getter or setter expected.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/rooms/WaterRoom.kt:7:21 Property must be initialized.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/rooms/WaterRoom.kt:7:25 Conflicting declarations:
+val name: String
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/rooms/WaterRoom.kt:7:37 Syntax error: Property getter or setter expected.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/rooms/WaterRoom.kt:7:39 Property must be initialized.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/rooms/WaterRoom.kt:7:43 Conflicting declarations:
+val description: String
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/rooms/WaterRoom.kt:8:1 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/rooms/WaterRoom.kt:8:3 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/rooms/WaterRoom.kt:8:5 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/rooms/WaterRoom.kt:8:14 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/rooms/WaterRoom.kt:8:15 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/rooms/WaterRoom.kt:8:17 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/rooms/WaterRoom.kt:8:19 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/rooms/WaterRoom.kt:8:23 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/rooms/WaterRoom.kt:8:25 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/rooms/WaterRoom.kt:8:36 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/rooms/WaterRoom.kt:8:38 Syntax error: Expecting a top level declaration.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/rooms/WaterRoom.kt:8:38 Function declaration must have a name.
+e: file:///C:/Users/Ziel/AndroidStudioProjects/QuantumQuest/app/src/main/java/com/example/quantumquest/rooms/WaterRoom.kt:9:5 Modifier 'override' is not applicable to 'local function'.
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:compileReleaseKotlin'.
+> A failure occurred while executing org.jetbrains.kotlin.compilerRunner.GradleCompilerRunnerWithWorkers$GradleKotlinCompilerWorkAction
+   > Compilation error. See log for more details

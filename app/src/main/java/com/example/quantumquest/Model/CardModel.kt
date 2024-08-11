@@ -1,6 +1,5 @@
-// CardBattleScreen.kt
+// File might be incomplete, please check manually.
 package com.example.quantumquest.model
-
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyItemScope
 import androidx.compose.foundation.lazy.LazyColumn
@@ -11,6 +10,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.example.quantumquest.CardModel
 import com.example.quantumquest.GameManager
+// CardBattleScreen.kt
+
 
 @Composable
 fun AnotherFunctionName(gameManager: GameManager) {
