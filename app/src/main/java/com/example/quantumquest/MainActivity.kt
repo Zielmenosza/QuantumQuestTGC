@@ -2,6 +2,7 @@ package com.example.quantumquest
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
@@ -11,31 +12,33 @@ import com.facebook.FacebookCallback
 import com.facebook.FacebookException
 import com.facebook.login.LoginResult
 import com.facebook.login.widget.LoginButton
-import com.google.android.gms.auth.api.signin.GoogleSignIn
-import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.SignInButton
-import com.google.android.gms.common.api.ApiException
+import com.google.android.gms.auth.api.signin.GoogleSignIn
+import com.google.android.gms.auth.api.signin.GoogleSignInClient
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.GoogleAuthProvider
 import com.google.firebase.auth.FacebookAuthProvider
-import com.facebook.FacebookSdk
-import com.facebook.appevents.AppEventsLogger
+import com.google.android.gms.common.api.ApiException
+import android.view.WindowInsetsController
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var signInLauncher: ActivityResultLauncher<Intent>
     private lateinit var auth: FirebaseAuth
     private lateinit var callbackManager: CallbackManager
+    private lateinit var googleSignInClient: GoogleSignInClient
+    private lateinit var signInLauncher: ActivityResultLauncher<Intent>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        // Initialize the Facebook SDK
-        FacebookSdk.sdkInitialize(applicationContext)
-        AppEventsLogger.activateApp(application)
-
         setContentView(R.layout.activity_main)
+
+        // Hide the status bar using WindowInsetsController
+        window.insetsController?.let {
+            it.hide(WindowInsetsController.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE)
+            it.systemBarsBehavior = WindowInsetsController.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
+        }
 
         // Initialize Firebase Auth
         auth = FirebaseAuth.getInstance()
@@ -46,30 +49,28 @@ class MainActivity : AppCompatActivity() {
             .requestEmail()
             .build()
 
-        val googleSignInClient = GoogleSignIn.getClient(this, gso)
+        googleSignInClient = GoogleSignIn.getClient(this, gso)
 
-        // Initialize the sign-in launcher
+        // Initialize Google Sign-In button
+        val signInButton = findViewById<SignInButton>(R.id.buttonGoogleSignIn)
+        signInButton.setOnClickListener {
+            val signInIntent = googleSignInClient.signInIntent
+            signInLauncher.launch(signInIntent)
+        }
+
+        // Register the signInLauncher
         signInLauncher = registerForActivityResult(
             ActivityResultContracts.StartActivityForResult()
         ) { result ->
             if (result.resultCode == RESULT_OK) {
-                val data: Intent? = result.data
-                val task = GoogleSignIn.getSignedInAccountFromIntent(data)
+                val task = GoogleSignIn.getSignedInAccountFromIntent(result.data)
                 try {
                     val account = task.getResult(ApiException::class.java)
-                    if (account != null) {
-                        firebaseAuthWithGoogle(account.idToken!!)
-                    }
+                    firebaseAuthWithGoogle(account.idToken!!)
                 } catch (e: ApiException) {
                     // Handle error
                 }
             }
-        }
-
-        // Set up the Google Sign-In button
-        findViewById<SignInButton>(R.id.buttonGoogleSignIn).setOnClickListener {
-            val signInIntent = googleSignInClient.signInIntent
-            signInLauncher.launch(signInIntent)
         }
 
         // Configure Facebook Sign-In
@@ -77,16 +78,16 @@ class MainActivity : AppCompatActivity() {
 
         val loginButton = findViewById<LoginButton>(R.id.login_button)
         loginButton.registerCallback(callbackManager, object : FacebookCallback<LoginResult> {
-            override fun onSuccess(loginResult: LoginResult) {
-                handleFacebookAccessToken(loginResult.accessToken)
+            override fun onSuccess(result: LoginResult) {
+                handleFacebookAccessToken(result.accessToken)
             }
 
             override fun onCancel() {
-                // Handle cancel case
+                // Handle login cancel
             }
 
-            override fun onError(exception: FacebookException) {
-                // Handle error case
+            override fun onError(error: FacebookException) {
+                // Handle login error
             }
         })
     }
