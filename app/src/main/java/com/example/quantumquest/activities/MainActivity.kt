@@ -1,9 +1,9 @@
-
 package com.example.quantumquest.activities
 
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
@@ -14,7 +14,6 @@ import com.facebook.FacebookCallback
 import com.facebook.FacebookException
 import com.facebook.login.LoginResult
 import com.facebook.login.widget.LoginButton
-import com.google.android.gms.common.SignInButton
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
@@ -23,6 +22,7 @@ import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.GoogleAuthProvider
 import com.google.firebase.auth.FacebookAuthProvider
 import com.google.android.gms.common.api.ApiException
+import com.google.android.gms.common.SignInButton
 
 class MainActivity : AppCompatActivity() {
 
@@ -92,6 +92,12 @@ class MainActivity : AppCompatActivity() {
                 // Handle login error
             }
         })
+
+        // Start New Game Button
+        findViewById<Button>(R.id.buttonNewGame).setOnClickListener {
+            val intent = Intent(this, GameActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun firebaseAuthWithGoogle(idToken: String) {
@@ -122,5 +128,10 @@ class MainActivity : AppCompatActivity() {
 
     private fun updateUI(user: FirebaseUser?) {
         // Update your UI with user information
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        callbackManager.onActivityResult(requestCode, resultCode, data)
     }
 }

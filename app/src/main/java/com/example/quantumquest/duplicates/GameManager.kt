@@ -1,4 +1,6 @@
 package com.example.quantumquest
+import com.example.quantumquest.Card
+
 
 import android.util.Log
 

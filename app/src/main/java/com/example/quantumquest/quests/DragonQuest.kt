@@ -1,8 +1,12 @@
 package com.example.quantumquest.quests
+import com.example.quantumquest.Card
+import com.example.quantumquest.QuestCard
+import com.example.quantumquest.DragonQuest
+
 
 import com.example.quantumquest.model.QuestCard
 
-class DragonQuest(
+class DragonQuest 
     id: Int,
     name: String,
     description: String,

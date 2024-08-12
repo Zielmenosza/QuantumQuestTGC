@@ -1,8 +1,12 @@
 package com.example.quantumquest.characters
+import com.example.quantumquest.ChronoBard
+import com.example.quantumquest.Card
+import com.example.quantumquest.CharacterCard
+
 
 import com.example.quantumquest.model.CharacterCard
 
-open class ChronoBard(
+open class ChronoBard 
     id: Int,            // Ensure this is an Int, not a String
     name: String,
     description: String,

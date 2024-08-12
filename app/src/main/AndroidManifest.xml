@@ -32,9 +32,10 @@
 
         <!-- Main Activity -->
         <activity
-            android:name=".MainActivity"
+            android:name=".activities.MainActivity"
             android:screenOrientation="landscape"
-            android:exported="false">
+            android:exported="true">
+            <!-- No need for another MAIN/LAUNCHER intent filter here -->
         </activity>
 
         <!-- Video Activity for intro -->
@@ -44,14 +45,18 @@
             android:theme="@style/Theme.AppCompat.NoActionBar">
         </activity>
 
-        <!-- Other Activities -->
+        <!-- Loading Activity -->
         <activity
             android:name=".LoadingActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar"
             android:screenOrientation="landscape">
         </activity>
 
-        <activity android:name=".GameActivity" />
+        <!-- Game Activity -->
+        <activity
+            android:name=".activities.GameActivity"
+            android:screenOrientation="landscape">
+        </activity>
 
         <!-- Facebook SDK Initialization -->
         <meta-data
@@ -65,11 +70,6 @@
         <meta-data
             android:name="android.app.lib_name"
             android:value="quantumquest" />
-        <activity android:name=".activities.MainActivity" android:exported="true">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-    </activity>
-</application>
+
+    </application>
 </manifest>

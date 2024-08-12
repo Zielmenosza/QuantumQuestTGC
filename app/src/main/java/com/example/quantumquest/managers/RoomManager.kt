@@ -1,4 +1,8 @@
 package com.example.quantumquest.managers
+import com.example.quantumquest.Card
+import com.example.quantumquest.RoomEffectCard
+import com.example.quantumquest.RoomManager
+
 
 import com.example.quantumquest.model.RoomEffectCard  // Correct import
 

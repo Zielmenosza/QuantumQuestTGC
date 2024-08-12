@@ -1,9 +1,11 @@
 package com.example.quantumquest.rooms
+import com.example.quantumquest.FireRoom
+
 
 import com.example.quantumquest.model.GameRoom  // Updated import to match the renamed class
 
 // Now, FireRoom can extend GameRoom
-class FireRoom(
+class FireRoom 
     id: String,
     name: String,
     description: String

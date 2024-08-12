@@ -1,4 +1,8 @@
 package com.example.quantumquest.managers
+import com.example.quantumquest.Card
+import com.example.quantumquest.CharacterCard
+import com.example.quantumquest.CharacterManager
+
 
 import com.example.quantumquest.model.CharacterCard
 

@@ -1,4 +1,3 @@
-// File might be incomplete, please check manually.
 package com.example.quantumquest.model
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyItemScope

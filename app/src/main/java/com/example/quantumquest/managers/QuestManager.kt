@@ -1,4 +1,8 @@
 package com.example.quantumquest.managers
+import com.example.quantumquest.Card
+import com.example.quantumquest.QuestCard
+import com.example.quantumquest.QuestManager
+
 
 import com.example.quantumquest.model.QuestCard  // Import the QuestCard class
 

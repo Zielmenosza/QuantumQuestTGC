@@ -1,5 +1,11 @@
 // File might be incomplete, please check manually.
+// File might be incomplete, please check manually.
+// File might be incomplete, please check manually.
+// File might be incomplete, please check manually.
+// File might be incomplete, please check manually.
 package com.example.quantumquest
+import com.example.quantumquest.Card
+
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer

@@ -1,8 +1,12 @@
 package com.example.quantumquest.quests
+import com.example.quantumquest.Card
+import com.example.quantumquest.QuestCard
+import com.example.quantumquest.TreasureHunt
+
 
 import com.example.quantumquest.model.QuestCard  // Import the correct base class
 
-class TreasureHunt(
+class TreasureHunt 
     id: Int,
     name: String,
     description: String,

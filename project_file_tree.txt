@@ -1,8 +1,10 @@
 /
     .gitignore
+    add_cards_and_characters.py
     affected_files_contents.txt
     build.gradle.kts
-    cleanup_project.bat
+    customize_cards_characters.py
+    errors.txt
     fix_build_errors.py
     fix_kotlin_classes.py
     fix_kotlin_file_structure.py
@@ -12,6 +14,8 @@
     gradlew.bat
     hs_err_pid10244.log
     hs_err_pid14184.log
+    hs_err_pid15608.log
+    hs_err_pid15720.log
     hs_err_pid1584.log
     hs_err_pid16196.log
     hs_err_pid18868.log
@@ -21,6 +25,7 @@
     populate_files.bat
     project_file_tree.txt
     replay_pid16196.log
+    run_tasks.bat
     settings.gradle.kts
     update_game_files.py
 .git/
@@ -73,6 +78,7 @@
             8da57fb1096a51530ba3ede9f4bcb04f174e3d
             8dfefd3a95c43b2fee3b88dfec94ab5d3e1893
             90f6a4431468db2d4f869b66c488c6e86c4bf0
+            ab54e28d64f03fb07a94b78b4bd2acf5660839
             dd27d2f751ba5e7ff00979dc580a5d22913795
             e2c209704209b26745875f413b1247a2731ac8
             f00921fe656d36c01cab41a74fbb33c5e20319
@@ -103,6 +109,8 @@
             c00f5ff584d48baf6aab0ed8c5a794138f3219
             e8df95711d7d93eacdfc1d3caa9d0d08e3b654
         04/
+            13a99b776f020a05d93b7ed596959b188f797b
+            181ae02019aad193fec0b5f210be282a34b797
             349502eb73030a9187d09a40f080951c060a3a
             386e52bb5ce0c318b7adb87bdd36218a6861d0
             46f5745bdeb7b6999ab7d8c5461b1cc739a61a
@@ -124,6 +132,7 @@
             d5d6e0f6c371d618b3d9feaf84c028948891a8
         06/
             14ed56a4f7ed34927c3ead5c547b7668b877c5
+            8a344bcc47901fea840fbba62cf415f5ed61ee
             8d9e911721623bfb7c5d5ac3ac5591581907e2
             93b166ee8822a3a8b007440a6e90ac70f909f3
             b7c4c3c98c1617926bb80cd37c9cad02170181
@@ -186,6 +195,7 @@
             5e3f609bb0bdd850b7fad29451ea2ebb7ed0cb
             67ffa4b3418f8474e44ea7ee7030b17b673a19
             8d43c2adf5f953737c83731bebe00c539ee4be
+            9083c17ab9c0d7fec8a4ed4a90863bb6a470e2
             93a11080aed69dc27f3c44340201ec120ff313
             a949a432c6c384b79dd25e6baf2b2afdd94ab6
             b75e6cd064738b4861efa697f1f628d602c2cf
@@ -203,6 +213,7 @@
             f0e8c9cdd9f952eed3e6c2942606ca355482cc
             fe7d75760b79fc20b5c9f2b12a9f7bde6bc697
         0d/
+            23e23ac15ab9e4967ea066b9659f49dd516518
             2b76a11ddcbd87c17f4121b6f8a7c7342e40c6
             3a1fbb142c51738dc2b6b1f28b44ddb425e1bc
             581197330f5a34605b374e5d800138d4493f08
@@ -220,6 +231,7 @@
             7996d76f97f7e23136d82538a3b3bf259afd7a
             a4c4c943cdd23eb4081582fc834e5b4d830e2f
             d34169c577650277912307a888a0fc46a184f6
+            d341cfbf25734dab0a728cc441115d980deab8
             dc07340840ad1c5eef7fff33bd9108496cb176
             f02a6cc6a434387fabd514451f2a22040500e4
         0f/
@@ -271,6 +283,7 @@
         13/
             04dd8d660f0e051500cd3ff8a905221f94fd12
             706f8ea5b6052571118573d33f5e7fcd3fdda9
+            7b8be98450902a143eef7cb23b1a4a10ab631d
             a71d1bbd8283ad9cd5e8231a1de2dd7f4bd493
             a8c8a559923880bbc926bfa2b572ac161f02af
             b03fb45ddc6b99746335a32d82715c7c452afd
@@ -279,6 +292,7 @@
             659d9cb7ffd608f6d0d0063498a12d53cb30c7
             6de3bb9e18c6ee70c02b9dd4cc3789fde68848
             73009a39c8a0077a930f3dc35f304e193402e5
+            9af2d34d4208673741f9c0747734c7c84a74ec
             ac445e580c5bd9e94d108b62011d6df55c843b
             e993024cb8b9e47af4fe7c35ef5f36bd257dc5
             fd7289e68e1333b86412d33b95c029254eb8b9
@@ -346,10 +360,12 @@
             77245e6027fb5f571075afb4f3a60d6c928b6b
             8fdd33dd9123140b26fbb4e46d044a4a7019ce
             a94a4269074199e6ed2c37e8db3e0826030965
+            c08c5e12e530204b58811c7c8889cf4212c587
         1b/
             03377c198e89efdf240b6c12e743ff36dc17f6
             1b71724b3ea2c1fdfb1bd527d889cdc99a5575
             55c12aac6efe7ff2ba58c54d08f2db8336bdfd
+            63623c2e96e1973998a63a835a2d96a102f91d
             9a6956b3acdc11f40ce2bb3f6efbd845cc243f
             9aceff964172b4c747b6c5aae85a01e03a3483
             9f7df3a93c8ca46e108238501eaab5c2ac3791
@@ -360,6 +376,7 @@
         1c/
             2367dc023103160ec68dee0590d32f8be70550
             5e8ba2a472af4ef8f1516964c5d320da190b51
+            83e4fe2ad71b1a505c987a80d2b77bf4986d5c
             8f56cb36dbf1e32abde8fc8353aa25c58271a8
             bbb5521f35f3300dcab05d65f2f300933076d8
             d79c63d72b39313e3f23ce757a818b902e3335
@@ -375,6 +392,7 @@
             dd73963622a36c9756d280ef05135d7eb1f014
         1e/
             2898c93ddc789c1186e02432889af34c924bcb
+            5ed0aa78b23c680f8e1531f705fe83f36a4669
             72f334230dee397361c2bae3af71600ee0a722
             886cfcbd8fa7a6f60b2a0dbd1ad9c95013780f
             8d6fededcd2d22b1b6e81d4b71bb1ed58b3b32
@@ -387,6 +405,7 @@
             b9ac0a445f41c2b7bbd6dd47599b47acce30c6
             caec3152846e6796a48a35b2cf8ad810415820
             d57eef310d7522f0969f2ca3f71857aa40f596
+            dc53f92d91e1e9eb5c4ad55fb893102c55a8a5
         20/
             023ad89a0ce6fa19b1294212ab78d0dff479b3
             0ef4402d1ec4251691fcbeebe3cf31c8b799f4
@@ -411,15 +430,18 @@
         23/
             0a43c1f4e95094349e3f250dd0466b47494fd6
             4b093c081cc029ccf2094efbdb3d63b319431e
+            6723e1323bfd6d128050cbbbd08dd65537bf27
             68a04c6bb53d88b1a8cefca6d93a1b6e9ba142
             8bea8e74db23db95f6b4b4b2d175538dea8adf
             8e166d12dcb9fee91e141d77bde1290df1795d
             901ed8dacdafe31d5cb6aa49bde4e5f238a404
             a39f9d0587d5f4aa6724dcf40270565090f32b
             c0820d0ae8445f4539bf0b7f7c18886eb8ae41
+            c167793ae0f2d0a8ee6ef2d8c43482205f1379
         24/
             0a52061f7a146ffee5dc279e839270c61227b2
             288e96080b88c839c7e2eb7da55fb2f0010da4
+            2b627cd12a3ad85b2bd6ec59a177699e3b5c53
             332e91fdd24e94ba2a70b0734bb50014796351
             655b4c2423677ecdf9e65872cbaedb141e2228
             7b2ebd753df99f3ca5dec2cfa0c5f8dcfae0a3
@@ -427,7 +449,9 @@
             d026f89011ffe3a5faf35b37fddd6cf9a52f35
             e92a1ca2c63a48b1e0a766682154746641537c
         25/
+            13dc434d4fcebc0e09d257e8a919dfc26df1df
             1fe06f7325f5324b5d3dccb7ef337caa9d47b9
+            2444cb7059dc4b926c31435c6e5032a774195c
             3956200e7a85a275f8526a45d05d725fdb84af
             4fc93352c62a8436ea3ccabcb898efcdcb186f
             59be8b0fb311cf85259d5db0256a2881505ba5
@@ -460,6 +484,7 @@
             fea2c7163c5f00ffe6c0ec68bf71c4cce86f93
         28/
             071234812bba370a066dc58768875c0d12b50a
+            4b421556330991e0d0635d58240ed9cb9ab964
             7488da0343cf12207cea1dbba0bd8727342ef2
             8d523dae7be731caf160c7467f2701a75ca06c
             acc2c9ca59619ba1401032141ed223d347650f
@@ -479,6 +504,7 @@
             900044e99b7507e9921782684461acfbd6ab1f
             938bbaf61662b648c0886565911eff4a51a9ef
             964c96b9515907e78edf6f3eb0e06ab25b4f20
+            a9e5b1d1ec96b0bc53ae1d572a640990482976
             bc694af659c8c795855f7a04253c153f719a01
             c751cec64d0e016a11abf91488623ad9c31aa0
             e547d492278554f7ff0effdf92d69288ccc478
@@ -535,6 +561,7 @@
             eac22286deb5cc6aa9a1f9b6bd62d0b88a48bd
         30/
             0bc7eafc3903b65bd8cc5cc04c4dcd2b7876b7
+            33b2d8139ddaf184d48dc534da6408fa158207
             3cb332eb879100640f01e2bd17163ed81f57a2
             753027c0dec0746423fbd753a1a937d12085bc
             76a5e63f93112b9a60974b8b33388272df96e8
@@ -544,6 +571,7 @@
             a3df1fb05d70a5745b409923dffb01b8960aca
             c7fb8c3402e986233b6131132b376afb116826
             d0b274d337a8e990fe0e264130e0e42c0321cb
+            f022f36a14b29fa12f9245d69c4b8a03f914f2
             f30de3cbd4c12cc642a6ac211e40876bdca525
         31/
             39d14819901c2c5e431e2b0e471ae87125a3c3
@@ -561,6 +589,7 @@
             252a66317b6071fbde65bef6cbc6f5bf953613
             49fb991cef0d9967fb1dd4250ccfaeaf5e865e
             522c1e7054e664d0b44bf5c384d6e06213b9a5
+            766012176596eea8f98c4f05c865866899abde
             c638909fef9c15304671551c6d3da09890f002
             cc6c094ab58c9a60ffb1f50fa911be343f49f7
             ced58a8f03f902acae6e0fd0e79a0efdb0653a
@@ -580,6 +609,7 @@
             6333402aa9219c83d5bed96dd7d0d9833c2153
             6725e4d6895dbbb1c013cf1cbafc29ec76955b
             a96b6404da7dcfc19a1c857facad20a23a62aa
+            acd0871c789feda8a16cc0bc8e278d5354d368
             b221991d2b2b00a65fbc7e483611db0c11dfa9
             b91b9d8692f2eafefcebc02ab3752c9e9e882c
             bd78301e44efbd960ee4451edae9a1155c279b
@@ -596,11 +626,13 @@
             d97794d4018c7969158826e2b4200d6823bc6a
             eb1ddfbbc029bcab630581847471d7f238ec53
         36/
+            24f5148862aca8116c4fe578dc6b3df86edb78
             26b9356e32b98316e6b6ead2988ce5d4fe205b
             400dbef21a1234bf980bbc6c3332e2e8445aae
             5a2452368394d79fb2694718846ac997b85c94
             64bb51c73bb84575f3e87d8b79078cb5af5660
             9e54b2ce440ca9bd39549c232ed78c0d038033
+            a02f1d9201aabab2038c17ff3aa9a68540aa9d
         37/
             1c8dddebd1cf197ab8527b4bb8098edf733814
             1f2e299f27ed45ecbf54b02a2cda9467d794d4
@@ -665,6 +697,7 @@
             89469f4ebe53d4abeece595916d31e78b33cd8
             8a42a1eaecb4fc5470c47ae15553b9602b0421
             941044cf960cf9fbe6c7c9b71f03c1a2690090
+            a30d936ac3929ffdc9f554813a86147cc7ccde
             bb26bce4f1ffe392a897cb0f64528bb4640c50
             cb8ae62d6d3075252c290a4983d3a8158c112c
             e1266ef3a01ef996e8fce5897f8c3b93e80d20
@@ -718,6 +751,7 @@
             23b84ff179b1b9addb3a54c09bef1f4ed548d7
             27db6fbdc50df95963751daa853ea279a39fd6
             280460661fa0ca3b90020c99de39d1b924cbe4
+            33456944125234752c438591abdb990dee5d76
             560701be73a5ee6447f14b058249a974196e29
             5c71271ed39b877b6359d5f25fd917dd726486
             705f421247a6c77e2191907e95469f1e7335eb
@@ -782,6 +816,7 @@
             5126737a73efc330db64ea4f96c0f43151adc5
             94cf088414035414e2e573114fbd6acb34bf23
             95b50dc7bceff9083ac0226feb7545e4c6e0fb
+            b8c4ded369a9d28cec2ec93779d42610b18542
             be3dfe56298cd5b8b0b55618ed33f7f64f4e6c
             c62ce6c1650b17b7d8e96402ee64856e510eab
             ee6801b6515266b1cfd9f389258ea5b200c5d1
@@ -869,6 +904,7 @@
             7ba1948000961058903722c5d0096c7b21b1b2
             8176e7a50ee7b5b0740daacbf99c8f371a2965
             8b9f8966feff92b269182a24e03b67358a4a91
+            9267c430eff6c7661181eafa2f9d96b68a5304
             a51e217300c75ad4f5b7854a7cef7818e4a125
             c103245c3a177b958de4df333245d09f4d1e28
             cf500ec5dd38f20423420379069be63646b4ba
@@ -894,8 +930,10 @@
             288b75c6973f49aabb5b8a15ddd1036b172f84
             477dbb95f91fad4af2e658728cb1bcc43e05d1
             49148b8ec1439e75813c1f33568f96562ed029
+            56086d7038929c453e7bffe0405319a4de8fb5
             8bd10de4cfb397f132c7171cfae114c5c450b5
             9c12f1663eedf54edecfaa63a2b76159595111
+            b78376deb9fbe5f704597c5705a4a010c84e11
             c446dac562a2e3136e0724439dd24a2dab8095
             d01401874e3e0004eb1a1ddf1344dede8cba59
             d42fb5d4e12854bcad00d0c57edd763e9e9090
@@ -924,6 +962,7 @@
             4759eadd9f939a1ea4c0ce6d86c676c425c7d6
             558e7b4060081df14ba10fbe4e4bf313b650a5
             6b4a222f94a5a4fd2c6079759995297cfc5ef9
+            7020e1f0a466609e528ac6d8ac90fb0fe581bd
             924a3d47ad01b2d7fce67b67ec711134207864
             b50a1f1cd61815decad00e312b0496bc46199c
             b52fb36b1a27764fe5a92d6a06771bbe499b34
@@ -944,6 +983,7 @@
             7d6facac30359ddd2fbfebaccc3209e245a6ef
             7e305aa7f74ab3418f92e728e740c6a5c437f3
             a66bf9b8b0c52b7a7564b7ce47660c08cdfc57
+            d6ce4e58c982694c8a0f140573b715b3c11407
             d6f08c393848879ac30649ec4a7af7be187bf9
             e101b6c505bb900e037145325e2a23e6594af5
             ed72bc063af4df24345205ffe4bc8091591a21
@@ -968,6 +1008,7 @@
             5f32a27724f070f3c9129d4e2f44e571d5f84b
             6c6d1d74285cd6832dbca361c315b55967885c
             7149bcf90fcd34e1b22e970fbd01cc45742fa5
+            abb0ea7011fe4a16b78a5e6c27ea308b8f4b96
             b68e3bece6feb7d2816a2079e0ccd0193d9107
             b98ed16e1a066b02390004e071e7e1bee4f1ab
             dd009c711b9bb11fd7958b4eeb05deac2833ab
@@ -993,6 +1034,7 @@
             7e809cdc25149c4c03763e983efec6ae263742
             a111de048171ae0f9849a2c5e375f9351a8bbc
             c22a138d94e7925e7458a047e96f79b34e7cc6
+            c3a3499412baf9ac5104fea48a836918b0b861
             d4b33c3e827bfa4ef7a0e6f8da9475a8e5f2f7
             daa9d6e0d8735d604d1cb07727e0280826f2fe
         5c/
@@ -1001,6 +1043,7 @@
             21bd0f8a02ba2eb495604db11f8cfaf8fec7c5
             314689c9a72dd0de1aafb50c5986323c2caa7c
             73952334401e822f909ccf98537b1ace1b9ed2
+            75e9a7ad1560355f2abf96190bdc4e3526acb3
             b8e546fe467ff6178dd153adce9872c8f0c070
             c84553d9366c8a621a9a67a3b28d15ba5e70de
             cde1b73a80d1f355a0ed6b14645c4e97a65a70
@@ -1024,6 +1067,7 @@
             e24f455c69470dba2a512eb8d59fd812da6181
             e51c9feda539693a6cea97dca9a8875c10d1cc
             ec2e03ca573273204ec4caa3c875c6835088c5
+            f8d54fdaf0758bd0560f2dd324f32131b74450
         5f/
             1701ddc16a52e36abe10dd67914ddd2b250276
             644022fb9b34434d0f3ca1403eb180231c999f
@@ -1033,6 +1077,7 @@
             bb450a754e077658c0ebafbef8a3497907499b
             da7e476b46488c821d20284960c1b5cc76b002
             ec17e5dbbc7b021628543715bda2a8e6bc70f3
+            f0f82214bd2d35d696c38d109558720b10a149
         60/
             483ded700eae724f8cd7e204e3007c88afbde3
             4b1d33a0af9e60806ee34a35e6250e3d688d1d
@@ -1114,6 +1159,7 @@
             bb9be4e3f89bd73ec1c7a61b3e7fabc320c280
             e251d6eda037d26a101c1cd0579fb894933056
         67/
+            442f044f0a66876a00e93f227f5de91a050b9f
             ad7ecc28093b43b89ea396baad9cc0a86d0272
             b9310ac2ce2ea49dd683f560d968c7ed74826f
             c9c6924c291d754cc2389865a6f38d09489664
@@ -1145,6 +1191,7 @@
             407c7eb3c0c7e50c00fd3c285444375c3f75a7
             79fc5b305f4c7de1399ee3ee31ef894c233c6b
             82bb3df09c3725f2e0a7c8fee5b46e5aa39907
+            c45229fd758b56f1a08f27603a7bf8212f8a5d
             d18ba9e65e108090e8354e5a55a5ac1c5f3b8f
             f3dcf7478fc3e0cd7181db060993e618de3822
         6b/
@@ -1276,6 +1323,7 @@
             773eb04003ca1a5e527f669af0aff2a9e9ba64
             85527b8f8bd67765b88a78c7355e154e648ed6
             bd23108e3bf3dd4880fc8072b8a7c9ee27e37e
+            bfdd3b1e2a63ccab5ed6248bf1b436dfafd3d0
             d53f39ca1c61772bba59dc5b061e6c416d9e43
             d9ef65f8c7c6bf54bdef7d54d1646b86417404
             dbf34f8237f69c5a128c8542ba29d8688aadb4
@@ -1313,6 +1361,7 @@
             132736439840aea4c19a01c8fe81870f21b3d3
             494bb1abaf9b62814cf98ccfcac84be919362c
             837c17a719811de50c9438cfb1c8d5d28b5c8b
+            be339b19e32cbe437825e2de69c8edd6e47ecc
             cd9a534a8f4df3a12118c746aadd6f264e264e
             d9876006617c740bd3f0d3f6c3f2a934c820c2
         7c/
@@ -1324,6 +1373,7 @@
             92da092f861ec4f9b732490a61ccb77275a132
             cebfad09ee973b3e30471f64861e8b00242d9c
             e4890b37085e0f72a686c8e7c26e8dcc589612
+            e489ac3a29008b74366dc493f42d46f8af0e07
             f381c1b78c93b188971ae56f5751e6a5e0f0f5
         7d/
             0952c2730f1d7fc824bb4eb5ec22bfa5f3e704
@@ -1348,6 +1398,7 @@
             4bd935726baf72f3585272b54e9259d4357403
             4df33004ef55bcb4ae01136c94ac97a5157b94
             868d3e0a345aeb4d10160aa12bc3b9590b4fe9
+            9b4f08ea8e4062056c89972078857d76be48e8
             a6e207dce05ad418179c8f1e37ec2a4b1c7f73
             aeb8aa751d24f6a587fe5152a87a446063aad4
             c23494fdf3e82246e7c90c8070ca510c5f27ae
@@ -1356,12 +1407,14 @@
             54a29e7a32fb7f08200799a818ff5f76b332f6
             68570e7468f1d0099e9bf950d48d078c1e9be0
             93135c49b765f8051ef9d0a6055ff8e46073d8
+            ca71757d544966b81aaa07c2aa552b13f4238c
             f00284b7d798d1b0a29e7e1e38fb487507ee80
         80/
             735c5df968354c4a7ceb9b97c3c42916d5d8c2
             7e099d86fef77c7bfec277c4d5fc2843f925ab
             7e71078ac2f6eff010579aadaed8e8c015fa90
             b4b3ebb2c0766e673be6d0ec5ddd7170407a10
+            b8ae8fe2a099f1a3d75988b1ec8db74fb9df02
             c9e87fcb97ea042c1aaf42fd6424ebc0bc6e32
         81/
             0aa94937bc3abbf541ec18047ed005e7c7203d
@@ -1402,6 +1455,7 @@
             ba857c08bd248e037e0819c9fcb74558e81a77
             cab9f1bd34553a2d759ffad412bf9ff76d3fe9
             d0bf1bc98353a3c996c963c2531a5b4cd7bb97
+            d883f5a68ed49ec2b040bace9f83e1c300bfc8
         84/
             0951b5b86d0eac01342b9e51bc148d2e3579b5
             1247b853b9c94d85683d436937c933716e68fb
@@ -1417,6 +1471,7 @@
             8ce00b956e1d2a4548f6d06e99e2cad2997a04
             97de05f1bd83323905338e2042a7ee4fb000cc
             c0bd88ef7f3fc32f873d0fea2c5be1a92630a3
+            c2bf3591afd1ec87c46036ef3546302e7961c3
             cfc5fddaaca088f6cebff89af87b6f2beab57e
             d33d9e7d145e8a3f12f52f174612a847270fab
             e6e4d1e414681e0b40708fdd167c424f021dba
@@ -1493,6 +1548,7 @@
         8b/
             22e2bbd273b019f197ed3a43805bcd8984d5dc
             499f5b10957f46a07fc4e865d7d707f1ede462
+            570eec80430174e18c8e1198f5f51e08773ca6
             62c9ebd8f92489c9790a4083e8d8041a1cda5c
             96580877dc9270e616dd26f25bbc14eed320a4
             b60effa7577083a11bd12348da7d1cc3b348e7
@@ -1584,6 +1640,7 @@
             19a94ad0cd395c50093fb79657ece692325983
             2404dbf227f8ddef68aecb4418cf7c3b3aa469
             26b15787046288380162ee8911d8854af44672
+            2f96dedcfc6056e5c6afc88b42d1bcab719e45
             661fd3fd7f581806610df4293bdc8bf5c4a71c
             84ba512b9747fb38c9013bab6f34c80f84bb15
             9ff5e2aca4cf2fa2fc445f03ecb92295861558
@@ -1623,6 +1680,7 @@
             10b4bb4da4264a298bcd7694b970fccbc829be
             2030fc8c1b02b068adf00f8ed69db539d54fb6
             2d199d964d326fac90768eb4a84df7a14d84b9
+            7ff120064aba029d7c6d0adff663bf92df55bb
             864478cefb8ca852a5db900b002a8ede3d5275
             8deda95492d8088199b4a0173b8ea7856917e3
             9a3f2442016f3129243e506155482d88fb0c7b
@@ -1634,6 +1692,7 @@
             3e41db155a36e1bc28424a6f3513c6b354751c
             70d9c29c33204a7ea62c1ff22f5af9543f0e5f
             b2fd86f502a3f31ec38b8f6d7841e348b7b212
+            e5dff548bfcf893b2ccfbfe10491122a57a30c
         98/
             145085cabda757203141d226865211941ca03b
             38a8e9a3c5e957a6a545982551766323157543
@@ -1677,6 +1736,7 @@
             baf829bc849b94dbc961bbe8953e769e3bab3a
             c0d822fc0fbfffaedb284a4eab41c7468aca6a
             cb0b8ae608bdf73da2d88856ea9618f859ccb2
+            f068f65027d4a87c210522ce3a8d2bff2998b8
             f150384a8a9c4d3b84e4646cbb2a9c3669a2eb
             f3b2a55d1797595c3b62ba08b3a227daa65fea
         9c/
@@ -1690,10 +1750,12 @@
             1ea4d4f6a32b7b902ea28e125b5ae0091ac4b7
             293436249c2130309f3f606f46abff09100873
             392c092e9fd8e0624e5c903de4cf616e5218cd
+            3bbf4a68667efc8469d8f561b8bac89ce9b258
             43cabffd9850e8559a0a789e989841b68933ff
             508485b866c1a64b7d9db67792f50b61357b1f
             6b447dc694ca0d14d0e98905827f1a2f13142d
             7ffa7193e476b1995710d0447da09d727a794e
+            874c01d7186bf3e8d22426e9af648fcb629780
             8b44bf1eef2fdbff3af3b85c4c0f6faa380782
             e83f82367157792446e91d3eeb627c1947bb3c
             ecebb602f6e439994e22c21ae8d23bf4002ea9
@@ -1745,9 +1807,11 @@
             3414e6669cb98cf9cbbdc2efac8a9e7a44cfee
             6c19c18bfbd6b84d7c1be07d9448c6fbcb7e01
             7ea2f1fe5141d4379f52861e016c8f02dc8940
+            826ad3f69c6126ff9d50393e946198216c11f3
             96f8c13c8a9e6329ac05819b4208373e8382fc
             b48c999a4f0a73b842bf4d7c0898240fed771f
             ca8a2ae37c6fe87997e66515ffead64fea23c7
+            d4877c19e3fba90313f7832e59bc7d6d68d2a5
             def884f0acce37a2b96d12ca9d5782858e3090
             e77d06e51261bd20ed5ad2fdf872ecf553d6f9
             ea1b2297a4e465dbcc2aa6bf3d87bff41a2fd8
@@ -1762,6 +1826,7 @@
         a4/
             15157e0d9ef2f1d709cbbe6a3d10c1778b8a5c
             15bf70795c36bc43c7aabe3b2498574f352b55
+            4ab47c66bfd96cea4af509ab626ea868f95691
             50f12f12d96d082209fbd01339858190e2093f
             6616f9a92efa5b1601029be673f4c35cc724b0
             847e90fa6b6c0509cc8f9f6564acb6cf4f0e42
@@ -1815,6 +1880,7 @@
             d5330bfc149264365518b27c8c83dd3ef51160
         aa/
             0022b73a88f49eaac53737396dfce393108b97
+            2fc0729de0f80adff66172a94e854651a2ac40
             4156feb0bf47b01df749c2f31161243e6001e4
             42988276229c47f32e62f7c7f8aa98b179a509
             51447bed524f0152e4f227d9454808ee83a610
@@ -1825,6 +1891,7 @@
             7c8b875734c49e69aa6d5c6c82fbcfd6191da1
             7d6427e6fa1074b79ccd52ef67ac15c5637e85
             83274d3735da287ab0b1ba6f9aebd66606e5a9
+            840a6279c85ee2e81d202f2656d19a5a33d6a6
             9d88162105c0336463d05f8eb4070c32eb5625
             c27c6699f534ee86890ccd6024538ec6b244a5
             ca82cfb59b3b5c3f7c3a6f18908239dbcacc66
@@ -1833,6 +1900,7 @@
             06caf011cbf0e96d2eaf24d7773b03fd219267
             1772e78125da6c280f4b1a676d7ff2c8fae082
             1978731261c90eb81a09ccc817b9ab83542300
+            33867aded52fea889969306b5d5ec7d4343dd4
             4c218cfefe77262bd833da07552a99d0af79e4
             56b072063e998f47e54362e619d2908984d606
             5f3e5e973f3724d92c371802e1b047009603e2
@@ -1844,6 +1912,7 @@
             55e8cf574d726484bfeb1e2ba244d42c617532
             8a60ab6753758414e04e8a97aed8ac96cb15e6
             96558439bcece1fd930ffc0922694bf894397c
+            a6f352394010f43deb04ad9672f9b028e44216
             a977e58b1bebf04efc77d40777ffdfb8bf34ec
             b243c8b89591cad4e5b4192d81e7b420f602ff
             c9f8f115afb3c688be5bc2447c08e0aa70f489
@@ -1890,11 +1959,13 @@
             0564eca46bb6ff42400461909d2957e5b0de9c
             355198a2435d9c0c22e262aad8879ccaaf614e
             40799763ae47893f2c4f23acf3bd8f522dd4cc
+            479420741d7e71872eaddd6339ca0c68f0f907
             4b7387b1a31826ce22ac25d7926586b7b6f14a
             513173bf2d0811a349d061420ab043b388112a
             60a83756762f626aaf151bb1a8ebbc0ad224db
             723e362d53ad724adee01a6fbb696162851e64
             78d88952d644d3368fabed40c10500aaa5b09b
+            7f87fa80bacffe604bad1c723b42ecedb48eec
             c159ef05fe3e5bb62e5237acd10c7f8accb084
             cbe9ff02cf50fc8a2e298998efabe59a9b07ea
             f68fd9d08a182cd7a3c81fb4eca6ba371416d4
@@ -1941,6 +2012,7 @@
         b4/
             73859aed231ea30ec9d865f1a7a87b78a0bf13
             75adf83b6e248e0736e12963aef4c8562272c0
+            85a1da0e37f5778538c3f30b0ac6f24cff4026
             a8ad7fdae4116833ec37ec1f73a04745a79ffb
             b948b72613eb48253a5e5543ac977ab90d44da
             ba3012c75021b3c3b9eeecaa96e1f0a8f4f982
@@ -1952,6 +2024,7 @@
             526fe55143cf872978a4c2c13a2bda2b2bcd27
             89d56e9f285d8cfdc6c270853a5d439021a278
             9ee297ac249470fdcce2045dae54d9979d111e
+            a291ab214b66737ef713faed745c56eafd3184
             c9ed39d1a7f57a529b12ebf22db19d69aea9cd
             ccb53779d68b6b19832690500bb99586c2fb95
             cda8a08f661f01b698227711babd68550ee11c
@@ -1987,6 +2060,7 @@
             c14c93a08c11568d77499e9a547f03eff757fb
             cc13491f93fe4e2e693ca0f6e5156d0f70330b
             e2c3f5befdf6ef28c4706bb30e57d4da63587c
+            e48df65b9d20ef7230745ced46156fd4330215
             e6320d9b9252cf57c07df083a726ce00fa0373
             e8295e2a041c71177c81537d41d812c558ffd3
         b9/
@@ -2031,9 +2105,12 @@
             867e12f3a2ecfe0ef4287bc10a5524d0f1ac4c
         bd/
             6051edd067b2a4f98be52a599e0f663e362ccf
+            79b42d0687a8a547961fa4ff51b5442e6d9b12
             8732aa2393fcf29585b8764f42bf731576a072
             9585815fca5863fefa59779df6b107a9adc251
             bb7e45a11e90e34ad8cad6a8feb9e5f849ba1b
+            c2f2ceaf28e9996abf5ce16fe585b9794dde23
+            ccfef93e4a0ec039b41de990add3b2f74c4e54
         be/
             33475ec76872361c20243f70d7532bec49b0e3
             54f51519c04966cd1ebd030e59f818da472cfe
@@ -2135,6 +2212,7 @@
             7a3cd6a0516c435a4eb9d9545ed08b81c392ba
             d1330383827ef0e7b6be0441c09fdf7b5d60b6
             dff39c39ab52a5fb0362580d52507bd752607e
+            ee87aa901166920c2e0bac586ab2aaba7cea97
             fe0d0c24e3d86e4edb8cb87802a3081088946d
         c8/
             037ebd7aa265cb56e3b809cf19df8fa807bcf8
@@ -2177,12 +2255,14 @@
             459d568fbcf8b970616cd81ce6136456f99a15
             553ba62157b3fca6c704777242bf473cdbe483
             57d5da7e247264d867f301bb433b041b3f1cd3
+            5bf5c98439eb449b3a4a7261b340c6cf56c86f
             7d74031fd48b4d526b45950db1dca9ab7d3db8
             865f697f47f6843c977b82522f285cde326243
             942ab4cca75713fa5486a13c2e78d451dc7c26
             9628b14ccdf1d260c511876ebd033b2227bbbc
             bc7d41ec007021d1f199eb106c87396a5fc03a
             d187efd85015605dc7d33e4f919b99070ade44
+            d5ae4470171aac4e7da193e43376d8a5389e9e
         cc/
             17c4c3d498ac403ca7b5341d00167038cf85b1
             24b9e62f50cd2fe6d54c2b82335c76fd70bac8
@@ -2212,6 +2292,7 @@
             eb113ce67bd7bdf560f4887cb1f15097659a30
         cf/
             44035d6c0b80480da7058cc33c5e484a5c48c7
+            4cd42fba1da5dac40c8bc337ca2bc2df7c3bbf
             4e5696e6407da959233a8472e5af9a699aa30e
             8114074ba35f5e9e587dd308fb50792c91e8f0
             a316ab3ad74afe37cace795649d105c3c0c901
@@ -2223,6 +2304,7 @@
             2eb0ff5703c2ea52c588927be2ced691d37e8b
             335734924b16ec8017bcb4e7b00176bd198625
             5c2fbcedbb160581152aa32d0a6d14929d316c
+            80ef8a88abe3ac6e5e43dafa86e680c7e3d53d
             96be7550655dd6ea0b2c009c9e4272c039c488
             a237c200a5f32c3055473fc0e2b482a8608cc8
             a47c4e132fb44cd090d2f03a62b9be15e5acbb
@@ -2234,6 +2316,7 @@
             25bccc9a704a23035cca06fa592857ca91f87c
             2aa8a0b3ac882a4e2feee3d58e675d435fca68
             2ea1ab8367b5becd468d4f4fdc58e97201289e
+            65310c9c9b806989ce96adda80d3d260eeea06
             6ff858455544f7343ce5915233f9cc7c8bf23e
             8cfbea8cf3f67ffcb98fba6d8ebe1def621ef2
             8ee062702e043231b537b46834603d958423df
@@ -2253,6 +2336,7 @@
             75ae86b86453a6d870884b104e129b06ca43cd
             9dd2fedd670f353f4ad9b5f9246475e2e69686
             a976ab0e93ac07e98049670e5795da864f1c72
+            b12dcb7d56410e41d56d00eb2bd9ddc5aec494
         d4/
             0fc88157433137e853c8cbb6c801c64b0acb43
             55a218a04211dc6cdc6a20fbd38fa7398cbadb
@@ -2283,6 +2367,7 @@
             ba9a16b70f115fb99f8098d296f0ee290492f8
             d28b29d20cd144f6ff77b16a943e1aa1a78883
             d4d9fce223c082f3ac8ee762b4ac31852a3e59
+            f197e9257d7e2003584992c5cd105b3133563c
         d7/
             1dc7d225b0efcd4881920ec515567d4896673a
             5a0ab39d13c880eac6b29ee7045df99ea03724
@@ -2313,6 +2398,7 @@
             293135987279e86752330bdc1922a0238cc997
             2f9bf92dba146803bd29aee2d79b149e40cbb8
             3c6afd5b79aeda66f5e96077503625519888fa
+            5f19b803253fa089f0be24c53be9b715522082
             6ee4c35f4ea62f4a869f37cb5367afc811ea61
             7539400b80568a9c85a48279c22a3e0835b073
             80c6d3888584d108f12f41def72c0ffda633ca
@@ -2395,6 +2481,7 @@
             122cd67bf031468c3ae246ebf4cb0154043db4
             13e46b9c20c136332dd71ecc4f65abf7b51cfb
             22f8caf41198206c9af143c3ba1807eac4c4ed
+            24a117f9376c994da248a397a3f7dd28dfc093
             303a673906380962d265ba455a4fee2a09b199
             3e6f27b9b63e92d31835a4ce83fa0180ba9d7d
             94d72e6a04e72d3df725197a194c9cbaaf7326
@@ -2428,6 +2515,7 @@
             d091bd897431e59f6a643dc3bfcdf4dd2fd224
         e4/
             3c17bd3120931fff5438f5db175852896a1bbb
+            46759d3eceba4fef5148361f8ab62ce50e2982
             4b8d41ff02d898f6cc85e8558aa5982a1647e4
             7e298b53de83567b240b51827ade36c6926401
             9f65c4361bf47c9818b2e25f17e898c81f1253
@@ -2480,6 +2568,7 @@
             fc9bbebc84ec5b62985a1972d9690e937dc45c
         ea/
             0f67281e7629622537b16621ef6624317c94f7
+            2191235b11673c9a6b040d039329c06a177dea
             3f0b3bf60f5733fbc3da13a54cd4af30872364
             61770b2f601b33c96816dbeaedcbd081a70358
             70fa8f1af65a55cd894ce9b77c2d6fab70b5b7
@@ -2489,6 +2578,7 @@
             283e9263f49debcba00e03ae5fe6918e13da98
             604d905ef22bdd4e057aa3b985ca23a7835e80
             8a7049761f0bb7c735ba689faac84ea5eb65d8
+            9a3d589b0da5675e91f3ca8ccc5ae5a5fa8664
         ec/
             301d8a1f15f6479878b53b94cf56c901116b31
             4583b5b598144e3c01643de09b2af88e423391
@@ -2548,20 +2638,25 @@
             74db474288c1ce6920b25daae5b012eb0f026b
             aee83fe9ccd3941916684aaf4a6acb57f34b17
             c5716bb48dd68b74f0e6637dfc4e254d4f3cb5
+            f30a3450f404c9082f7a2c5a7c17e8620c464f
         f2/
             3f884fb93a2c246d4560ec1f18c7292f9205c6
             64785c08103a6f52368681b818667867257633
             875f2b152ba3c9106b509160d28933d793df1c
             8bd2de734f0087b223bc89204a943562b0657b
+            9439cde925613f3d4bf33c2ea49a59ab2ac804
+            ac82250e9df54b26cc8c465f3f36fcd9c52010
             f4517a42046ecd2d2487b88607624bbe4e4bb8
         f3/
             1819d824f77dea2171290f7b71741203acb2b0
             3b9275ff96eb72dd3a4ba51b2857860ea6fe57
+            8cdf47ad0c103a040048e0baf63ff1fd17a91b
             8fa40fdb3a1d99f2aacf333e93855f26024d0f
             b35f98651b799200f0891380bcfe5c1cc44f98
         f4/
             4338134391a7ec1013851802549ff161c7a3b0
             671fced9168289ed674a84639eb0fed2cf6011
+            9193a1617a2f4d0c2a9c342c855b4ce10c628b
             cafe825538d203d5fec5327388d4728b960b93
             f622c605ab1802d38fbc944aab8ef94777ea80
         f5/
@@ -2578,6 +2673,7 @@
             b681fbbfb07452d7e46c322ce95b8721036d88
             d9801ace436c66c30aa2e8a69313336acf0577
         f6/
+            4899019d0e5b3edb3777ae11af5841251cf372
             5861f0644de4f1ededefa64ce506c864159d95
             69dd4eeddda7c6cf342d84e8cd5fc54726b4bc
             76785e7eb920e2d62a82051d57ee0e19cff722
@@ -2608,6 +2704,7 @@
             2b56dc405fc9425851ef43396c896285a8f6ec
             3775385cb793dc58422505cc03bad9bccd1257
             5c848c9ceb4b64cf1746d7f90bb212f98f5744
+            896c9948308005333d93041f1b5b10c62dbac3
             8b1d6b4033ccc9a57db0f353f99b211bd0f04b
             8bd074787c20410804f364908794156c9daf20
             e0502fd331c0de67a3333fad7e1b7792e0119c
@@ -2649,6 +2746,7 @@
             78951727f1c5e419418fbac9394322f579f1c4
             7f4a8a465d42b4a0390d464b83b99e8465bba7
             b213f290bc5be9105fd5776e119919ffd5546b
+            be9a1ac4114a22db50b235cd4621a414da80c9
             cfca6467e47f48f1add170ee596439f03ad091
             cfe11eaffb759fbb12dca5b2d615b2e231a106
             d6a522979c5301eeabc7ae46b3fedea4456458
@@ -2683,6 +2781,7 @@
             5d1aa313339cc82bb2992ce9237761de8dd667
             62108f317625e11cf0fd219659fa6bb744ab06
             6b829ecc3cb6057186327e3c13d9dd1d9b5ce5
+            819f2629fe17fffe498fe1cfda9124e9c81288
             9d20689c7e750d7155b7aaaa693f217f5e84d5
         ff/
             03e215e5e4da0d190c514461fd57c902643bbf
@@ -5978,6 +6077,9 @@ app/
                 release/
                     javaPreCompileRelease/
                         annotationProcessors.json
+                releaseUnitTest/
+                    javaPreCompileReleaseUnitTest/
+                        annotationProcessors.json
             app_metadata/
                 release/
                     writeReleaseAppMetadata/
@@ -6428,6 +6530,7 @@ app/
                         drawable_ic_launcher_background.xml.flat
                         drawable_pixelated_paradise.jpg.flat
                         drawable_room_backgrounds.xml.flat
+                        layout_activity_card_collection.xml.flat
                         layout_activity_character_select.xml.flat
                         layout_activity_collection.xml.flat
                         layout_activity_game.xml.flat
@@ -6841,6 +6944,7 @@ app/
                         drawable-finger/
                             pixelated_paradise.jpg
                         layout/
+                            activity_card_collection.xml
                             activity_character_select.xml
                             activity_collection.xml
                             activity_game.xml
@@ -7150,10 +7254,6 @@ app/
                                 QuantumQuest.kt
                                 SplashActivity.java
                                 VideoActivity.java
-                            manager/
-                                CardManager.kt
-                                QuestManager.kt
-                                RoomManager.kt
                             managers/
                                 CardManager.kt
                                 CharacterManager.kt
@@ -7172,12 +7272,14 @@ app/
                                 QuestCard.kt
                                 Room.kt
                                 RoomEffectCard.kt
-                            models/
                             quests/
                                 DragonQuest.kt
                                 Quest.kt
                                 TreasureHunt.kt
                             repositories/
+                            repository/
+                                CardRepository.kt
+                                CharacterRepository.kt
                             rooms/
                                 FireRoom.kt
                                 Room.kt
@@ -7215,6 +7317,7 @@ app/
                 drawable-finger/
                     pixelated_paradise.jpg
                 layout/
+                    activity_card_collection.xml
                     activity_character_select.xml
                     activity_collection.xml
                     activity_game.xml

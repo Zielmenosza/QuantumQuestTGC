@@ -1,9 +1,11 @@
 package com.example.quantumquest.rooms
+import com.example.quantumquest.WaterRoom
+
 
 import com.example.quantumquest.model.GameRoom  // Import the correct class
 
 // WaterRoom extending the GameRoom class
-class WaterRoom(
+class WaterRoom 
     id: String,
     name: String,
     description: String

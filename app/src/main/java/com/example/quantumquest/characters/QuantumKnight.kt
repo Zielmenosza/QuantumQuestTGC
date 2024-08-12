@@ -1,8 +1,12 @@
 package com.example.quantumquest.characters
+import com.example.quantumquest.QuantumKnight
+import com.example.quantumquest.Card
+import com.example.quantumquest.CharacterCard
+
 
 import com.example.quantumquest.model.CharacterCard
 
-class QuantumKnight(
+class QuantumKnight 
     id: Int,
     name: String,
     description: String,
