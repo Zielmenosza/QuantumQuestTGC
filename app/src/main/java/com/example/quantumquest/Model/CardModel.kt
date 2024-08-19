@@ -1,20 +1,24 @@
-package com.example.quantumquest.model
+package com.example.quantumquest.Model
+
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.lazy.LazyItemScope
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.example.quantumquest.CardModel
-import com.example.quantumquest.GameManager
-// CardBattleScreen.kt
+import com.example.quantumquest.managers.GameManager
 
+data class CardModel(
+    val id: Int,
+    val name: String,
+    val description: String,
+    val cost: Int
+)
 
 @Composable
 fun AnotherFunctionName(gameManager: GameManager) {
-    val playerHand by remember { mutableStateOf(gameManager.getPlayerHand()) }
+    val playerHand: List<CardModel> = gameManager.getPlayerHand()
 
     Surface(modifier = Modifier.fillMaxSize()) {
         Column(
@@ -44,10 +48,6 @@ fun AnotherFunctionName(gameManager: GameManager) {
             }
         }
     }
-}
-
-fun items(count: Int, itemContent: LazyItemScope.(index: Int) -> Unit) {
-
 }
 
 @Composable

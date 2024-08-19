@@ -1,23 +1,20 @@
 package com.example.quantumquest.managers
-import com.example.quantumquest.Card
-import com.example.quantumquest.RoomEffectCard
-import com.example.quantumquest.RoomManager
 
-
-import com.example.quantumquest.model.RoomEffectCard  // Correct import
+import com.example.quantumquest.cards.Card
+import com.example.quantumquest.cards.RoomEffectCard
 
 class RoomManager {
-    private val roomeffectcardList = mutableListOf<RoomEffectCard>()
+    private val roomEffects: MutableList<RoomEffectCard> = mutableListOf()
 
-    fun addRoomEffectCard(roomeffectcard: RoomEffectCard) {
-        roomeffectcardList.add(roomeffectcard)
+    fun addRoomEffect(effect: RoomEffectCard) {
+        roomEffects.add(effect)
     }
 
-    fun getRoomEffectCard(index: Int): RoomEffectCard? {
-        return if (index in 0 until roomeffectcardList.size) roomeffectcardList[index] else null
+    fun removeRoomEffect(effect: RoomEffectCard) {
+        roomEffects.remove(effect)
     }
 
-    fun getAllRoomEffectCards(): List<RoomEffectCard> {
-        return roomeffectcardList.toList()
+    fun getAllRoomEffects(): List<RoomEffectCard> {
+        return roomEffects
     }
 }

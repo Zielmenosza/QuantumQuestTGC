@@ -1,16 +1,20 @@
 package com.example.quantumquest.quests
-import com.example.quantumquest.Card
-import com.example.quantumquest.QuestCard
-import com.example.quantumquest.TreasureHunt
 
+import com.example.quantumquest.cards.QuestCard
 
-import com.example.quantumquest.model.QuestCard  // Import the correct base class
-
-class TreasureHunt 
+class TreasureHunt(
     id: Int,
     name: String,
     description: String,
     questObjective: String
 ) : QuestCard(id, name, description, questObjective) {
     override val reward: Int = 500  // Correctly overrides the reward property
+
+    fun startQuest() {
+        println("Quest $name has started. Objective: $questObjective")
+    }
+
+    fun completeQuest() {
+        println("Quest $name completed! Reward: $reward")
+    }
 }

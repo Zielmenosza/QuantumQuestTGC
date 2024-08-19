@@ -94,10 +94,10 @@ dependencies {
     debugImplementation(libs.androidxComposeUiTestManifest)
 
     implementation("com.google.firebase:firebase-auth")
-    implementation("com.google.android.gms:play-services-auth:20.4.1")
+    implementation("com.google.android.gms:play-services-auth:21.2.0")
     // Firebase Authentication
     implementation("com.google.firebase:firebase-auth-ktx")
        // Facebook SDK
-    implementation("com.facebook.android:facebook-android-sdk:latest.release")
-    implementation("com.facebook.android:facebook-login:12.0.0")
+    implementation("com.facebook.android:facebook-android-sdk:17.0.1")
+    implementation("com.facebook.android:facebook-login:17.0.1")
 }

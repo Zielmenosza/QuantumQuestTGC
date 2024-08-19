@@ -1,22 +1,21 @@
 package com.example.quantumquest.rooms
-import com.example.quantumquest.WaterRoom
 
+// Define any imports required
+import com.example.quantumquest.cards.Card
 
-import com.example.quantumquest.model.GameRoom  // Import the correct class
+class WaterRoom(
+    val id: Int,
+    val name: String,
+    val description: String,
+    val effect: String // Specific property for the room
+) {
+    // Initialize room-specific properties here
 
-// WaterRoom extending the GameRoom class
-class WaterRoom 
-    id: String,
-    name: String,
-    description: String
-) : GameRoom(id, name, description) {
+    fun activateEffect() {
+        // Logic for room effect activation
+    }
 
-    // Override the roomType property
-    override val roomType: String = "Water"
-
-    val waterEffect: Int = 5
-
-    fun applyWaterEffect() {
-        // Logic to apply water effect to characters or cards in the room
+    fun displayRoomInfo() {
+        println("Room Name: $name, Description: $description, Effect: $effect")
     }
 }

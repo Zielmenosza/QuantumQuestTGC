@@ -1,22 +1,15 @@
 package com.example.quantumquest.characters
-import com.example.quantumquest.ChronoBard
-import com.example.quantumquest.Card
-import com.example.quantumquest.CharacterCard
 
+import com.example.quantumquest.cards.CharacterCard // Corrected import
 
-import com.example.quantumquest.model.CharacterCard
-
-open class ChronoBard 
-    id: Int,            // Ensure this is an Int, not a String
+class ChronoBard(
+    id: Int,
     name: String,
     description: String,
-    health: Int,        // Ensure this matches the expected type
-    attack: Int         // Ensure this matches the expected type
-) : CharacterCard(id, name, description, health) {
+    val timePower: String // Specific property for ChronoBard
+) : CharacterCard(id, name, description) {
 
-    var timeManipulationPower: Int = 0
-
-    fun manipulateTime() {
-        // Implementation of time manipulation
+    fun playSongOfTime() {
+        // Implementation of the ChronoBard's ability
     }
 }

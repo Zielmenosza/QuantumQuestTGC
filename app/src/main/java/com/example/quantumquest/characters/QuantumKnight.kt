@@ -1,21 +1,15 @@
 package com.example.quantumquest.characters
-import com.example.quantumquest.QuantumKnight
-import com.example.quantumquest.Card
-import com.example.quantumquest.CharacterCard
 
+import com.example.quantumquest.cards.CharacterCard // Corrected import
 
-import com.example.quantumquest.model.CharacterCard
-
-class QuantumKnight 
+class QuantumKnight(
     id: Int,
     name: String,
     description: String,
-    health: Int,
-    attack: Int
-) : CharacterCard(id, name, description, health) {
-    var quantumShield: Int = 0
+    val quantumPower: String // Specific property for QuantumKnight
+) : CharacterCard(id, name, description) {
 
-    fun activateQuantumShield() {
-        // Implementation of quantum shield activation
+    fun useQuantumStrike() {
+        // Implementation of the QuantumKnight's ability
     }
 }

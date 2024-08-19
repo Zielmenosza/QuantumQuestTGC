@@ -1,23 +1,16 @@
 package com.example.quantumquest.managers
-import com.example.quantumquest.Card
-import com.example.quantumquest.CharacterCard
-import com.example.quantumquest.CharacterManager
 
-
-import com.example.quantumquest.model.CharacterCard
+import com.example.quantumquest.cards.CharacterCard
 
 class CharacterManager {
-    private val characterCardList = mutableListOf<CharacterCard>()
 
-    fun addCharacterCard(characterCard: CharacterCard) {
-        characterCardList.add(characterCard)
+    private val characterList = mutableListOf<CharacterCard>()
+
+    fun addCharacter(character: CharacterCard) {
+        characterList.add(character)
     }
 
-    fun getCharacterCard(index: Int): CharacterCard? {
-        return if (index in 0 until characterCardList.size) characterCardList[index] else null
-    }
-
-    fun getAllCharacterCards(): List<CharacterCard> {
-        return characterCardList.toList()
+    fun getCharacter(index: Int): CharacterCard? {
+        return characterList.getOrNull(index)
     }
 }

@@ -1,17 +1,14 @@
 package com.example.quantumquest.cards
-import com.example.quantumquest.Card
 
-
-import com.example.quantumquest.model.Card
-
-open class ElementalSpellCard 
+class ElementalSpellCard(
     id: Int,
     name: String,
     description: String,
-    val element: String
-) : Card(id, name, description) {
+    val element: String, // Specific property for ElementalSpellCard
+    cost: Int // Include the cost parameter
+) : Card(id, name, description, cost) {
 
     fun castSpell() {
-        // Implementation of the spell casting
+        // Implementation for casting the elemental spell
     }
 }

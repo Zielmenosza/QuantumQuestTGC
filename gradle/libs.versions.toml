@@ -12,7 +12,7 @@ composeCompiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "k
 androidxCoreKtx = { group = "androidx.core", name = "core-ktx", version = "1.13.1" }
 androidxAppcompat = { group = "androidx.appcompat", name = "appcompat", version = "1.7.0" }
 googleMaterial = { group = "com.google.android.material", name = "material", version = "1.12.0" }
-googleArCore = { group = "com.google.ar", name = "core", version = "1.44.0" }
+googleArCore = { group = "com.google.ar", name = "core", version = "1.45.0" }
 
 # Compose
 androidxComposeUi = { group = "androidx.compose.ui", name = "ui", version.ref = "composeVersion" }

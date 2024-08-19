@@ -1,23 +1,19 @@
 package com.example.quantumquest.managers
-import com.example.quantumquest.Card
-import com.example.quantumquest.QuestCard
-import com.example.quantumquest.QuestManager
 
-
-import com.example.quantumquest.model.QuestCard  // Import the QuestCard class
+import com.example.quantumquest.cards.QuestCard
 
 class QuestManager {
-    private val questcardList = mutableListOf<QuestCard>()
+    private val questDeck: MutableList<QuestCard> = mutableListOf()
 
-    fun addQuestCard(questcard: QuestCard) {
-        questcardList.add(questcard)
+    fun addQuestCard(questCard: QuestCard) {
+        questDeck.add(questCard)
     }
 
-    fun getQuestCard(index: Int): QuestCard? {
-        return if (index in 0 until questcardList.size) questcardList[index] else null
+    fun removeQuestCard(questCard: QuestCard) {
+        questDeck.remove(questCard)
     }
 
     fun getAllQuestCards(): List<QuestCard> {
-        return questcardList.toList()
+        return questDeck
     }
 }

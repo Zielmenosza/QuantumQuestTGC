@@ -1,17 +1,13 @@
 package com.example.quantumquest.cards
-import com.example.quantumquest.Card
 
-
-import com.example.quantumquest.model.Card
-
-open class PixelArtifactCard 
+class PixelArtifactCard(
     id: Int,
     name: String,
     description: String,
-    val artifactPower: Int
-) : Card(id, name, description) {
+    cost: Int // Include the cost parameter
+) : Card(id, name, description, cost) {
 
     fun activateArtifact() {
-        // Implementation of the artifact's activation effect
+        // Implementation for activating the pixel artifact
     }
 }

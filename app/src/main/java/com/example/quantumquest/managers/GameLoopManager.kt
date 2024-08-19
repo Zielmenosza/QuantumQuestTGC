@@ -1,16 +1,10 @@
 package com.example.quantumquest.managers
-import com.example.quantumquest.Card
-import com.example.quantumquest.CardManager
-import com.example.quantumquest.CharacterManager
-import com.example.quantumquest.QuestManager
-import com.example.quantumquest.RoomManager
-
-
-import com.example.quantumquest.model.Card
+import com.example.quantumquest.cards.Card
 import com.example.quantumquest.managers.CardManager
 import com.example.quantumquest.managers.CharacterManager
 import com.example.quantumquest.managers.QuestManager
 import com.example.quantumquest.managers.RoomManager
+
 
 class GameLoopManager {
     private val cardManager = CardManager()

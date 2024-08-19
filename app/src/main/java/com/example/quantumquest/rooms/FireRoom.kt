@@ -1,22 +1,23 @@
 package com.example.quantumquest.rooms
-import com.example.quantumquest.FireRoom
 
+class FireRoom : RoomBase(
+    roomName = "Fire Chamber",
+    roomDescription = "A room engulfed in blazing flames. Beware of the heat!"
+) {
+    override fun activateRoomEffect() {
+        if (isVulnerableToFire()) {
+            applyDamage(20) // Example damage value
+        }
+    }
 
-import com.example.quantumquest.model.GameRoom  // Updated import to match the renamed class
+    private fun isVulnerableToFire(): Boolean {
+        // Logic to determine if the room is vulnerable to fire
+        // This could be more complex depending on game mechanics
+        return true // Example return value
+    }
 
-// Now, FireRoom can extend GameRoom
-class FireRoom 
-    id: String,
-    name: String,
-    description: String
-) : GameRoom(id, name, description) {
-
-    // Override the roomType property
-    override val roomType: String = "Fire"
-
-    val fireDamage: Int = 10
-
-    fun applyFireDamage() {
-        // Logic to apply fire damage to characters or cards in the room
+    private fun applyDamage(damage: Int) {
+        // Logic to apply damage to the room or its occupants
+        println("Applying $damage damage due to fire.")
     }
 }
