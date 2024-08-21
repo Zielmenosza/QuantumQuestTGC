@@ -1,11 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Quantum Quest</string>
-    <string name="todo">TODO</string>
-    <string name="facebook_client_token">1038043426268-0vnjni6teu6gsidp9dbc6r13bh4nk51b.apps.googleusercontent.com</string>
-    <string name="facebook_app_id">1191939875384622</string>
+    <!-- App Name -->
+    <string name="app_name">QuantumQuest</string>
+
+    <!-- Button Text -->
     <string name="start_new_game">Start New Game</string>
-    <string name="view_card_collection">View Card Collection</string>
+    <string name="google_sign_in">Sign in with Google</string>
+    <string name="facebook_sign_in">Sign in with Facebook</string>
+
+    <!-- Instructions Text -->
+    <string name="instructions">Please sign in or start a new game</string>
+
+    <!-- Descriptive Texts -->
+    <string name="google_sign_in_description">Sign in with your Google account to start playing.</string>
+    <string name="facebook_sign_in_description">Sign in with your Facebook account to start playing.</string>
+
+    <!-- Error Messages -->
+    <string name="error_no_network">No network connection available.</string>
+    <string name="error_sign_in">Failed to sign in. Please try again.</string>
+
+    <!-- Tutorial -->
+    <string name="tutorial_step1">Welcome to QuantumQuest! Choose a sign-in method to continue.</string>
+    <string name="tutorial_step2">Press "Start New Game" to begin your adventure.</string>
+
+    <!-- Labels -->
+    <string name="label_sign_in">Sign In</string>
+    <string name="label_start_game">New Game</string>
+
+    <!-- Game Specific -->
     <string name="game_screen">Game Screen</string>
     <string name="next_turn">Next Turn</string>
-    <string name="select_a_character">Select a Character</string>
+
+    <!-- Facebook App ID and Client Token -->
+    <string name="facebook_app_id">1191939875384622</string>
+    <string name="facebook_client_token">1038043426268-0vnjni6teu6gsidp9dbc6r13bh4nk51b.apps.googleusercontent.com</string>
+
+    <!-- Firebase Web Client ID -->
+    <string name="default_web_client_id">1038043426268-0vnjni6teu6gsidp9dbc6r13bh4nk51b.apps.googleusercontent.com</string> <!-- Your Firebase Web Client ID -->
 </resources>

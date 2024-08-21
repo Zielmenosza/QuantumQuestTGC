@@ -1,26 +1,21 @@
-<!-- res/layout/activity_game.xml -->
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center">
+    android:padding="16dp">
 
+    <!-- Game Screen Text -->
     <TextView
+        android:id="@+id/game_screen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/game_screen"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:id="@+id/handTextView"
-        android:layout_marginTop="16dp"
-        android:padding="16dp"/>
+        android:textSize="24sp"/>
 
+    <!-- Next Turn Button -->
     <Button
-        android:id="@+id/nextTurnButton"
+        android:id="@+id/next_turn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/next_turn"
-        android:layout_marginTop="16dp"/>
-
-    <!-- Game UI components here -->
-</LinearLayout>
+        android:text="@string/next_turn"/>
+</RelativeLayout>

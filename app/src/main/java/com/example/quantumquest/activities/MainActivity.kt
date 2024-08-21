@@ -127,7 +127,14 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun updateUI(user: FirebaseUser?) {
-        // Update your UI with user information
+        if (user != null) {
+            // User is signed in
+            val intent = Intent(this, GameActivity::class.java)
+            startActivity(intent)
+            finish() // Close MainActivity
+        } else {
+            // Handle sign-in failure
+        }
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
