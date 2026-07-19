@@ -1,15 +1,22 @@
 package com.example.quantumquest.managers
 
 import com.example.quantumquest.Model.CardModel
+import com.example.quantumquest.data.CardDefinition
 
-class GameManager {
+class GameManager(
+    private val playerHandProvider: () -> List<CardDefinition> = { emptyList() },
+) {
 
     fun getPlayerHand(): List<CardModel> {
-        // Return a list of CardModel representing the player's hand
+        val dataDrivenCards = playerHandProvider()
+        if (dataDrivenCards.isNotEmpty()) {
+            return dataDrivenCards.map { CardModel.fromDefinition(it) }
+        }
+
+        // Fallback keeps older call sites usable until every screen is data-driven.
         return listOf(
             CardModel(1, "Inferno Crystal", "Empowers Fire creatures", 5),
             CardModel(2, "Tidal Amulet", "Boosts Water abilities", 3),
-            // Add more cards as needed...
         )
     }
 

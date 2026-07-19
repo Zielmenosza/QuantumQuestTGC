@@ -4,7 +4,7 @@
 
 #include <EGL/egl.h>
 #include <GLES3/gl3.h>
-#include <C:\Users\Ziel\AppData\Local\Android\Sdk\ndk\26.1.10909125\sources\android\native_app_glue\android_native_app_glue.h>
+#include <android_native_app_glue.h>
 #include <memory>
 #include <vector>
 #include "Model.h"

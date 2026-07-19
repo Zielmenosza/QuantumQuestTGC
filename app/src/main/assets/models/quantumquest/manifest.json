@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "assets": [
+    {
+      "assetId": "inferno_crystal",
+      "displayName": "Inferno Crystal",
+      "type": "card_prop",
+      "runtimeModel": "",
+      "sourceBrief": "docs/asset_briefs/inferno_crystal.md",
+      "sourceMayaFile": "",
+      "textureSet": [],
+      "scale": 1.0,
+      "anchorMode": "card",
+      "status": "briefed"
+    },
+    {
+      "assetId": "quest_portal_gate",
+      "displayName": "Quest Portal Gate",
+      "type": "prop",
+      "runtimeModel": "",
+      "sourceBrief": "docs/asset_briefs/quest_portal_gate.md",
+      "sourceMayaFile": "",
+      "textureSet": [],
+      "scale": 1.0,
+      "anchorMode": "plane",
+      "status": "briefed"
+    }
+  ]
+}

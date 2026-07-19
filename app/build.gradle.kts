@@ -85,6 +85,7 @@ dependencies {
 
     // Testing
     testImplementation(libs.junit)
+    testImplementation("org.json:json:20240303")
     androidTestImplementation(libs.androidxTestJunit)
     androidTestImplementation(libs.androidxEspressoCore)
     androidTestImplementation(libs.androidxComposeUiTestJunit4)
@@ -97,7 +98,7 @@ dependencies {
     implementation("com.google.android.gms:play-services-auth:21.2.0")
     // Firebase Authentication
     implementation("com.google.firebase:firebase-auth-ktx")
-       // Facebook SDK
+    // Facebook SDK
     implementation("com.facebook.android:facebook-android-sdk:17.0.1")
     implementation("com.facebook.android:facebook-login:17.0.1")
 }

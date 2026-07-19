@@ -5,16 +5,15 @@ pluginManagement {
         gradlePluginPortal()
         google()
         mavenCentral()
-        maven { url = uri("https://maven.pkg.jetbrains.space/public/p/compose/dev") } // Add this line
+        maven { url = uri("https://maven.pkg.jetbrains.space/public/p/compose/dev") }
     }
 }
 
 dependencyResolutionManagement {
-    RepositoriesMode.FAIL_ON_PROJECT_REPOS  // Or RepositoriesMode.FAIL_ON_PROJECT_REPOS to enforce
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
         google()
         mavenCentral()
-        maven { url = uri("https://maven.example.com/repo") }
     }
 }
 

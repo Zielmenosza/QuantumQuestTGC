@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "slug": "inferno_crystal",
+    "name": "Inferno Crystal",
+    "description": "Empowers Fire creatures and turns stored heat into burst damage.",
+    "cost": 5,
+    "type": "pixel_artifact",
+    "element": "fire",
+    "rarity": "rare",
+    "artAsset": "aqua_mirage_scene",
+    "modelAsset": "inferno_crystal"
+  },
+  {
+    "id": 2,
+    "slug": "tidal_amulet",
+    "name": "Tidal Amulet",
+    "description": "Boosts Water abilities and smooths unstable quantum echoes.",
+    "cost": 3,
+    "type": "pixel_artifact",
+    "element": "water",
+    "rarity": "common",
+    "artAsset": "aqua_mirage_icon",
+    "modelAsset": "tidal_amulet"
+  },
+  {
+    "id": 3,
+    "slug": "quantum_anomaly_orb",
+    "name": "Quantum Anomaly Orb",
+    "description": "Collapses a random room effect into a chosen lane after observation.",
+    "cost": 4,
+    "type": "quantum_anomaly",
+    "element": "quantum",
+    "rarity": "rare",
+    "artAsset": "card_frame_foreground",
+    "modelAsset": "quantum_anomaly_orb"
+  },
+  {
+    "id": 4,
+    "slug": "chrono_bard_refrain",
+    "name": "Chrono Bard Refrain",
+    "description": "Repeats the last friendly spell at reduced strength.",
+    "cost": 2,
+    "type": "elemental_spell",
+    "element": "time",
+    "rarity": "uncommon",
+    "artAsset": "pixelated_paradise",
+    "modelAsset": "chrono_bard_refrain"
+  },
+  {
+    "id": 5,
+    "slug": "observer_lens",
+    "name": "Observer Lens",
+    "description": "Reveals the top card of each deck and locks one quantum outcome.",
+    "cost": 2,
+    "type": "room_effect",
+    "element": "quantum",
+    "rarity": "common",
+    "artAsset": "card_frame_background",
+    "modelAsset": "observer_lens"
+  },
+  {
+    "id": 6,
+    "slug": "quest_portal_gate",
+    "name": "Quest Portal Gate",
+    "description": "Opens a route to the active quest objective when charged by three elements.",
+    "cost": 6,
+    "type": "quest",
+    "element": "arcane",
+    "rarity": "legendary",
+    "artAsset": "icon_1",
+    "modelAsset": "quest_portal_gate"
+  }
+]

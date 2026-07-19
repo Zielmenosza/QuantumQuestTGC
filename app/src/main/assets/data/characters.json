@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "slug": "thorne_quantum_knight",
+    "name": "Thorne Quantum Knight",
+    "role": "guardian",
+    "element": "quantum",
+    "description": "A frontline knight whose shield exists in multiple states until observed.",
+    "portraitAsset": "card_frame_foreground",
+    "modelAsset": "thorne_quantum_knight"
+  },
+  {
+    "id": 2,
+    "slug": "luna_pixel_sorceress",
+    "name": "Luna Pixel Sorceress",
+    "role": "caster",
+    "element": "arcane",
+    "description": "A spellcaster who weaves pixel constellations into temporary allies.",
+    "portraitAsset": "pixelated_paradise",
+    "modelAsset": "luna_pixel_sorceress"
+  },
+  {
+    "id": 3,
+    "slug": "rex_block_elemental",
+    "name": "Rex Block Elemental",
+    "role": "bruiser",
+    "element": "earth",
+    "description": "A chunky elemental built from retro blocks and stubborn momentum.",
+    "portraitAsset": "icon_1",
+    "modelAsset": "rex_block_elemental"
+  },
+  {
+    "id": 4,
+    "slug": "nyx_arcade_sphinx",
+    "name": "Nyx Arcade Sphinx",
+    "role": "boss",
+    "element": "shadow",
+    "description": "A riddle-bound arcade sphinx who guards corrupted quest gates.",
+    "portraitAsset": "aqua_mirage_scene",
+    "modelAsset": "nyx_arcade_sphinx"
+  }
+]
